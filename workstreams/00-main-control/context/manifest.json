@@ -1,0 +1,1581 @@
+{
+  "schemaVersion": 1,
+  "inputs": [
+    {
+      "path": ".codex/skills/workstream-delegation/agents/openai.yaml",
+      "bytes": 257,
+      "mtimeMs": 1781787606000
+    },
+    {
+      "path": ".codex/skills/workstream-delegation/references/context-protocol.md",
+      "bytes": 2720,
+      "mtimeMs": 1781800306000
+    },
+    {
+      "path": ".codex/skills/workstream-delegation/scripts/context.mjs",
+      "bytes": 39690,
+      "mtimeMs": 1781800306000
+    },
+    {
+      "path": ".codex/skills/workstream-delegation/scripts/context.test.mjs",
+      "bytes": 2912,
+      "mtimeMs": 1781787726000
+    },
+    {
+      "path": ".codex/skills/workstream-delegation/SKILL.md",
+      "bytes": 17290,
+      "mtimeMs": 1782126972748
+    },
+    {
+      "path": "docs/blueprint/agent-skills-process.md",
+      "bytes": 1518,
+      "mtimeMs": 1781787704000
+    },
+    {
+      "path": "docs/blueprint/backend-design-placeholder.md",
+      "bytes": 15015,
+      "mtimeMs": 1781801240000
+    },
+    {
+      "path": "docs/blueprint/decisions.md",
+      "bytes": 1601,
+      "mtimeMs": 1781802084000
+    },
+    {
+      "path": "docs/blueprint/frontend-completion-roadmap.md",
+      "bytes": 1421,
+      "mtimeMs": 1781802080000
+    },
+    {
+      "path": "docs/blueprint/product-blueprint.md",
+      "bytes": 2253,
+      "mtimeMs": 1781802080000
+    },
+    {
+      "path": "docs/blueprint/ui-home-reference.md",
+      "bytes": 1063,
+      "mtimeMs": 1781729954000
+    },
+    {
+      "path": "docs/blueprint/workflow.md",
+      "bytes": 2776,
+      "mtimeMs": 1781787704000
+    },
+    {
+      "path": "miniprogram/config/environments.js",
+      "bytes": 2590,
+      "mtimeMs": 1782013422113
+    },
+    {
+      "path": "miniprogram/config/environments.ts",
+      "bytes": 2590,
+      "mtimeMs": 1782013423042
+    },
+    {
+      "path": "miniprogram/data/campus.js",
+      "bytes": 4440,
+      "mtimeMs": 1781781806000
+    },
+    {
+      "path": "miniprogram/data/campus.ts",
+      "bytes": 5525,
+      "mtimeMs": 1781781806000
+    },
+    {
+      "path": "miniprogram/data/employer.js",
+      "bytes": 12220,
+      "mtimeMs": 1781879466489
+    },
+    {
+      "path": "miniprogram/data/employer.ts",
+      "bytes": 12055,
+      "mtimeMs": 1781879467287
+    },
+    {
+      "path": "miniprogram/data/events.js",
+      "bytes": 5276,
+      "mtimeMs": 1781936851041
+    },
+    {
+      "path": "miniprogram/data/events.ts",
+      "bytes": 5241,
+      "mtimeMs": 1781936852041
+    },
+    {
+      "path": "miniprogram/data/jobs.js",
+      "bytes": 5149,
+      "mtimeMs": 1781877487454
+    },
+    {
+      "path": "miniprogram/data/jobs.ts",
+      "bytes": 5096,
+      "mtimeMs": 1781877488225
+    },
+    {
+      "path": "miniprogram/data/labor.js",
+      "bytes": 5212,
+      "mtimeMs": 1781764666000
+    },
+    {
+      "path": "miniprogram/data/labor.ts",
+      "bytes": 5184,
+      "mtimeMs": 1781764666000
+    },
+    {
+      "path": "miniprogram/data/messages.js",
+      "bytes": 3271,
+      "mtimeMs": 1781803712000
+    },
+    {
+      "path": "miniprogram/data/messages.ts",
+      "bytes": 3243,
+      "mtimeMs": 1781803712000
+    },
+    {
+      "path": "miniprogram/data/policy.js",
+      "bytes": 6458,
+      "mtimeMs": 1781764670000
+    },
+    {
+      "path": "miniprogram/data/policy.ts",
+      "bytes": 6429,
+      "mtimeMs": 1781764670000
+    },
+    {
+      "path": "miniprogram/data/return-home.js",
+      "bytes": 6118,
+      "mtimeMs": 1781764718000
+    },
+    {
+      "path": "miniprogram/data/return-home.ts",
+      "bytes": 6085,
+      "mtimeMs": 1781764718000
+    },
+    {
+      "path": "miniprogram/data/training-signup.js",
+      "bytes": 5634,
+      "mtimeMs": 1781781832000
+    },
+    {
+      "path": "miniprogram/data/training-signup.ts",
+      "bytes": 5597,
+      "mtimeMs": 1781781832000
+    },
+    {
+      "path": "miniprogram/data/training.js",
+      "bytes": 3964,
+      "mtimeMs": 1781781860000
+    },
+    {
+      "path": "miniprogram/data/training.ts",
+      "bytes": 3933,
+      "mtimeMs": 1781781860000
+    },
+    {
+      "path": "miniprogram/pages/campus/index.js",
+      "bytes": 966,
+      "mtimeMs": 1781781806000
+    },
+    {
+      "path": "miniprogram/pages/campus/index.json",
+      "bytes": 44,
+      "mtimeMs": 1781764620000
+    },
+    {
+      "path": "miniprogram/pages/campus/index.ts",
+      "bytes": 1028,
+      "mtimeMs": 1781781806000
+    },
+    {
+      "path": "miniprogram/pages/campus/index.wxml",
+      "bytes": 4066,
+      "mtimeMs": 1781764620000
+    },
+    {
+      "path": "miniprogram/pages/campus/index.wxss",
+      "bytes": 6481,
+      "mtimeMs": 1781883816465
+    },
+    {
+      "path": "miniprogram/pages/employer-candidates/index.js",
+      "bytes": 10426,
+      "mtimeMs": 1782033450539
+    },
+    {
+      "path": "miniprogram/pages/employer-candidates/index.json",
+      "bytes": 82,
+      "mtimeMs": 1781878587766
+    },
+    {
+      "path": "miniprogram/pages/employer-candidates/index.ts",
+      "bytes": 10426,
+      "mtimeMs": 1782033451681
+    },
+    {
+      "path": "miniprogram/pages/employer-candidates/index.wxml",
+      "bytes": 5139,
+      "mtimeMs": 1782032261924
+    },
+    {
+      "path": "miniprogram/pages/employer-candidates/index.wxss",
+      "bytes": 4359,
+      "mtimeMs": 1782032263138
+    },
+    {
+      "path": "miniprogram/pages/employer-job-form/index.js",
+      "bytes": 5744,
+      "mtimeMs": 1782032301345
+    },
+    {
+      "path": "miniprogram/pages/employer-job-form/index.json",
+      "bytes": 79,
+      "mtimeMs": 1781878395329
+    },
+    {
+      "path": "miniprogram/pages/employer-job-form/index.ts",
+      "bytes": 5744,
+      "mtimeMs": 1782032302573
+    },
+    {
+      "path": "miniprogram/pages/employer-job-form/index.wxml",
+      "bytes": 3066,
+      "mtimeMs": 1782032143044
+    },
+    {
+      "path": "miniprogram/pages/employer-job-form/index.wxss",
+      "bytes": 3508,
+      "mtimeMs": 1782032144056
+    },
+    {
+      "path": "miniprogram/pages/employer-job-preview/index.js",
+      "bytes": 4932,
+      "mtimeMs": 1782032303745
+    },
+    {
+      "path": "miniprogram/pages/employer-job-preview/index.json",
+      "bytes": 79,
+      "mtimeMs": 1781878463947
+    },
+    {
+      "path": "miniprogram/pages/employer-job-preview/index.ts",
+      "bytes": 4932,
+      "mtimeMs": 1782032304869
+    },
+    {
+      "path": "miniprogram/pages/employer-job-preview/index.wxml",
+      "bytes": 3361,
+      "mtimeMs": 1782032196497
+    },
+    {
+      "path": "miniprogram/pages/employer-job-preview/index.wxss",
+      "bytes": 3881,
+      "mtimeMs": 1782032197573
+    },
+    {
+      "path": "miniprogram/pages/employer/index.js",
+      "bytes": 6096,
+      "mtimeMs": 1782030882148
+    },
+    {
+      "path": "miniprogram/pages/employer/index.json",
+      "bytes": 113,
+      "mtimeMs": 1781878323528
+    },
+    {
+      "path": "miniprogram/pages/employer/index.ts",
+      "bytes": 6096,
+      "mtimeMs": 1782030884774
+    },
+    {
+      "path": "miniprogram/pages/employer/index.wxml",
+      "bytes": 5266,
+      "mtimeMs": 1782030935199
+    },
+    {
+      "path": "miniprogram/pages/employer/index.wxss",
+      "bytes": 5468,
+      "mtimeMs": 1782030936267
+    },
+    {
+      "path": "miniprogram/pages/event-detail/index.js",
+      "bytes": 2784,
+      "mtimeMs": 1781937089363
+    },
+    {
+      "path": "miniprogram/pages/event-detail/index.json",
+      "bytes": 81,
+      "mtimeMs": 1781937091351
+    },
+    {
+      "path": "miniprogram/pages/event-detail/index.ts",
+      "bytes": 2784,
+      "mtimeMs": 1781937090363
+    },
+    {
+      "path": "miniprogram/pages/event-detail/index.wxml",
+      "bytes": 3103,
+      "mtimeMs": 1781937092270
+    },
+    {
+      "path": "miniprogram/pages/event-detail/index.wxss",
+      "bytes": 4631,
+      "mtimeMs": 1781937093198
+    },
+    {
+      "path": "miniprogram/pages/events/index.js",
+      "bytes": 2785,
+      "mtimeMs": 1781936971991
+    },
+    {
+      "path": "miniprogram/pages/events/index.json",
+      "bytes": 81,
+      "mtimeMs": 1781936973899
+    },
+    {
+      "path": "miniprogram/pages/events/index.ts",
+      "bytes": 2785,
+      "mtimeMs": 1781936972977
+    },
+    {
+      "path": "miniprogram/pages/events/index.wxml",
+      "bytes": 3401,
+      "mtimeMs": 1781936974881
+    },
+    {
+      "path": "miniprogram/pages/events/index.wxss",
+      "bytes": 5666,
+      "mtimeMs": 1781936975835
+    },
+    {
+      "path": "miniprogram/pages/home/index.wxml",
+      "bytes": 3137,
+      "mtimeMs": 1782031161655
+    },
+    {
+      "path": "miniprogram/pages/job-detail/index.js",
+      "bytes": 4241,
+      "mtimeMs": 1782016059652
+    },
+    {
+      "path": "miniprogram/pages/job-detail/index.json",
+      "bytes": 48,
+      "mtimeMs": 1781871393812
+    },
+    {
+      "path": "miniprogram/pages/job-detail/index.ts",
+      "bytes": 4241,
+      "mtimeMs": 1782016061975
+    },
+    {
+      "path": "miniprogram/pages/job-detail/index.wxml",
+      "bytes": 4681,
+      "mtimeMs": 1782016106560
+    },
+    {
+      "path": "miniprogram/pages/job-detail/index.wxss",
+      "bytes": 5272,
+      "mtimeMs": 1782016107554
+    },
+    {
+      "path": "miniprogram/pages/jobs/index.js",
+      "bytes": 5486,
+      "mtimeMs": 1782016325708
+    },
+    {
+      "path": "miniprogram/pages/jobs/index.json",
+      "bytes": 41,
+      "mtimeMs": 1781730262000
+    },
+    {
+      "path": "miniprogram/pages/jobs/index.ts",
+      "bytes": 5486,
+      "mtimeMs": 1782016326834
+    },
+    {
+      "path": "miniprogram/pages/jobs/index.wxml",
+      "bytes": 5415,
+      "mtimeMs": 1782016266947
+    },
+    {
+      "path": "miniprogram/pages/jobs/index.wxss",
+      "bytes": 8757,
+      "mtimeMs": 1782016267929
+    },
+    {
+      "path": "miniprogram/pages/labor/index.js",
+      "bytes": 1640,
+      "mtimeMs": 1781764666000
+    },
+    {
+      "path": "miniprogram/pages/labor/index.json",
+      "bytes": 47,
+      "mtimeMs": 1781764668000
+    },
+    {
+      "path": "miniprogram/pages/labor/index.ts",
+      "bytes": 1879,
+      "mtimeMs": 1781764668000
+    },
+    {
+      "path": "miniprogram/pages/labor/index.wxml",
+      "bytes": 3664,
+      "mtimeMs": 1781764668000
+    },
+    {
+      "path": "miniprogram/pages/labor/index.wxss",
+      "bytes": 5988,
+      "mtimeMs": 1781883817292
+    },
+    {
+      "path": "miniprogram/pages/message-detail/index.js",
+      "bytes": 7007,
+      "mtimeMs": 1782032167282
+    },
+    {
+      "path": "miniprogram/pages/message-detail/index.json",
+      "bytes": 47,
+      "mtimeMs": 1781803956000
+    },
+    {
+      "path": "miniprogram/pages/message-detail/index.ts",
+      "bytes": 7007,
+      "mtimeMs": 1782032168455
+    },
+    {
+      "path": "miniprogram/pages/message-detail/index.wxml",
+      "bytes": 5213,
+      "mtimeMs": 1782031041652
+    },
+    {
+      "path": "miniprogram/pages/message-detail/index.wxss",
+      "bytes": 6561,
+      "mtimeMs": 1782031086627
+    },
+    {
+      "path": "miniprogram/pages/messages/index.js",
+      "bytes": 10025,
+      "mtimeMs": 1782031142304
+    },
+    {
+      "path": "miniprogram/pages/messages/index.json",
+      "bytes": 47,
+      "mtimeMs": 1781803802000
+    },
+    {
+      "path": "miniprogram/pages/messages/index.ts",
+      "bytes": 10025,
+      "mtimeMs": 1782031143475
+    },
+    {
+      "path": "miniprogram/pages/messages/index.wxml",
+      "bytes": 5252,
+      "mtimeMs": 1782031038940
+    },
+    {
+      "path": "miniprogram/pages/messages/index.wxss",
+      "bytes": 6842,
+      "mtimeMs": 1782031085547
+    },
+    {
+      "path": "miniprogram/pages/policy/index.js",
+      "bytes": 1576,
+      "mtimeMs": 1781764670000
+    },
+    {
+      "path": "miniprogram/pages/policy/index.json",
+      "bytes": 126,
+      "mtimeMs": 1781764670000
+    },
+    {
+      "path": "miniprogram/pages/policy/index.ts",
+      "bytes": 1669,
+      "mtimeMs": 1781764670000
+    },
+    {
+      "path": "miniprogram/pages/policy/index.wxml",
+      "bytes": 4700,
+      "mtimeMs": 1781764670000
+    },
+    {
+      "path": "miniprogram/pages/policy/index.wxss",
+      "bytes": 8325,
+      "mtimeMs": 1781883815635
+    },
+    {
+      "path": "miniprogram/pages/return-home/index.js",
+      "bytes": 1373,
+      "mtimeMs": 1781764718000
+    },
+    {
+      "path": "miniprogram/pages/return-home/index.json",
+      "bytes": 161,
+      "mtimeMs": 1781764720000
+    },
+    {
+      "path": "miniprogram/pages/return-home/index.ts",
+      "bytes": 1560,
+      "mtimeMs": 1781764720000
+    },
+    {
+      "path": "miniprogram/pages/return-home/index.wxml",
+      "bytes": 6351,
+      "mtimeMs": 1781764720000
+    },
+    {
+      "path": "miniprogram/pages/return-home/index.wxss",
+      "bytes": 8054,
+      "mtimeMs": 1781764720000
+    },
+    {
+      "path": "miniprogram/pages/training-signup/index.js",
+      "bytes": 1505,
+      "mtimeMs": 1781781832000
+    },
+    {
+      "path": "miniprogram/pages/training-signup/index.json",
+      "bytes": 47,
+      "mtimeMs": 1781764634000
+    },
+    {
+      "path": "miniprogram/pages/training-signup/index.ts",
+      "bytes": 1566,
+      "mtimeMs": 1781781832000
+    },
+    {
+      "path": "miniprogram/pages/training-signup/index.wxml",
+      "bytes": 3994,
+      "mtimeMs": 1781781832000
+    },
+    {
+      "path": "miniprogram/pages/training-signup/index.wxss",
+      "bytes": 6603,
+      "mtimeMs": 1781883818130
+    },
+    {
+      "path": "miniprogram/pages/training/index.js",
+      "bytes": 1283,
+      "mtimeMs": 1781781860000
+    },
+    {
+      "path": "miniprogram/pages/training/index.json",
+      "bytes": 47,
+      "mtimeMs": 1781764682000
+    },
+    {
+      "path": "miniprogram/pages/training/index.ts",
+      "bytes": 1398,
+      "mtimeMs": 1781781860000
+    },
+    {
+      "path": "miniprogram/pages/training/index.wxml",
+      "bytes": 3378,
+      "mtimeMs": 1781781860000
+    },
+    {
+      "path": "miniprogram/pages/training/index.wxss",
+      "bytes": 5716,
+      "mtimeMs": 1781883814805
+    },
+    {
+      "path": "miniprogram/services/.gitkeep",
+      "bytes": 1,
+      "mtimeMs": 1781729956000
+    },
+    {
+      "path": "miniprogram/services/auth-session.js",
+      "bytes": 2730,
+      "mtimeMs": 1782032727873
+    },
+    {
+      "path": "miniprogram/services/auth-session.ts",
+      "bytes": 2730,
+      "mtimeMs": 1782032729034
+    },
+    {
+      "path": "miniprogram/services/employer.js",
+      "bytes": 8154,
+      "mtimeMs": 1782031642722
+    },
+    {
+      "path": "miniprogram/services/employer.ts",
+      "bytes": 8154,
+      "mtimeMs": 1782031643930
+    },
+    {
+      "path": "miniprogram/services/errors.js",
+      "bytes": 2988,
+      "mtimeMs": 1782013924941
+    },
+    {
+      "path": "miniprogram/services/errors.ts",
+      "bytes": 2988,
+      "mtimeMs": 1782013925937
+    },
+    {
+      "path": "miniprogram/services/jobs.js",
+      "bytes": 5346,
+      "mtimeMs": 1782015862378
+    },
+    {
+      "path": "miniprogram/services/jobs.ts",
+      "bytes": 5346,
+      "mtimeMs": 1782015863627
+    },
+    {
+      "path": "miniprogram/services/messages.js",
+      "bytes": 4411,
+      "mtimeMs": 1782033470065
+    },
+    {
+      "path": "miniprogram/services/messages.ts",
+      "bytes": 4411,
+      "mtimeMs": 1782033471201
+    },
+    {
+      "path": "miniprogram/services/mock-runtime.js",
+      "bytes": 3673,
+      "mtimeMs": 1782013927043
+    },
+    {
+      "path": "miniprogram/services/mock-runtime.ts",
+      "bytes": 3673,
+      "mtimeMs": 1782013928090
+    },
+    {
+      "path": "miniprogram/services/README.md",
+      "bytes": 2422,
+      "mtimeMs": 1782013960524
+    },
+    {
+      "path": "miniprogram/services/registry.js",
+      "bytes": 2421,
+      "mtimeMs": 1782013922951
+    },
+    {
+      "path": "miniprogram/services/registry.ts",
+      "bytes": 2421,
+      "mtimeMs": 1782013923946
+    },
+    {
+      "path": "miniprogram/services/submission-guard.js",
+      "bytes": 878,
+      "mtimeMs": 1782013194094
+    },
+    {
+      "path": "miniprogram/services/submission-guard.ts",
+      "bytes": 878,
+      "mtimeMs": 1782013195108
+    },
+    {
+      "path": "miniprogram/services/transport.js",
+      "bytes": 2630,
+      "mtimeMs": 1782013107034
+    },
+    {
+      "path": "miniprogram/services/transport.ts",
+      "bytes": 2630,
+      "mtimeMs": 1782013108162
+    },
+    {
+      "path": "workstreams/00-main-control/archive/20260618-context-governance-v1/HANDOFF.md",
+      "bytes": 868,
+      "mtimeMs": 1781788222000
+    },
+    {
+      "path": "workstreams/00-main-control/archive/20260618-context-governance-v1/TASKS.md",
+      "bytes": 625,
+      "mtimeMs": 1781788222000
+    },
+    {
+      "path": "workstreams/00-main-control/archive/20260619-backend-architecture-review-v1/HANDOFF.md",
+      "bytes": 830,
+      "mtimeMs": 1781801474000
+    },
+    {
+      "path": "workstreams/00-main-control/archive/20260619-backend-architecture-review-v1/TASKS.md",
+      "bytes": 579,
+      "mtimeMs": 1781801474000
+    },
+    {
+      "path": "workstreams/00-main-control/archive/20260619-frontend-acceptance-closeout-v1/HANDOFF.md",
+      "bytes": 946,
+      "mtimeMs": 1781800408000
+    },
+    {
+      "path": "workstreams/00-main-control/archive/20260619-frontend-acceptance-closeout-v1/TASKS.md",
+      "bytes": 578,
+      "mtimeMs": 1781800408000
+    },
+    {
+      "path": "workstreams/00-main-control/archive/20260619-frontend-completion-roadmap-v1/HANDOFF.md",
+      "bytes": 797,
+      "mtimeMs": 1781802202000
+    },
+    {
+      "path": "workstreams/00-main-control/archive/20260619-frontend-completion-roadmap-v1/TASKS.md",
+      "bytes": 485,
+      "mtimeMs": 1781802202000
+    },
+    {
+      "path": "workstreams/00-main-control/archive/20260619-messages-frontend-review-v1/HANDOFF.md",
+      "bytes": 638,
+      "mtimeMs": 1781804328000
+    },
+    {
+      "path": "workstreams/00-main-control/archive/20260619-messages-frontend-review-v1/TASKS.md",
+      "bytes": 405,
+      "mtimeMs": 1781804328000
+    },
+    {
+      "path": "workstreams/00-main-control/archive/20260619-profile-frontend-review-v1/HANDOFF.md",
+      "bytes": 633,
+      "mtimeMs": 1781803386000
+    },
+    {
+      "path": "workstreams/00-main-control/archive/20260619-profile-frontend-review-v1/TASKS.md",
+      "bytes": 383,
+      "mtimeMs": 1781803386000
+    },
+    {
+      "path": "workstreams/00-main-control/archive/initial-migration-2026-06-18/HANDOFF.md",
+      "bytes": 3651,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/00-main-control/archive/initial-migration-2026-06-18/TASKS.md",
+      "bytes": 1534,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/00-main-control/HANDOFF.md",
+      "bytes": 883,
+      "mtimeMs": 1781804328000
+    },
+    {
+      "path": "workstreams/00-main-control/SPEC.md",
+      "bytes": 845,
+      "mtimeMs": 1781787606000
+    },
+    {
+      "path": "workstreams/00-main-control/STATE.json",
+      "bytes": 1277,
+      "mtimeMs": 1781804328000
+    },
+    {
+      "path": "workstreams/00-main-control/TASKS.md",
+      "bytes": 301,
+      "mtimeMs": 1781804328000
+    },
+    {
+      "path": "workstreams/01-project-shell/archive/20260619-frontend-route-integration-v2/HANDOFF.md",
+      "bytes": 1480,
+      "mtimeMs": 1781880870034
+    },
+    {
+      "path": "workstreams/01-project-shell/archive/20260619-frontend-route-integration-v2/TASKS.md",
+      "bytes": 373,
+      "mtimeMs": 1781880870034
+    },
+    {
+      "path": "workstreams/01-project-shell/archive/20260619-shell-and-route-integration-v1/HANDOFF.md",
+      "bytes": 1045,
+      "mtimeMs": 1781800350000
+    },
+    {
+      "path": "workstreams/01-project-shell/archive/20260619-shell-and-route-integration-v1/TASKS.md",
+      "bytes": 374,
+      "mtimeMs": 1781800350000
+    },
+    {
+      "path": "workstreams/01-project-shell/archive/20260620-devtools-project-root-fix-v1/HANDOFF.md",
+      "bytes": 1066,
+      "mtimeMs": 1781934301292
+    },
+    {
+      "path": "workstreams/01-project-shell/archive/20260620-devtools-project-root-fix-v1/TASKS.md",
+      "bytes": 372,
+      "mtimeMs": 1781934301291
+    },
+    {
+      "path": "workstreams/01-project-shell/archive/20260620-events-fifth-tab-integration-v1/HANDOFF.md",
+      "bytes": 1158,
+      "mtimeMs": 1781938188988
+    },
+    {
+      "path": "workstreams/01-project-shell/archive/20260620-events-fifth-tab-integration-v1/TASKS.md",
+      "bytes": 375,
+      "mtimeMs": 1781938188987
+    },
+    {
+      "path": "workstreams/01-project-shell/archive/20260621-frontend-service-foundation-v1/HANDOFF.md",
+      "bytes": 1285,
+      "mtimeMs": 1782014095318
+    },
+    {
+      "path": "workstreams/01-project-shell/archive/20260621-frontend-service-foundation-v1/TASKS.md",
+      "bytes": 374,
+      "mtimeMs": 1782014095317
+    },
+    {
+      "path": "workstreams/01-project-shell/archive/initial-migration-2026-06-18/HANDOFF.md",
+      "bytes": 3220,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/01-project-shell/archive/initial-migration-2026-06-18/TASKS.md",
+      "bytes": 873,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/01-project-shell/HANDOFF.md",
+      "bytes": 1295,
+      "mtimeMs": 1782014095323
+    },
+    {
+      "path": "workstreams/01-project-shell/SPEC.md",
+      "bytes": 1782,
+      "mtimeMs": 1782013992297
+    },
+    {
+      "path": "workstreams/01-project-shell/STATE.json",
+      "bytes": 1812,
+      "mtimeMs": 1782014095320
+    },
+    {
+      "path": "workstreams/01-project-shell/TASKS.md",
+      "bytes": 305,
+      "mtimeMs": 1782014095321
+    },
+    {
+      "path": "workstreams/02-home-ui/archive/20260619-home-eight-entry-integration-v1/HANDOFF.md",
+      "bytes": 882,
+      "mtimeMs": 1781800350000
+    },
+    {
+      "path": "workstreams/02-home-ui/archive/20260619-home-eight-entry-integration-v1/TASKS.md",
+      "bytes": 369,
+      "mtimeMs": 1781800350000
+    },
+    {
+      "path": "workstreams/02-home-ui/archive/20260619-quality-nav-failure-v1/HANDOFF.md",
+      "bytes": 903,
+      "mtimeMs": 1781884658202
+    },
+    {
+      "path": "workstreams/02-home-ui/archive/20260619-quality-nav-failure-v1/TASKS.md",
+      "bytes": 360,
+      "mtimeMs": 1781884658201
+    },
+    {
+      "path": "workstreams/02-home-ui/archive/20260621-home-functional-closure-v1/HANDOFF.md",
+      "bytes": 973,
+      "mtimeMs": 1782012657885
+    },
+    {
+      "path": "workstreams/02-home-ui/archive/20260621-home-functional-closure-v1/TASKS.md",
+      "bytes": 364,
+      "mtimeMs": 1782012657884
+    },
+    {
+      "path": "workstreams/02-home-ui/archive/20260621-runtime-arrow-copy-fix-v1/HANDOFF.md",
+      "bytes": 826,
+      "mtimeMs": 1782033846765
+    },
+    {
+      "path": "workstreams/02-home-ui/archive/20260621-runtime-arrow-copy-fix-v1/TASKS.md",
+      "bytes": 363,
+      "mtimeMs": 1782033846764
+    },
+    {
+      "path": "workstreams/02-home-ui/archive/initial-migration-2026-06-18/HANDOFF.md",
+      "bytes": 6951,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/02-home-ui/archive/initial-migration-2026-06-18/TASKS.md",
+      "bytes": 2847,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/02-home-ui/HANDOFF.md",
+      "bytes": 836,
+      "mtimeMs": 1782033846770
+    },
+    {
+      "path": "workstreams/02-home-ui/SPEC.md",
+      "bytes": 850,
+      "mtimeMs": 1782031223980
+    },
+    {
+      "path": "workstreams/02-home-ui/STATE.json",
+      "bytes": 1218,
+      "mtimeMs": 1782033846767
+    },
+    {
+      "path": "workstreams/02-home-ui/TASKS.md",
+      "bytes": 294,
+      "mtimeMs": 1782033846768
+    },
+    {
+      "path": "workstreams/03-jobs/archive/20260619-jobs-frontend-flow-v2/HANDOFF.md",
+      "bytes": 1182,
+      "mtimeMs": 1781877639992
+    },
+    {
+      "path": "workstreams/03-jobs/archive/20260619-jobs-frontend-flow-v2/TASKS.md",
+      "bytes": 356,
+      "mtimeMs": 1781877639992
+    },
+    {
+      "path": "workstreams/03-jobs/archive/20260619-jobs-static-ui-v1/HANDOFF.md",
+      "bytes": 876,
+      "mtimeMs": 1781800350000
+    },
+    {
+      "path": "workstreams/03-jobs/archive/20260619-jobs-static-ui-v1/TASKS.md",
+      "bytes": 352,
+      "mtimeMs": 1781800350000
+    },
+    {
+      "path": "workstreams/03-jobs/archive/20260619-quality-route-copy-v1/HANDOFF.md",
+      "bytes": 958,
+      "mtimeMs": 1781884658976
+    },
+    {
+      "path": "workstreams/03-jobs/archive/20260619-quality-route-copy-v1/TASKS.md",
+      "bytes": 356,
+      "mtimeMs": 1781884658976
+    },
+    {
+      "path": "workstreams/03-jobs/archive/20260621-jobs-service-states-pagination-v1/HANDOFF.md",
+      "bytes": 1612,
+      "mtimeMs": 1782030207003
+    },
+    {
+      "path": "workstreams/03-jobs/archive/20260621-jobs-service-states-pagination-v1/TASKS.md",
+      "bytes": 368,
+      "mtimeMs": 1782030207002
+    },
+    {
+      "path": "workstreams/03-jobs/archive/initial-migration-2026-06-18/HANDOFF.md",
+      "bytes": 2373,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/03-jobs/archive/initial-migration-2026-06-18/TASKS.md",
+      "bytes": 540,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/03-jobs/HANDOFF.md",
+      "bytes": 1622,
+      "mtimeMs": 1782030207008
+    },
+    {
+      "path": "workstreams/03-jobs/SPEC.md",
+      "bytes": 2570,
+      "mtimeMs": 1782015710665
+    },
+    {
+      "path": "workstreams/03-jobs/STATE.json",
+      "bytes": 2324,
+      "mtimeMs": 1782030207006
+    },
+    {
+      "path": "workstreams/03-jobs/TASKS.md",
+      "bytes": 299,
+      "mtimeMs": 1782030207007
+    },
+    {
+      "path": "workstreams/04-user-profile/archive/20260619-profile-frontend-framework-v1/HANDOFF.md",
+      "bytes": 1348,
+      "mtimeMs": 1781803338000
+    },
+    {
+      "path": "workstreams/04-user-profile/archive/20260619-profile-frontend-framework-v1/TASKS.md",
+      "bytes": 415,
+      "mtimeMs": 1781803338000
+    },
+    {
+      "path": "workstreams/04-user-profile/archive/20260619-quality-accessibility-copy-v1/HANDOFF.md",
+      "bytes": 1432,
+      "mtimeMs": 1781884659679
+    },
+    {
+      "path": "workstreams/04-user-profile/archive/20260619-quality-accessibility-copy-v1/TASKS.md",
+      "bytes": 372,
+      "mtimeMs": 1781884659679
+    },
+    {
+      "path": "workstreams/04-user-profile/archive/20260621-auth-role-privacy-frontend-v1/HANDOFF.md",
+      "bytes": 1493,
+      "mtimeMs": 1782015314196
+    },
+    {
+      "path": "workstreams/04-user-profile/archive/20260621-auth-role-privacy-frontend-v1/TASKS.md",
+      "bytes": 372,
+      "mtimeMs": 1782015314195
+    },
+    {
+      "path": "workstreams/04-user-profile/archive/20260621-auth-session-generation-v1/HANDOFF.md",
+      "bytes": 1164,
+      "mtimeMs": 1782033281655
+    },
+    {
+      "path": "workstreams/04-user-profile/archive/20260621-auth-session-generation-v1/TASKS.md",
+      "bytes": 369,
+      "mtimeMs": 1782033281653
+    },
+    {
+      "path": "workstreams/04-user-profile/HANDOFF.md",
+      "bytes": 1174,
+      "mtimeMs": 1782033281659
+    },
+    {
+      "path": "workstreams/04-user-profile/SPEC.md",
+      "bytes": 2055,
+      "mtimeMs": 1782032915470
+    },
+    {
+      "path": "workstreams/04-user-profile/STATE.json",
+      "bytes": 1784,
+      "mtimeMs": 1782033281658
+    },
+    {
+      "path": "workstreams/04-user-profile/TASKS.md",
+      "bytes": 300,
+      "mtimeMs": 1782033281659
+    },
+    {
+      "path": "workstreams/05-employer/archive/20260619-employer-frontend-flow-v2/HANDOFF.md",
+      "bytes": 1547,
+      "mtimeMs": 1781879638489
+    },
+    {
+      "path": "workstreams/05-employer/archive/20260619-employer-frontend-flow-v2/TASKS.md",
+      "bytes": 364,
+      "mtimeMs": 1781879638489
+    },
+    {
+      "path": "workstreams/05-employer/archive/20260619-employer-static-page-v1/HANDOFF.md",
+      "bytes": 892,
+      "mtimeMs": 1781800352000
+    },
+    {
+      "path": "workstreams/05-employer/archive/20260619-employer-static-page-v1/TASKS.md",
+      "bytes": 362,
+      "mtimeMs": 1781800352000
+    },
+    {
+      "path": "workstreams/05-employer/archive/20260619-quality-integration-compat-v1/HANDOFF.md",
+      "bytes": 1412,
+      "mtimeMs": 1781884660400
+    },
+    {
+      "path": "workstreams/05-employer/archive/20260619-quality-integration-compat-v1/TASKS.md",
+      "bytes": 368,
+      "mtimeMs": 1781884660400
+    },
+    {
+      "path": "workstreams/05-employer/archive/20260621-employer-service-guard-auth-v1/HANDOFF.md",
+      "bytes": 1701,
+      "mtimeMs": 1782033678754
+    },
+    {
+      "path": "workstreams/05-employer/archive/20260621-employer-service-guard-auth-v1/TASKS.md",
+      "bytes": 369,
+      "mtimeMs": 1782033678753
+    },
+    {
+      "path": "workstreams/05-employer/archive/initial-migration-2026-06-18/HANDOFF.md",
+      "bytes": 1990,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/05-employer/archive/initial-migration-2026-06-18/TASKS.md",
+      "bytes": 265,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/05-employer/HANDOFF.md",
+      "bytes": 1711,
+      "mtimeMs": 1782033678759
+    },
+    {
+      "path": "workstreams/05-employer/SPEC.md",
+      "bytes": 4609,
+      "mtimeMs": 1782030690811
+    },
+    {
+      "path": "workstreams/05-employer/STATE.json",
+      "bytes": 2424,
+      "mtimeMs": 1782033678756
+    },
+    {
+      "path": "workstreams/05-employer/TASKS.md",
+      "bytes": 300,
+      "mtimeMs": 1782033678757
+    },
+    {
+      "path": "workstreams/06-backend-api/archive/20260619-backend-architecture-v1/HANDOFF.md",
+      "bytes": 1001,
+      "mtimeMs": 1781801430000
+    },
+    {
+      "path": "workstreams/06-backend-api/archive/20260619-backend-architecture-v1/TASKS.md",
+      "bytes": 406,
+      "mtimeMs": 1781801430000
+    },
+    {
+      "path": "workstreams/06-backend-api/archive/initial-migration-2026-06-18/HANDOFF.md",
+      "bytes": 789,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/06-backend-api/archive/initial-migration-2026-06-18/TASKS.md",
+      "bytes": 280,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/06-backend-api/HANDOFF.md",
+      "bytes": 1944,
+      "mtimeMs": 1782147076428
+    },
+    {
+      "path": "workstreams/06-backend-api/SPEC.md",
+      "bytes": 2146,
+      "mtimeMs": 1781801306000
+    },
+    {
+      "path": "workstreams/06-backend-api/STATE.json",
+      "bytes": 1193,
+      "mtimeMs": 1782147170825
+    },
+    {
+      "path": "workstreams/06-backend-api/TASKS.md",
+      "bytes": 1384,
+      "mtimeMs": 1782147169520
+    },
+    {
+      "path": "workstreams/07-quality-review/archive/20260619-static-front-end-manual-acceptance-v1/HANDOFF.md",
+      "bytes": 916,
+      "mtimeMs": 1781800352000
+    },
+    {
+      "path": "workstreams/07-quality-review/archive/20260619-static-front-end-manual-acceptance-v1/TASKS.md",
+      "bytes": 650,
+      "mtimeMs": 1781800352000
+    },
+    {
+      "path": "workstreams/07-quality-review/archive/20260623-frontend-framework-review-v2-recheck/HANDOFF.md",
+      "bytes": 1788,
+      "mtimeMs": 1782145658228
+    },
+    {
+      "path": "workstreams/07-quality-review/archive/20260623-frontend-framework-review-v2-recheck/TASKS.md",
+      "bytes": 381,
+      "mtimeMs": 1782145658228
+    },
+    {
+      "path": "workstreams/07-quality-review/archive/initial-migration-2026-06-18/HANDOFF.md",
+      "bytes": 4552,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/07-quality-review/archive/initial-migration-2026-06-18/TASKS.md",
+      "bytes": 1378,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/07-quality-review/HANDOFF.md",
+      "bytes": 1798,
+      "mtimeMs": 1782145658233
+    },
+    {
+      "path": "workstreams/07-quality-review/SPEC.md",
+      "bytes": 716,
+      "mtimeMs": 1781734524000
+    },
+    {
+      "path": "workstreams/07-quality-review/STATE.json",
+      "bytes": 2778,
+      "mtimeMs": 1782145658231
+    },
+    {
+      "path": "workstreams/07-quality-review/TASKS.md",
+      "bytes": 312,
+      "mtimeMs": 1782145658232
+    },
+    {
+      "path": "workstreams/08-skill-training/archive/20260619-quality-touch-target-v1/HANDOFF.md",
+      "bytes": 1086,
+      "mtimeMs": 1781884661111
+    },
+    {
+      "path": "workstreams/08-skill-training/archive/20260619-quality-touch-target-v1/TASKS.md",
+      "bytes": 368,
+      "mtimeMs": 1781884661110
+    },
+    {
+      "path": "workstreams/08-skill-training/archive/20260619-training-static-page-v1/HANDOFF.md",
+      "bytes": 904,
+      "mtimeMs": 1781800352000
+    },
+    {
+      "path": "workstreams/08-skill-training/archive/20260619-training-static-page-v1/TASKS.md",
+      "bytes": 368,
+      "mtimeMs": 1781800352000
+    },
+    {
+      "path": "workstreams/08-skill-training/archive/initial-migration-2026-06-18/HANDOFF.md",
+      "bytes": 3070,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/08-skill-training/archive/initial-migration-2026-06-18/TASKS.md",
+      "bytes": 419,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/08-skill-training/HANDOFF.md",
+      "bytes": 1096,
+      "mtimeMs": 1781884661114
+    },
+    {
+      "path": "workstreams/08-skill-training/SPEC.md",
+      "bytes": 714,
+      "mtimeMs": 1781781916000
+    },
+    {
+      "path": "workstreams/08-skill-training/STATE.json",
+      "bytes": 1613,
+      "mtimeMs": 1781884661112
+    },
+    {
+      "path": "workstreams/08-skill-training/TASKS.md",
+      "bytes": 299,
+      "mtimeMs": 1781884661113
+    },
+    {
+      "path": "workstreams/09-policy/archive/20260619-policy-static-page-v1/HANDOFF.md",
+      "bytes": 882,
+      "mtimeMs": 1781800352000
+    },
+    {
+      "path": "workstreams/09-policy/archive/20260619-policy-static-page-v1/TASKS.md",
+      "bytes": 358,
+      "mtimeMs": 1781800352000
+    },
+    {
+      "path": "workstreams/09-policy/archive/20260619-quality-touch-target-v1/HANDOFF.md",
+      "bytes": 1125,
+      "mtimeMs": 1781884661832
+    },
+    {
+      "path": "workstreams/09-policy/archive/20260619-quality-touch-target-v1/TASKS.md",
+      "bytes": 360,
+      "mtimeMs": 1781884661832
+    },
+    {
+      "path": "workstreams/09-policy/archive/initial-migration-2026-06-18/HANDOFF.md",
+      "bytes": 2368,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/09-policy/archive/initial-migration-2026-06-18/TASKS.md",
+      "bytes": 293,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/09-policy/HANDOFF.md",
+      "bytes": 1135,
+      "mtimeMs": 1781884661837
+    },
+    {
+      "path": "workstreams/09-policy/SPEC.md",
+      "bytes": 704,
+      "mtimeMs": 1781764190000
+    },
+    {
+      "path": "workstreams/09-policy/STATE.json",
+      "bytes": 1650,
+      "mtimeMs": 1781884661835
+    },
+    {
+      "path": "workstreams/09-policy/TASKS.md",
+      "bytes": 291,
+      "mtimeMs": 1781884661836
+    },
+    {
+      "path": "workstreams/10-campus/archive/20260619-campus-static-page-v1/HANDOFF.md",
+      "bytes": 885,
+      "mtimeMs": 1781800352000
+    },
+    {
+      "path": "workstreams/10-campus/archive/20260619-campus-static-page-v1/TASKS.md",
+      "bytes": 358,
+      "mtimeMs": 1781800352000
+    },
+    {
+      "path": "workstreams/10-campus/archive/20260619-quality-touch-target-v1/HANDOFF.md",
+      "bytes": 1146,
+      "mtimeMs": 1781884662584
+    },
+    {
+      "path": "workstreams/10-campus/archive/20260619-quality-touch-target-v1/TASKS.md",
+      "bytes": 360,
+      "mtimeMs": 1781884662583
+    },
+    {
+      "path": "workstreams/10-campus/archive/initial-migration-2026-06-18/HANDOFF.md",
+      "bytes": 2959,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/10-campus/archive/initial-migration-2026-06-18/TASKS.md",
+      "bytes": 547,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/10-campus/HANDOFF.md",
+      "bytes": 1156,
+      "mtimeMs": 1781884662587
+    },
+    {
+      "path": "workstreams/10-campus/SPEC.md",
+      "bytes": 661,
+      "mtimeMs": 1781764190000
+    },
+    {
+      "path": "workstreams/10-campus/STATE.json",
+      "bytes": 1689,
+      "mtimeMs": 1781884662585
+    },
+    {
+      "path": "workstreams/10-campus/TASKS.md",
+      "bytes": 291,
+      "mtimeMs": 1781884662586
+    },
+    {
+      "path": "workstreams/11-labor-info/archive/20260619-labor-static-page-v1/HANDOFF.md",
+      "bytes": 885,
+      "mtimeMs": 1781800352000
+    },
+    {
+      "path": "workstreams/11-labor-info/archive/20260619-labor-static-page-v1/TASKS.md",
+      "bytes": 361,
+      "mtimeMs": 1781800352000
+    },
+    {
+      "path": "workstreams/11-labor-info/archive/20260619-quality-touch-target-v1/HANDOFF.md",
+      "bytes": 1071,
+      "mtimeMs": 1781884663301
+    },
+    {
+      "path": "workstreams/11-labor-info/archive/20260619-quality-touch-target-v1/TASKS.md",
+      "bytes": 364,
+      "mtimeMs": 1781884663300
+    },
+    {
+      "path": "workstreams/11-labor-info/archive/initial-migration-2026-06-18/HANDOFF.md",
+      "bytes": 2425,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/11-labor-info/archive/initial-migration-2026-06-18/TASKS.md",
+      "bytes": 414,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/11-labor-info/HANDOFF.md",
+      "bytes": 1081,
+      "mtimeMs": 1781884663304
+    },
+    {
+      "path": "workstreams/11-labor-info/SPEC.md",
+      "bytes": 680,
+      "mtimeMs": 1781764192000
+    },
+    {
+      "path": "workstreams/11-labor-info/STATE.json",
+      "bytes": 1603,
+      "mtimeMs": 1781884663303
+    },
+    {
+      "path": "workstreams/11-labor-info/TASKS.md",
+      "bytes": 295,
+      "mtimeMs": 1781884663304
+    },
+    {
+      "path": "workstreams/12-return-home/archive/20260619-return-home-static-page-v1/HANDOFF.md",
+      "bytes": 910,
+      "mtimeMs": 1781800352000
+    },
+    {
+      "path": "workstreams/12-return-home/archive/20260619-return-home-static-page-v1/TASKS.md",
+      "bytes": 368,
+      "mtimeMs": 1781800352000
+    },
+    {
+      "path": "workstreams/12-return-home/archive/initial-migration-2026-06-18/HANDOFF.md",
+      "bytes": 2334,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/12-return-home/archive/initial-migration-2026-06-18/TASKS.md",
+      "bytes": 244,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/12-return-home/HANDOFF.md",
+      "bytes": 920,
+      "mtimeMs": 1781800352000
+    },
+    {
+      "path": "workstreams/12-return-home/SPEC.md",
+      "bytes": 696,
+      "mtimeMs": 1781764192000
+    },
+    {
+      "path": "workstreams/12-return-home/STATE.json",
+      "bytes": 1336,
+      "mtimeMs": 1781800352000
+    },
+    {
+      "path": "workstreams/12-return-home/TASKS.md",
+      "bytes": 299,
+      "mtimeMs": 1781800352000
+    },
+    {
+      "path": "workstreams/13-training-signup/archive/20260619-quality-touch-target-v1/HANDOFF.md",
+      "bytes": 1115,
+      "mtimeMs": 1781884664025
+    },
+    {
+      "path": "workstreams/13-training-signup/archive/20260619-quality-touch-target-v1/TASKS.md",
+      "bytes": 369,
+      "mtimeMs": 1781884664024
+    },
+    {
+      "path": "workstreams/13-training-signup/archive/20260619-training-signup-static-page-v1/HANDOFF.md",
+      "bytes": 936,
+      "mtimeMs": 1781800352000
+    },
+    {
+      "path": "workstreams/13-training-signup/archive/20260619-training-signup-static-page-v1/TASKS.md",
+      "bytes": 376,
+      "mtimeMs": 1781800352000
+    },
+    {
+      "path": "workstreams/13-training-signup/archive/initial-migration-2026-06-18/HANDOFF.md",
+      "bytes": 2864,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/13-training-signup/archive/initial-migration-2026-06-18/TASKS.md",
+      "bytes": 765,
+      "mtimeMs": 1781787644000
+    },
+    {
+      "path": "workstreams/13-training-signup/HANDOFF.md",
+      "bytes": 1125,
+      "mtimeMs": 1781884664029
+    },
+    {
+      "path": "workstreams/13-training-signup/SPEC.md",
+      "bytes": 904,
+      "mtimeMs": 1781781832000
+    },
+    {
+      "path": "workstreams/13-training-signup/STATE.json",
+      "bytes": 1650,
+      "mtimeMs": 1781884664026
+    },
+    {
+      "path": "workstreams/13-training-signup/TASKS.md",
+      "bytes": 300,
+      "mtimeMs": 1781884664027
+    },
+    {
+      "path": "workstreams/14-messages/archive/20260619-messages-frontend-framework-v1/HANDOFF.md",
+      "bytes": 1492,
+      "mtimeMs": 1781804278000
+    },
+    {
+      "path": "workstreams/14-messages/archive/20260619-messages-frontend-framework-v1/TASKS.md",
+      "bytes": 401,
+      "mtimeMs": 1781804278000
+    },
+    {
+      "path": "workstreams/14-messages/archive/20260619-quality-accessibility-copy-v1/HANDOFF.md",
+      "bytes": 1302,
+      "mtimeMs": 1781884664789
+    },
+    {
+      "path": "workstreams/14-messages/archive/20260619-quality-accessibility-copy-v1/TASKS.md",
+      "bytes": 368,
+      "mtimeMs": 1781884664788
+    },
+    {
+      "path": "workstreams/14-messages/archive/20260621-messages-service-guard-auth-v1/HANDOFF.md",
+      "bytes": 1355,
+      "mtimeMs": 1782033758924
+    },
+    {
+      "path": "workstreams/14-messages/archive/20260621-messages-service-guard-auth-v1/TASKS.md",
+      "bytes": 369,
+      "mtimeMs": 1782033758923
+    },
+    {
+      "path": "workstreams/14-messages/HANDOFF.md",
+      "bytes": 1365,
+      "mtimeMs": 1782033758929
+    },
+    {
+      "path": "workstreams/14-messages/SPEC.md",
+      "bytes": 1930,
+      "mtimeMs": 1782031296140
+    },
+    {
+      "path": "workstreams/14-messages/STATE.json",
+      "bytes": 2017,
+      "mtimeMs": 1782033758926
+    },
+    {
+      "path": "workstreams/14-messages/TASKS.md",
+      "bytes": 300,
+      "mtimeMs": 1782033758928
+    },
+    {
+      "path": "workstreams/15-events/archive/20260620-events-frontend-framework-v1/HANDOFF.md",
+      "bytes": 1200,
+      "mtimeMs": 1781937549481
+    },
+    {
+      "path": "workstreams/15-events/archive/20260620-events-frontend-framework-v1/TASKS.md",
+      "bytes": 365,
+      "mtimeMs": 1781937549480
+    },
+    {
+      "path": "workstreams/15-events/HANDOFF.md",
+      "bytes": 1210,
+      "mtimeMs": 1781937549485
+    },
+    {
+      "path": "workstreams/15-events/SPEC.md",
+      "bytes": 2034,
+      "mtimeMs": 1781936765349
+    },
+    {
+      "path": "workstreams/15-events/STATE.json",
+      "bytes": 1829,
+      "mtimeMs": 1781937549482
+    },
+    {
+      "path": "workstreams/15-events/TASKS.md",
+      "bytes": 296,
+      "mtimeMs": 1781937549484
+    }
+  ],
+  "fingerprint": "3ad84aba73acaeba38b626bd8eb7f2af91400c9ccdf1d4c5a133ed2831ff3d64"
+}

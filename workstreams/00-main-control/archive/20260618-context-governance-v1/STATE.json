@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "workstream": "00-main-control",
+  "title": "总控与上下文治理",
+  "phase": "REVIEW",
+  "state": "accepted",
+  "priority": "P0",
+  "currentSlice": "context-governance-v1",
+  "ownerThreadId": "current-main-thread",
+  "summary": "持久化记忆、精简交接、本地混合检索、自动状态快照和 SHIP 轮换协议已落地。",
+  "nextAction": "归档 context-governance-v1，并从下一切片开始强制使用新协议。",
+  "blockers": [],
+  "dependencies": [],
+  "evidence": [
+    {
+      "kind": "unit-test",
+      "status": "passed",
+      "summary": "五项 Node 单元测试覆盖重复抑制、状态冲突、缺失字段和检索相关性",
+      "ref": ".codex/skills/workstream-delegation/scripts/context.test.mjs"
+    },
+    {
+      "kind": "repository-validation",
+      "status": "passed",
+      "summary": "十三个 workstream 校验为零错误、零警告",
+      "ref": "workstreams/00-main-control/STATUS.md"
+    },
+    {
+      "kind": "retrieval-test",
+      "status": "passed",
+      "summary": "职位、培训报名、首页路由和后端查询均返回相关当前内容",
+      "ref": "workstreams/00-main-control/context/index.jsonl"
+    },
+    {
+      "kind": "idempotence-test",
+      "status": "passed",
+      "summary": "连续刷新保持 STATUS、代码清单、索引和 manifest 哈希不变",
+      "ref": ".codex/skills/workstream-delegation/scripts/context.mjs"
+    },
+    {
+      "kind": "forward-test",
+      "status": "passed",
+      "summary": "全新子 Agent 仅凭最小上下文正确恢复培训报名状态并生成验证包",
+      "ref": ".codex/skills/workstream-delegation/references/context-protocol.md"
+    }
+  ],
+  "tags": [
+    "control",
+    "memory",
+    "rag",
+    "workflow"
+  ],
+  "codePaths": [
+    ".codex/skills/workstream-delegation/**",
+    "docs/blueprint/**",
+    "workstreams/00-main-control/**"
+  ],
+  "updatedAt": "2026-06-18T21:09:26+08:00",
+  "handoffRef": "HANDOFF.md"
+}

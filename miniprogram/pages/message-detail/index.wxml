@@ -1,0 +1,132 @@
+<view class="detail-page">
+  <view class="detail-hero">
+    <view class="hero-top" wx:if="{{detail}}">
+      <text class="category-label">{{detail.categoryLabel}}</text>
+      <text class="detail-time">{{detail.time}}</text>
+    </view>
+    <view class="detail-title">{{detail ? detail.title : '消息详情'}}</view>
+    <view class="detail-subtitle">
+      {{detail ? (viewKind === 'conversation' ? '招聘沟通演示' : '通知进度演示') : '本地消息状态演示'}}
+    </view>
+  </view>
+
+  <view class="feedback-card">{{feedback}}</view>
+
+  <view class="scenario-card">
+    <view class="scenario-title">本地状态演示</view>
+    <scroll-view class="scenario-scroll" scroll-x="true" show-scrollbar="false">
+      <view class="scenario-row">
+        <view
+          class="scenario-chip {{activeScenario === item.id ? 'scenario-chip-active' : ''}}"
+          wx:for="{{scenarioOptions}}"
+          wx:key="id"
+          bindtap="onScenarioTap"
+          data-scenario="{{item.id}}"
+        >{{item.name}}</view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="state-card" wx:if="{{loadState === 'loading'}}">
+    <view class="state-title">正在读取本地详情</view>
+    <view class="state-text">请稍候，不会连接企业或服务器。</view>
+  </view>
+
+  <view class="state-card" wx:elif="{{loadState === 'unauthorized'}}">
+    <view class="state-title">{{errorTitle}}</view>
+    <view class="state-text">{{errorMessage}}</view>
+    <button
+      class="state-button"
+      bindtap="onDemoLoginTap"
+      disabled="{{authPending}}"
+      loading="{{authPending}}"
+    >进入本地演示</button>
+    <view class="state-note">仅更新内存身份，不调用微信登录，也不会保存账号。</view>
+  </view>
+
+  <view class="state-card state-card-error" wx:elif="{{loadState === 'error'}}">
+    <view class="state-kicker">{{errorKind}}</view>
+    <view class="state-title">{{errorTitle}}</view>
+    <view class="state-text">{{errorMessage}}</view>
+    <button class="state-button" bindtap="onRetryTap">重试本地读取</button>
+  </view>
+
+  <view class="state-card" wx:elif="{{loadState === 'empty'}}">
+    <view class="state-title">没有找到这条消息</view>
+    <view class="state-text">这是本地空状态，没有读取或替换成其他消息。</view>
+    <button class="state-button" bindtap="onRetryTap">重新读取</button>
+  </view>
+
+  <view wx:if="{{loadState === 'ready'}}">
+    <view class="job-card" wx:if="{{detail.job}}">
+      <view class="section-kicker">关联岗位</view>
+      <view class="job-top">
+        <view class="job-copy">
+          <text class="job-title">{{detail.job.title}}</text>
+          <text class="company-name">{{detail.job.company}}</text>
+        </view>
+        <text class="salary">{{detail.job.salary}}</text>
+      </view>
+      <view class="job-location">工作地点：{{detail.job.location}}</view>
+    </view>
+
+    <view class="content-card" wx:if="{{viewKind === 'notification'}}">
+      <view class="section-title">通知时间线</view>
+      <view class="timeline-list">
+        <view class="timeline-item" wx:for="{{detail.timeline}}" wx:key="id">
+          <view class="timeline-marker"></view>
+          <view class="timeline-main">
+            <view class="timeline-head">
+              <text class="timeline-label">{{item.label}}</text>
+              <text class="timeline-time">{{item.time}}</text>
+            </view>
+            <text class="timeline-content">{{item.content}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="truth-note">以上为本地演示时间线，不代表企业或平台的实时处理结果。</view>
+    </view>
+
+    <view wx:if="{{viewKind === 'conversation'}}">
+      <view class="content-card">
+        <view class="section-title">沟通记录</view>
+        <view class="conversation-list">
+          <view
+            class="conversation-item {{item.side === 'user' ? 'conversation-item-user' : ''}}"
+            wx:for="{{detail.conversation}}"
+            wx:key="id"
+          >
+            <view class="speaker-row">
+              <text class="speaker-name">{{item.speaker}}</text>
+              <text class="bubble-time">{{item.time}}</text>
+            </view>
+            <view class="message-bubble">{{item.content}}</view>
+          </view>
+        </view>
+      </view>
+
+      <view class="composer-card">
+        <view class="section-title">回复草稿</view>
+        <textarea
+          class="draft-input"
+          value="{{draft}}"
+          maxlength="120"
+          auto-height="true"
+          placeholder="输入想咨询的内容，仅保留在本页"
+          bindinput="onDraftInput"
+        ></textarea>
+        <view class="composer-meta">
+          <text>{{draftLength}}/120</text>
+          <text>不会上传或保存</text>
+        </view>
+        <button
+          class="send-button"
+          bindtap="onSendTap"
+          disabled="{{sendPending}}"
+          loading="{{sendPending}}"
+        >仅校验草稿，不会发送</button>
+        <view class="send-note">只做异步本地校验，不会新增消息、联系招聘方或产生送达状态。</view>
+      </view>
+    </view>
+  </view>
+</view>

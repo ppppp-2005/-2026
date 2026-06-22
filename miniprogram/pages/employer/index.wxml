@@ -1,0 +1,103 @@
+<view class="page">
+  <view class="hero">
+    <view class="hero-top">
+      <text class="hero-label">企业招人</text>
+      <text class="demo-badge">本地演示</text>
+    </view>
+    <text class="hero-title">今天的招聘事情，一页看清</text>
+    <text class="hero-subtitle">资料、岗位和候选人操作都不会发送到平台。</text>
+  </view>
+
+  <view wx:if="{{hasDemoSession}}" class="state-tools">
+    <text class="tool-label">页面状态演示</text>
+    <view class="tool-buttons">
+      <button class="mode-button {{demoScenario === item.id ? 'active' : ''}}" wx:for="{{demoScenarios}}" wx:key="id" data-scenario="{{item.id}}" bindtap="onScenarioTap">{{item.name}}</button>
+    </view>
+  </view>
+
+  <view wx:if="{{loadState === 'loading'}}" class="state-card">
+    <text class="state-title">{{stateTitle}}</text>
+    <text class="state-text">{{stateMessage}}</text>
+  </view>
+
+  <view wx:elif="{{loadState === 'unauthorized'}}" class="state-card">
+    <text class="state-title">{{stateTitle}}</text>
+    <text class="state-text">{{stateMessage}}。这只会建立内存会话，不会认证企业或保存账号。</text>
+    <button class="primary-state-button" loading="{{authPending}}" disabled="{{authPending}}" bindtap="onStartEmployerDemo">{{authPending ? '正在进入本地演示' : '进入企业本地演示'}}</button>
+  </view>
+
+  <view wx:elif="{{loadState !== 'normal'}}" class="state-card">
+    <text class="state-title">{{stateTitle}}</text>
+    <text class="state-text">{{stateMessage}}</text>
+    <button class="primary-state-button" bindtap="onRetry">恢复正常本地示例</button>
+  </view>
+
+  <block wx:elif="{{employer}}">
+    <view class="card profile-card">
+      <view class="section-row">
+        <view class="section-copy">
+          <text class="section-title">企业资料</text>
+          <text class="section-subtitle">已填{{profileProgress.filled}}/{{profileProgress.total}}项 · {{profileProgress.label}}</text>
+        </view>
+        <button class="small-button" bindtap="onToggleProfileEdit">{{profileEditing ? '收起编辑' : '本地编辑'}}</button>
+      </view>
+      <view class="progress-track"><view class="progress-fill" style="width: {{profileProgress.percent}}%;"></view></view>
+
+      <view wx:if="{{!profileEditing}}" class="profile-summary">
+        <text class="company-name">{{companyDraft.name || '企业名称未填写'}}</text>
+        <text class="profile-line">{{companyDraft.location || '工作地点未填写'}}</text>
+        <text class="profile-line">{{companyDraft.industry || '行业未填写'}} · {{companyDraft.size || '规模未填写'}}</text>
+        <text class="profile-line">联系人：{{companyDraft.contactName || '未填写'}} · 电话：{{companyDraft.contactPhone || '未填写'}}</text>
+      </view>
+
+      <view wx:else class="profile-form">
+        <view class="field" wx:for="{{employer.profileFields}}" wx:key="id">
+          <text class="field-label">{{item.label}}<text wx:if="{{item.required}}" class="required"> *</text></text>
+          <input class="field-input" value="{{companyDraft[item.id]}}" placeholder="{{item.placeholder}}" maxlength="{{item.maxlength}}" data-field="{{item.id}}" bindinput="onProfileInput" />
+        </view>
+        <button class="reset-button" bindtap="onResetProfile">恢复本地示例</button>
+      </view>
+      <view class="honest-note">{{employer.profileNotice}}</view>
+    </view>
+
+    <view class="summary-grid">
+      <view class="summary-item" wx:for="{{employer.summary}}" wx:key="id">
+        <view><text class="summary-value">{{item.value}}</text><text class="summary-unit">{{item.unit}}</text></view>
+        <text class="summary-label">{{item.label}}</text>
+      </view>
+    </view>
+
+    <view class="section-heading">
+      <text class="section-title">常用操作</text>
+      <text class="section-subtitle">三个页面均已接入，当前功能仍为本地演示</text>
+    </view>
+    <view class="action-list">
+      <view class="card action-card" wx:for="{{employer.actions}}" wx:key="id">
+        <view class="action-copy">
+          <text class="action-title">{{item.title}}</text>
+          <text class="action-text">{{item.text}}</text>
+        </view>
+        <button class="primary-small" bindtap="onOpenAction" data-id="{{item.id}}">{{item.buttonText}}</button>
+      </view>
+    </view>
+
+    <view class="section-heading">
+      <text class="section-title">岗位概览</text>
+      <text class="section-subtitle">均为集中示例，不代表已真实发布</text>
+    </view>
+    <view class="job-list">
+      <view class="card job-card" wx:for="{{employer.jobs}}" wx:key="id">
+        <view class="job-top">
+          <text class="job-title">{{item.title}}</text>
+          <text class="job-status">{{item.statusLabel}}</text>
+        </view>
+        <text class="job-salary">{{item.salary}}</text>
+        <text class="job-line">{{item.location}} · 招{{item.headcount}}人</text>
+        <view class="job-bottom">
+          <text class="job-count">{{item.interestedCount}}位示例候选人</text>
+          <button class="link-button" bindtap="onOpenJobCandidates" data-id="{{item.id}}">本地查看</button>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

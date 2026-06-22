@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "workstream": "02-home-ui",
+  "title": "Home UI and entry points",
+  "phase": "SHIP",
+  "state": "shipped",
+  "priority": "P1",
+  "currentSlice": "runtime-arrow-copy-fix-v1",
+  "ownerThreadId": null,
+  "summary": "The home quick-entry arrow now uses a literal ASCII > glyph, with verifier coverage preventing escaped-entity regressions.",
+  "nextAction": "由总控选择下一个切片，并用精简上下文启动新线程。",
+  "blockers": [],
+  "dependencies": [
+    "01-project-shell"
+  ],
+  "evidence": [
+    {
+      "kind": "automated",
+      "status": "passed",
+      "summary": "Home verifier passes, including the literal entry-arrow assertion and escaped-entity rejection.",
+      "ref": "workstreams/02-home-ui/verify.cjs"
+    },
+    {
+      "kind": "independent-review",
+      "status": "passed",
+      "summary": "runtime-arrow-copy-fix-v1 review PASS and WeChat simulator spot-check confirmed visible literal > arrow",
+      "ref": "workstreams/02-home-ui/HANDOFF.md"
+    }
+  ],
+  "tags": [
+    "home",
+    "runtime-copy",
+    "wxml"
+  ],
+  "codePaths": [
+    "miniprogram/pages/home/index.wxml"
+  ],
+  "updatedAt": "2026-06-21T09:24:06.765Z",
+  "handoffRef": "HANDOFF.md"
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "workstream": "00-main-control",
+  "title": "总控与上下文治理",
+  "phase": "REVIEW",
+  "state": "accepted",
+  "priority": "P0",
+  "currentSlice": "frontend-completion-roadmap-v1",
+  "ownerThreadId": "current-main-thread",
+  "summary": "前端完成路线、04/14 workstream 和后端延期门槛已建立，04-user-profile 子 Agent 已启动。",
+  "nextAction": "归档 frontend-completion-roadmap-v1，并切换到 profile-frontend-review-v1。",
+  "blockers": [],
+  "dependencies": [],
+  "evidence": [
+    {
+      "kind": "repository-validation",
+      "status": "passed",
+      "summary": "新增路线与 workstream 后，十五个 workstream 校验为零错误、零警告",
+      "ref": "docs/blueprint/frontend-completion-roadmap.md"
+    },
+    {
+      "kind": "delegation",
+      "status": "passed",
+      "summary": "04-user-profile 已用最小上下文和独立 owner 启动",
+      "ref": "workstreams/04-user-profile/HANDOFF.md"
+    }
+  ],
+  "tags": [
+    "control",
+    "memory",
+    "rag",
+    "workflow",
+    "frontend-roadmap"
+  ],
+  "codePaths": [
+    ".codex/skills/workstream-delegation/**",
+    "docs/blueprint/**",
+    "workstreams/00-main-control/**"
+  ],
+  "updatedAt": "2026-06-19T01:02:21+08:00",
+  "handoffRef": "HANDOFF.md"
+}

@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/events/index",
+    "pages/jobs/index",
+    "pages/messages/index",
+    "pages/profile/index",
+    "pages/employer/index",
+    "pages/training/index",
+    "pages/policy/index",
+    "pages/campus/index",
+    "pages/labor/index",
+    "pages/return-home/index",
+    "pages/training-signup/index",
+    "pages/profile-login/index",
+    "pages/profile-resume/index",
+    "pages/profile-applications/index",
+    "pages/message-detail/index",
+    "pages/job-detail/index",
+    "pages/employer-job-form/index",
+    "pages/employer-job-preview/index",
+    "pages/employer-candidates/index",
+    "pages/event-detail/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "家乡工人招聘",
+    "navigationBarBackgroundColor": "#1F7A4D",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F6F7F2",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#6B7280",
+    "selectedColor": "#1F7A4D",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/events/index",
+        "text": "交流"
+      },
+      {
+        "pagePath": "pages/jobs/index",
+        "text": "职位"
+      },
+      {
+        "pagePath": "pages/messages/index",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

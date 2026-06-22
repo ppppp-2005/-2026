@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "workstream": "05-employer",
+  "title": "企业招聘前端完整流程",
+  "phase": "REVIEW",
+  "state": "accepted",
+  "priority": "P1",
+  "currentSlice": "employer-frontend-flow-v2",
+  "ownerThreadId": "/root/05_employer_frontend_v2",
+  "summary": "首轮 REVIEW findings 已最小修复：快照结构和来源可信、候选人 loading 可见；重新通过 VERIFY。",
+  "nextAction": "由 00-main-control 执行当前切片的 SHIP 与归档。",
+  "blockers": [],
+  "dependencies": [
+    "03-jobs",
+    "04-user-profile"
+  ],
+  "evidence": [
+    {
+      "kind": "automated",
+      "status": "passed",
+      "summary": "JS/JSON、JS/TS 镜像、WXML 事件、禁用 API、未注册路由和声明改动 allowlist 通过。",
+      "ref": "workstreams/05-employer/verify.cjs"
+    },
+    {
+      "kind": "behavioral",
+      "status": "passed",
+      "summary": "资料完整度与本页编辑、岗位校验与查询快照、仅预览确认、候选人四态筛选与本页标记通过。",
+      "ref": "workstreams/05-employer/verify.cjs"
+    },
+    {
+      "kind": "boundary",
+      "status": "passed",
+      "summary": "未使用 request/socket/storage/订阅/上传 API，且未修改 app.json 注册新路由。",
+      "ref": "workstreams/05-employer/verify.cjs"
+    },
+    {
+      "kind": "review-fix",
+      "status": "passed",
+      "summary": "畸形快照诚实回退、来源标签固定、候选人 loading 分支与详情行为已修复并通过回归断言。",
+      "ref": "workstreams/05-employer/verify.cjs"
+    },
+    {
+      "kind": "independent-review",
+      "status": "passed",
+      "summary": "独立 REVIEW 发现并修复快照真实性、来源信任和 loading 状态问题；定点复验与全量自动验证通过。",
+      "ref": "workstreams/05-employer/HANDOFF.md"
+    }
+  ],
+  "tags": [
+    "employer",
+    "job-form",
+    "job-preview",
+    "candidates",
+    "frontend"
+  ],
+  "codePaths": [
+    "miniprogram/pages/employer/**",
+    "miniprogram/pages/employer-job-form/**",
+    "miniprogram/pages/employer-job-preview/**",
+    "miniprogram/pages/employer-candidates/**",
+    "miniprogram/data/employer.js",
+    "miniprogram/data/employer.ts"
+  ],
+  "updatedAt": "2026-06-19T14:33:51.215Z",
+  "handoffRef": "HANDOFF.md"
+}

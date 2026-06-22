@@ -1,0 +1,90 @@
+<view class="page">
+  <view class="hero">
+    <view class="hero-bg">
+      <view class="field field-left"></view>
+      <view class="field field-right"></view>
+      <view class="ridge ridge-one"></view>
+      <view class="ridge ridge-two"></view>
+    </view>
+
+    <view class="hero-top">
+      <view class="brand-mark">{{home.brand.logoText}}</view>
+      <view class="login-link" bindtap="onLoginTap">{{home.brand.loginText}}</view>
+    </view>
+
+    <view class="hero-content">
+      <view class="hero-kicker">{{home.brand.location}}</view>
+      <view class="hero-title">{{home.brand.title}}</view>
+      <view class="hero-subtitle">{{home.brand.subtitle}}</view>
+    </view>
+  </view>
+
+  <view class="search-box" bindtap="onSearchTap">
+    <view class="search-icon"></view>
+    <text class="search-placeholder">{{home.searchPlaceholder}}</text>
+  </view>
+
+  <view class="section entry-section">
+    <view class="section-header entry-header">
+      <text class="section-title">{{home.ui.entryTitle}}</text>
+    </view>
+    <view class="entry-card-grid">
+      <view
+        class="entry-card {{item.enabled ? '' : 'entry-card-disabled'}}"
+        style="background-color: {{item.bgColor}};"
+        bindtap="onEntryTap"
+        data-index="{{index}}"
+        wx:for="{{home.quickEntries}}"
+        wx:key="id"
+      >
+        <view class="entry-stamp" style="background-color: {{item.color}};">{{item.iconText}}</view>
+        <view class="entry-copy">
+          <view class="entry-title-row">
+            <text class="entry-title">{{item.name}}</text>
+            <text class="entry-badge" wx:if="{{item.badge}}" style="color: {{item.color}};">{{item.badge}}</text>
+          </view>
+          <text class="entry-description">{{item.description}}</text>
+        </view>
+        <text class="entry-arrow">></text>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <view class="section-header">
+      <text class="section-title">{{home.ui.newsTitle}}</text>
+      <text class="section-more" bindtap="onNewsMoreTap">{{newsActionText}}</text>
+    </view>
+    <view class="news-list">
+      <view class="news-item" wx:for="{{visibleNews}}" wx:key="id">
+        <text class="news-tag">{{item.tag}}</text>
+        <view class="news-main">
+          <text class="news-title">{{item.title}}</text>
+          <text class="news-meta">{{item.meta}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="section service-section">
+    <view class="section-header">
+      <text class="section-title">{{home.ui.servicesTitle}}</text>
+      <text class="section-more" bindtap="onServicesAllTap">{{servicesActionText}}</text>
+    </view>
+    <view class="service-grid">
+      <view
+        class="service-card"
+        bindtap="onServiceTap"
+        data-index="{{index}}"
+        wx:for="{{visibleServices}}"
+        wx:key="id"
+      >
+        <view class="service-card-top">
+          <text class="service-title">{{item.title}}</text>
+          <text class="service-badge">{{item.badge}}</text>
+        </view>
+        <text class="service-desc">{{item.desc}}</text>
+      </view>
+    </view>
+  </view>
+</view>

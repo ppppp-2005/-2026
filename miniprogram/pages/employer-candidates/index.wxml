@@ -1,0 +1,86 @@
+<view class="page">
+  <view class="hero">
+    <text class="eyebrow">候选人管理 · 本地演示</text>
+    <text class="title">先筛选，再查看资料</text>
+    <text class="subtitle">{{honestNote}}</text>
+  </view>
+
+  <view class="state-tools">
+    <text class="tool-label">页面状态演示</text>
+    <view class="tool-buttons">
+      <button class="mode-button {{demoScenario === item.id ? 'active' : ''}}" wx:for="{{demoScenarios}}" wx:key="id" data-scenario="{{item.id}}" bindtap="onScenarioTap">{{item.name}}</button>
+    </view>
+  </view>
+
+  <view wx:if="{{filters.length}}" class="filter-card">
+    <input class="search-input" value="{{query}}" placeholder="搜索姓名、地点、经历或岗位" bindinput="onSearchInput" />
+    <text class="filter-label">查看状态</text>
+    <view class="chip-row">
+      <button class="chip {{activeStatusId === item.id ? 'active' : ''}}" wx:for="{{filters}}" wx:key="id" data-id="{{item.id}}" bindtap="onStatusFilterTap">{{item.label}}</button>
+    </view>
+    <text class="filter-label">应聘岗位</text>
+    <view class="chip-row">
+      <button class="chip {{activeJobId === 'all' ? 'active' : ''}}" data-id="all" bindtap="onJobFilterTap">全部岗位</button>
+      <button class="chip {{activeJobId === item.id ? 'active' : ''}}" wx:for="{{jobs}}" wx:key="id" data-id="{{item.id}}" bindtap="onJobFilterTap">{{item.title}}</button>
+    </view>
+  </view>
+
+  <view wx:if="{{loadState === 'loading'}}" class="state-card">
+    <text class="state-title">{{stateTitle}}</text>
+    <text class="state-text">{{stateMessage}}</text>
+  </view>
+
+  <view wx:elif="{{loadState === 'unauthorized'}}" class="state-card">
+    <text class="state-title">{{stateTitle}}</text>
+    <text class="state-text">{{stateMessage}}。不会进行真实登录或企业认证。</text>
+    <button class="primary-button compact" loading="{{authPending}}" disabled="{{authPending}}" bindtap="onStartEmployerDemo">进入企业本地演示</button>
+  </view>
+
+  <view wx:elif="{{loadState === 'empty'}}" class="state-card">
+    <text class="state-title">{{stateTitle}}</text>
+    <text class="state-text">{{stateMessage}}。可换个筛选条件，或恢复正常示例。</text>
+    <button class="primary-button compact" bindtap="onClearFilters">清除条件并恢复</button>
+  </view>
+
+  <view wx:elif="{{loadState !== 'normal'}}" class="state-card">
+    <text class="state-title">{{stateTitle}}</text>
+    <text class="state-text">{{stateMessage}}</text>
+    <button class="primary-button compact" bindtap="onRetry">恢复正常本地示例</button>
+  </view>
+
+  <view wx:else class="candidate-list">
+    <text class="result-count">共{{total}}位匹配的本地示例，当前显示{{visibleCandidates.length}}位</text>
+    <view class="candidate-card" wx:for="{{visibleCandidates}}" wx:key="id">
+      <view class="candidate-head">
+        <view class="candidate-copy">
+          <text class="candidate-name">{{item.name}} · {{item.ageText}}</text>
+          <text class="candidate-job">意向：{{item.targetJobTitle}}</text>
+        </view>
+        <text class="status-chip">{{item.statusLabel}}</text>
+      </view>
+      <text class="candidate-line">{{item.location}}</text>
+      <text class="candidate-line">{{item.experience}}</text>
+      <view class="highlight-row">
+        <text class="highlight" wx:for="{{item.highlights}}" wx:for-item="highlight" wx:key="*this">{{highlight}}</text>
+      </view>
+      <text wx:if="{{item.demoStatusLabel}}" class="demo-mark">{{item.demoStatusLabel}} · 未保存未通知</text>
+
+      <view wx:if="{{expandedCandidateId === item.id}}" class="detail-box">
+        <text>这是集中示例资料，不含真实联系方式。</text>
+        <text>查看动作不会留下记录，也不会让候选人知道。</text>
+      </view>
+
+      <view class="candidate-actions">
+        <button class="secondary-button" data-id="{{item.id}}" bindtap="onToggleCandidate">{{expandedCandidateId === item.id ? '收起资料' : '查看资料演示'}}</button>
+        <button class="primary-button" loading="{{markingCandidateId === item.id}}" disabled="{{!!markingCandidateId}}" data-id="{{item.id}}" bindtap="onDemoMark">本页标记</button>
+      </view>
+    </view>
+    <view wx:if="{{pageFeedback || pageError}}" class="page-feedback {{pageError ? 'error' : ''}}">
+      <text class="feedback-title">{{pageFeedback}}</text>
+      <text wx:if="{{pageError}}" class="feedback-text">{{pageError}}。已显示的候选人仍保留，重试不会从头读取。</text>
+      <button wx:if="{{pageError}}" class="load-more-button" loading="{{loadingMore || authPending}}" disabled="{{loadingMore || authPending}}" bindtap="onRetryPage">{{pageErrorKind === 'unauthorized' ? '重新进入并重试本页' : '重试本页'}}</button>
+    </view>
+    <button wx:elif="{{hasMore}}" class="load-more-button" loading="{{loadingMore}}" disabled="{{loadingMore}}" bindtap="onLoadMore">{{loadingMore ? '正在读取更多' : '继续读取本地示例'}}</button>
+    <text wx:else class="end-note">已显示当前条件下的全部本地示例</text>
+  </view>
+</view>

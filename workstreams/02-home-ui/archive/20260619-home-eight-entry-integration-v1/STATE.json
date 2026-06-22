@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "workstream": "02-home-ui",
+  "title": "首页静态 UI 与入口",
+  "phase": "REVIEW",
+  "state": "accepted",
+  "priority": "P1",
+  "currentSlice": "home-eight-entry-integration-v1",
+  "ownerThreadId": "019ed762-3fb0-7f51-8c02-87adc6010beb",
+  "summary": "首页静态 UI、八个入口、Tab 与普通页面跳转以及未开放反馈均已完成。",
+  "nextAction": "由 00-main-control 执行当前切片的 SHIP 与归档。",
+  "blockers": [],
+  "dependencies": [
+    "01-project-shell"
+  ],
+  "evidence": [
+    {
+      "kind": "static-review",
+      "status": "passed",
+      "summary": "首页入口契约、事件绑定和数据镜像复验通过",
+      "ref": "workstreams/07-quality-review/HANDOFF.md"
+    },
+    {
+      "kind": "manual-acceptance",
+      "status": "passed",
+      "summary": "2026-06-19 用户确认微信开发者工具人工验收完成，编译、导航、交互、窄屏、大字体和视觉检查均通过，未报告缺陷",
+      "ref": "workstreams/07-quality-review/HANDOFF.md"
+    }
+  ],
+  "tags": [
+    "home",
+    "navigation",
+    "ui"
+  ],
+  "codePaths": [
+    "miniprogram/pages/home/**",
+    "miniprogram/data/home.js",
+    "miniprogram/data/home.ts"
+  ],
+  "updatedAt": "2026-06-19T00:29:43+08:00",
+  "handoffRef": "HANDOFF.md"
+}

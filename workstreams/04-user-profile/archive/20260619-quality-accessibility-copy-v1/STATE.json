@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "workstream": "04-user-profile",
+  "title": "用户中心前端框架",
+  "phase": "REVIEW",
+  "state": "accepted",
+  "priority": "P0",
+  "currentSlice": "quality-accessibility-copy-v1",
+  "ownerThreadId": null,
+  "summary": "已移除个人中心失真的路由待注册文案，并把 8 个目标按钮改为适配大字的 88rpx 最小触控区域；自动 VERIFY 已通过。",
+  "nextAction": "由 00-main-control 执行当前切片的 SHIP 与归档。",
+  "blockers": [],
+  "dependencies": [
+    "01-project-shell",
+    "07-quality-review"
+  ],
+  "evidence": [
+    {
+      "kind": "automated",
+      "status": "passed",
+      "summary": "04 verifier 通过 JS 语法、JS/TS 指纹、WXML 事件和禁用 API 检查。",
+      "ref": "workstreams/04-user-profile/verify.cjs"
+    },
+    {
+      "kind": "review-fix",
+      "status": "passed",
+      "summary": "个人中心默认与失败反馈不再声称路由待注册，失败时使用通用页面暂时无法打开文案并保留本地演示边界。",
+      "ref": "workstreams/04-user-profile/verify.cjs"
+    },
+    {
+      "kind": "accessibility",
+      "status": "passed",
+      "summary": "8 个真实 button 选择器均移除低于 88rpx 固定高度，使用 min-height、padding 与 border-box。",
+      "ref": "workstreams/04-user-profile/verify.cjs"
+    },
+    {
+      "kind": "independent-review",
+      "status": "passed",
+      "summary": "07 P2 修复批次独立 REVIEW 通过：导航失败文案、18 个触控目标和企业验证集成兼容均复验通过。",
+      "ref": "workstreams/07-quality-review/REPORT.md"
+    }
+  ],
+  "tags": [
+    "profile",
+    "resume",
+    "applications",
+    "frontend"
+  ],
+  "codePaths": [
+    "miniprogram/pages/profile/**",
+    "miniprogram/pages/profile-login/**",
+    "miniprogram/pages/profile-resume/**",
+    "miniprogram/pages/profile-applications/**",
+    "miniprogram/data/profile.js",
+    "miniprogram/data/profile.ts"
+  ],
+  "updatedAt": "2026-06-19T15:57:24.719Z",
+  "handoffRef": "HANDOFF.md"
+}

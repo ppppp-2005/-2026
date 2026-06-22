@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "workstream": "07-quality-review",
+  "title": "质量审查",
+  "phase": "REVIEW",
+  "state": "accepted",
+  "priority": "P0",
+  "currentSlice": "static-front-end-manual-acceptance-v1",
+  "ownerThreadId": "019ed97b-e688-7222-b183-6343d9bc58db",
+  "summary": "静态复查与人工验收均通过，未报告 P0/P1 缺陷。",
+  "nextAction": "由 00-main-control 执行当前静态前端批次的 SHIP 与归档。",
+  "blockers": [],
+  "dependencies": [
+    "01-project-shell",
+    "02-home-ui",
+    "03-jobs",
+    "05-employer",
+    "08-skill-training",
+    "09-policy",
+    "10-campus",
+    "11-labor-info",
+    "12-return-home",
+    "13-training-signup"
+  ],
+  "evidence": [
+    {
+      "kind": "static-review",
+      "status": "passed",
+      "summary": "P0/P1 清零，24 个事件绑定、8 组数据镜像和全部 JSON 通过",
+      "ref": "workstreams/07-quality-review/HANDOFF.md"
+    },
+    {
+      "kind": "manual-acceptance",
+      "status": "passed",
+      "summary": "2026-06-19 用户确认“我验收完毕了”；编译、导航、交互、320px 窄屏、大字体和视觉验收通过，未报告缺陷",
+      "ref": "workstreams/07-quality-review/HANDOFF.md"
+    }
+  ],
+  "tags": [
+    "quality",
+    "review",
+    "verification"
+  ],
+  "codePaths": [
+    "workstreams/07-quality-review/**"
+  ],
+  "updatedAt": "2026-06-19T00:29:43+08:00",
+  "handoffRef": "HANDOFF.md"
+}

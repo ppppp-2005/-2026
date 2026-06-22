@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "workstream": "02-home-ui",
+  "title": "首页 UI 与入口",
+  "phase": "REVIEW",
+  "state": "accepted",
+  "priority": "P1",
+  "currentSlice": "home-functional-closure-v1",
+  "ownerThreadId": null,
+  "summary": "首页搜索已接入职位 Tab，资讯和热门服务支持本地展开/收起，服务卡均可导航至已注册页面。",
+  "nextAction": "由 00-main-control 执行当前切片的 SHIP 与归档。",
+  "blockers": [],
+  "dependencies": [
+    "01-project-shell",
+    "03-jobs"
+  ],
+  "evidence": [
+    {
+      "kind": "automated",
+      "status": "passed",
+      "summary": "JS 语法与 JS/TS 镜像、WXML 事件、展开/收起、搜索与服务导航、禁用 API、路由、允许范围及更多/全部按钮 88rpx 触控高度均通过。",
+      "ref": "workstreams/02-home-ui/verify.cjs"
+    },
+    {
+      "kind": "independent-review",
+      "status": "passed",
+      "summary": "Independent review PASS after 88rpx touch-target correction; home search, news expansion, and service navigation verified.",
+      "ref": "workstreams/02-home-ui/HANDOFF.md"
+    }
+  ],
+  "tags": [
+    "home",
+    "navigation",
+    "local-interaction"
+  ],
+  "codePaths": [
+    "miniprogram/pages/home/**",
+    "miniprogram/data/home.js",
+    "miniprogram/data/home.ts"
+  ],
+  "updatedAt": "2026-06-21T03:30:56.998Z",
+  "handoffRef": "HANDOFF.md"
+}

@@ -1,0 +1,101 @@
+<view class="profile-page">
+  <view class="profile-hero">
+    <view class="hero-copy">
+      <text class="hero-label">{{profile.header.label}}</text>
+      <view class="hero-title">{{profile.header.title}}</view>
+      <view class="hero-subtitle">{{profile.header.subtitle}}</view>
+    </view>
+    <text class="hero-data-label">{{profile.header.dataLabel}}</text>
+  </view>
+
+  <view class="identity-card">
+    <view class="identity-top">
+      <view class="identity-copy">
+        <text class="identity-name">{{identityName}}</text>
+        <text class="identity-status identity-status-{{sessionStatus}}">{{identityStatus}}</text>
+      </view>
+    </view>
+    <text class="identity-note">{{identityNote}}</text>
+    <button class="login-button" bindtap="onLoginTap">{{loginActionText}}</button>
+    <text class="button-note">本地会话不调用微信登录、不写入存储，重新加载即清除。</text>
+  </view>
+
+  <view class="notice-card">{{interactionNotice}}</view>
+
+  <view class="progress-card">
+    <view class="card-heading-row">
+      <text class="card-title">{{profile.completeness.label}}</text>
+      <text class="progress-value">{{profile.completeness.value}}%</text>
+    </view>
+    <view class="progress-track">
+      <view class="progress-fill" style="width: {{profile.completeness.value}}%;"></view>
+    </view>
+    <text class="card-note">{{profile.completeness.note}}</text>
+  </view>
+
+  <view class="intent-card">
+    <view class="card-heading-row">
+      <text class="card-title">求职意向</text>
+      <text class="demo-tag">演示资料</text>
+    </view>
+    <view class="intent-line">
+      <text class="intent-label">工种</text>
+      <text class="intent-value">{{profile.intent.role}}</text>
+    </view>
+    <view class="intent-line">
+      <text class="intent-label">地点</text>
+      <text class="intent-value">{{profile.intent.location}}</text>
+    </view>
+    <view class="intent-line">
+      <text class="intent-label">工资</text>
+      <text class="intent-value salary-text">{{profile.intent.salary}}</text>
+    </view>
+  </view>
+
+  <view class="summary-grid">
+    <view class="summary-item" wx:for="{{profile.summary}}" wx:key="id">
+      <text class="summary-value">{{item.value}}</text>
+      <text class="summary-label">{{item.label}}</text>
+    </view>
+  </view>
+
+  <view class="section-head">
+    <text class="section-title">常用功能</text>
+    <text class="section-note">页面内均为本地演示</text>
+  </view>
+  <view class="entry-list">
+    <view class="entry-card" wx:for="{{profile.entries}}" wx:key="id" bindtap="onEntryTap" data-route="{{item.routeKey}}">
+      <view class="entry-mark">{{index + 1}}</view>
+      <view class="entry-copy">
+        <text class="entry-title">{{item.title}}</text>
+        <text class="entry-description">{{item.description}}</text>
+      </view>
+      <text class="entry-action">{{item.actionText}} &gt;</text>
+    </view>
+  </view>
+
+  <view class="section-head">
+    <text class="section-title">身份视图</text>
+    <text class="section-note">当前：{{activeRole === 'employer' ? '招聘方' : '求职者'}} · 仅本地演示</text>
+  </view>
+  <view class="role-list">
+    <view
+      class="role-card {{activeRole === item.id ? 'role-card-active' : ''}}"
+      wx:for="{{profile.roles}}"
+      wx:key="id"
+      bindtap="onRoleTap"
+      data-role="{{item.id}}"
+    >
+      <text class="role-name">{{item.name}}</text>
+      <text class="role-description">{{item.description}}</text>
+    </view>
+  </view>
+
+  <view class="help-card" bindtap="onHelpTap">
+    <view class="card-heading-row">
+      <text class="card-title">{{profile.help.title}}</text>
+      <text class="help-toggle">{{helpExpanded ? '收起' : '展开'}}</text>
+    </view>
+    <text class="help-text" wx:if="{{helpExpanded}}">{{profile.help.text}}</text>
+  </view>
+</view>

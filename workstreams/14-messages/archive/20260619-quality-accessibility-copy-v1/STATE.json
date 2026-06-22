@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "workstream": "14-messages",
+  "title": "消息中心前端框架",
+  "phase": "REVIEW",
+  "state": "accepted",
+  "priority": "P1",
+  "currentSlice": "quality-accessibility-copy-v1",
+  "ownerThreadId": null,
+  "summary": "已移除消息详情导航失败的路由待注册归因，并把发送按钮改为适配大字的 88rpx 最小触控区域；自动 VERIFY 已通过。",
+  "nextAction": "由 00-main-control 执行当前切片的 SHIP 与归档。",
+  "blockers": [],
+  "dependencies": [
+    "01-project-shell",
+    "04-user-profile",
+    "07-quality-review"
+  ],
+  "evidence": [
+    {
+      "kind": "automated",
+      "status": "passed",
+      "summary": "14 verifier 通过 JS 语法、JS/TS 指纹、WXML 事件和禁用 API 检查。",
+      "ref": "workstreams/14-messages/verify.cjs"
+    },
+    {
+      "kind": "review-fix",
+      "status": "passed",
+      "summary": "消息导航失败不再声称路由待注册，改用通用详情页暂时无法打开文案并保留本地已读真实性。",
+      "ref": "workstreams/14-messages/verify.cjs"
+    },
+    {
+      "kind": "accessibility",
+      "status": "passed",
+      "summary": "发送 button 选择器移除 78rpx 固定高度，使用 min-height、padding 与 border-box。",
+      "ref": "workstreams/14-messages/verify.cjs"
+    },
+    {
+      "kind": "independent-review",
+      "status": "passed",
+      "summary": "07 P2 修复批次独立 REVIEW 通过：导航失败文案、18 个触控目标和企业验证集成兼容均复验通过。",
+      "ref": "workstreams/07-quality-review/REPORT.md"
+    }
+  ],
+  "tags": [
+    "messages",
+    "notifications",
+    "conversation",
+    "frontend"
+  ],
+  "codePaths": [
+    "miniprogram/pages/messages/**",
+    "miniprogram/pages/message-detail/**",
+    "miniprogram/data/messages.js",
+    "miniprogram/data/messages.ts"
+  ],
+  "updatedAt": "2026-06-19T15:57:24.719Z",
+  "handoffRef": "HANDOFF.md"
+}

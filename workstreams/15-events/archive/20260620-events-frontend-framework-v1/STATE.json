@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "workstream": "15-events",
+  "title": "交流与活动中心前端框架",
+  "phase": "REVIEW",
+  "state": "accepted",
+  "priority": "P1",
+  "currentSlice": "events-frontend-framework-v1",
+  "ownerThreadId": null,
+  "summary": "活动中心与详情前端框架已完成，三类 Tab、状态筛选、列表状态、详情 ID 分支和诚实本地交互均通过 VERIFY。",
+  "nextAction": "由 00-main-control 执行当前切片的 SHIP 与归档。",
+  "blockers": [],
+  "dependencies": [
+    "01-project-shell",
+    "07-quality-review"
+  ],
+  "evidence": [
+    {
+      "kind": "automated",
+      "status": "passed",
+      "summary": "15-events verifier 通过 JS 语法、JSON、JS/TS 镜像、WXML 事件、状态行为和禁用 API 检查。",
+      "ref": "workstreams/15-events/verify.cjs"
+    },
+    {
+      "kind": "boundary",
+      "status": "passed",
+      "summary": "app.json 哈希未变化，活动详情使用绝对导航意图与通用失败反馈。",
+      "ref": "workstreams/15-events/verify.cjs"
+    },
+    {
+      "kind": "context-validation",
+      "status": "passed",
+      "summary": "上下文状态通过 validate 并已 refresh。",
+      "ref": "workstreams/00-main-control/STATUS.md"
+    },
+    {
+      "kind": "independent-review",
+      "status": "passed",
+      "summary": "Independent reviewer PASS: handlers, mirrors, states, honesty boundaries, forbidden APIs, and scope verified.",
+      "ref": "workstreams/15-events/HANDOFF.md"
+    }
+  ],
+  "tags": [
+    "events",
+    "live",
+    "job-fair",
+    "frontend"
+  ],
+  "codePaths": [
+    "miniprogram/pages/events/**",
+    "miniprogram/pages/event-detail/**",
+    "miniprogram/data/events.js",
+    "miniprogram/data/events.ts"
+  ],
+  "updatedAt": "2026-06-20T06:39:08.762Z",
+  "handoffRef": "HANDOFF.md"
+}

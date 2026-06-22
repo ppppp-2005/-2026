@@ -1,0 +1,55 @@
+<view class="page">
+  <view class="intro">
+    <text class="eyebrow">岗位表单 · 本地演示</text>
+    <text class="title">把岗位信息写清楚</text>
+    <text class="subtitle">先完成前端必填校验，再进入仅预览页面。</text>
+  </view>
+
+  <view class="notice">{{honestNote}}</view>
+
+  <view class="state-tools">
+    <text class="tool-label">表单读取状态演示</text>
+    <view class="tool-buttons">
+      <button class="mode-button {{demoScenario === item.id ? 'active' : ''}}" wx:for="{{demoScenarios}}" wx:key="id" data-scenario="{{item.id}}" bindtap="onScenarioTap">{{item.name}}</button>
+    </view>
+  </view>
+
+  <view wx:if="{{loadState === 'loading'}}" class="state-card">
+    <text class="state-title">{{stateTitle}}</text>
+    <text class="state-text">{{stateMessage}}</text>
+  </view>
+
+  <view wx:elif="{{loadState === 'unauthorized'}}" class="state-card">
+    <text class="state-title">{{stateTitle}}</text>
+    <text class="state-text">{{stateMessage}}。不会进行真实登录或企业认证。</text>
+    <button class="primary-button compact" loading="{{authPending}}" disabled="{{authPending}}" bindtap="onStartEmployerDemo">进入企业本地演示</button>
+  </view>
+
+  <view wx:elif="{{loadState !== 'normal'}}" class="state-card">
+    <text class="state-title">{{stateTitle}}</text>
+    <text class="state-text">{{stateMessage}}</text>
+    <button class="primary-button compact" bindtap="onRetry">恢复正常本地表单</button>
+  </view>
+
+  <block wx:else>
+    <view class="tool-row">
+      <button class="secondary-button" disabled="{{submitting}}" bindtap="onUseExample">填入示例</button>
+      <button class="plain-button" disabled="{{submitting}}" bindtap="onReset">清空重填</button>
+    </view>
+
+    <view wx:if="{{errorSummary}}" class="error-summary">{{errorSummary}}</view>
+
+    <view class="form-card">
+      <view class="field" wx:for="{{fields}}" wx:key="id">
+        <text class="field-label">{{item.label}}<text wx:if="{{item.required}}" class="required"> *</text></text>
+        <textarea wx:if="{{item.multiline}}" class="field-input textarea" value="{{draft[item.id]}}" placeholder="{{item.placeholder}}" maxlength="{{item.maxlength}}" auto-height disabled="{{submitting}}" data-field="{{item.id}}" bindinput="onFieldInput"></textarea>
+        <input wx:else class="field-input" value="{{draft[item.id]}}" placeholder="{{item.placeholder}}" type="{{item.inputType}}" maxlength="{{item.maxlength}}" disabled="{{submitting}}" data-field="{{item.id}}" bindinput="onFieldInput" />
+        <text wx:if="{{errors[item.id]}}" class="field-error">{{errors[item.id]}}</text>
+      </view>
+    </view>
+
+    <view wx:if="{{submissionMessage}}" class="submission-note">{{submissionMessage}}</view>
+    <button class="primary-button" loading="{{submitting}}" disabled="{{submitting}}" bindtap="onPreviewTap">{{submitting ? '正在生成本地预览' : '检查并查看预览'}}</button>
+    <text class="bottom-note">点击后不会保存草稿，也不会发布岗位。</text>
+  </block>
+</view>

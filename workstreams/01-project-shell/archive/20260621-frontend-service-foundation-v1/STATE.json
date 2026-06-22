@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "workstream": "01-project-shell",
+  "title": "Frontend service foundation",
+  "phase": "REVIEW",
+  "state": "accepted",
+  "priority": "P1",
+  "currentSlice": "frontend-service-foundation-v1",
+  "ownerThreadId": null,
+  "summary": "Shared service contracts are verified, including REVIEW fixes for domain-key validation, loading-to-success transitions, ServiceError request correlation, and zero-value pagination rejection.",
+  "nextAction": "由 00-main-control 执行当前切片的 SHIP 与归档。",
+  "blockers": [],
+  "dependencies": [
+    "06-backend-api"
+  ],
+  "evidence": [
+    {
+      "kind": "automated",
+      "status": "passed",
+      "summary": "verify.cjs passes preserved shell regressions and service behavior, including all four REVIEW follow-ups: unknown domains, loading-to-success, ServiceError request ID, and zero pagination values.",
+      "ref": "workstreams/01-project-shell/verify.cjs"
+    },
+    {
+      "kind": "context-validation",
+      "status": "passed",
+      "summary": "Context validation reports 16 workstreams with 0 errors and 0 warnings, and refresh completes successfully.",
+      "ref": "workstreams/01-project-shell/HANDOFF.md"
+    },
+    {
+      "kind": "independent-review",
+      "status": "passed",
+      "summary": "Independent review PASS after service foundation fixes: environment, errors, mock transitions, pagination, duplicate guard, and adapter selection verified.",
+      "ref": "workstreams/01-project-shell/HANDOFF.md"
+    }
+  ],
+  "tags": [
+    "shell",
+    "services",
+    "transport",
+    "mock",
+    "environment"
+  ],
+  "codePaths": [
+    "miniprogram/config/**",
+    "miniprogram/services/**",
+    "workstreams/01-project-shell/**"
+  ],
+  "updatedAt": "2026-06-21T03:54:54.466Z",
+  "handoffRef": "HANDOFF.md"
+}

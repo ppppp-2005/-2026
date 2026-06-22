@@ -1,0 +1,130 @@
+<view class="messages-page">
+  <view class="page-hero">
+    <view class="hero-copy">
+      <text class="hero-label">{{messageCenter.header.label}}</text>
+      <view class="hero-title">{{messageCenter.header.title}}</view>
+      <view class="hero-subtitle">{{messageCenter.header.subtitle}}</view>
+    </view>
+    <view class="unread-summary">
+      <text class="unread-value">{{totalUnread}}</text>
+      <text class="unread-label">本地未读</text>
+    </view>
+  </view>
+
+  <view class="feedback-card">{{feedback}}</view>
+
+  <view class="scenario-card">
+    <view class="scenario-title">本地状态演示</view>
+    <scroll-view class="scenario-scroll" scroll-x="true" show-scrollbar="false">
+      <view class="scenario-row">
+        <view
+          class="scenario-chip {{activeScenario === item.id ? 'scenario-chip-active' : ''}}"
+          wx:for="{{scenarioOptions}}"
+          wx:key="id"
+          bindtap="onScenarioTap"
+          data-scenario="{{item.id}}"
+        >{{item.name}}</view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="state-card" wx:if="{{loadState === 'loading'}}">
+    <view class="state-title">正在读取本地消息</view>
+    <view class="state-text">请稍候，不会发起网络请求。</view>
+  </view>
+
+  <view class="state-card" wx:elif="{{loadState === 'unauthorized'}}">
+    <view class="state-title">{{errorTitle}}</view>
+    <view class="state-text">{{errorMessage}}</view>
+    <button
+      class="state-button"
+      bindtap="onDemoLoginTap"
+      disabled="{{authPending}}"
+      loading="{{authPending}}"
+    >进入本地演示</button>
+    <view class="state-note">仅更新内存身份，不调用微信登录，也不会保存账号。</view>
+  </view>
+
+  <view class="state-card state-card-error" wx:elif="{{loadState === 'error'}}">
+    <view class="state-kicker">{{errorKind}}</view>
+    <view class="state-title">{{errorTitle}}</view>
+    <view class="state-text">{{errorMessage}}</view>
+    <button class="state-button" bindtap="onRetryTap">重试本地读取</button>
+  </view>
+
+  <view wx:if="{{loadState === 'ready' || loadState === 'empty'}}">
+    <scroll-view class="category-scroll" scroll-x="true" show-scrollbar="false">
+      <view class="category-row">
+        <view
+          class="category-chip {{activeCategory === item.id ? 'category-chip-active' : ''}}"
+          wx:for="{{categories}}"
+          wx:key="id"
+          bindtap="onCategoryTap"
+          data-category="{{item.id}}"
+        >
+          <text>{{item.name}} {{item.count}}</text>
+          <text class="category-unread" wx:if="{{item.unreadCount}}">未读 {{item.unreadCount}}</text>
+        </view>
+      </view>
+    </scroll-view>
+
+    <view class="tool-row">
+      <view class="unread-toggle {{unreadOnly ? 'unread-toggle-active' : ''}}" bindtap="onUnreadToggle">
+        {{unreadOnly ? '只看未读' : '显示全部'}}
+      </view>
+      <view class="mark-all" bindtap="onMarkAllRead">当前分类全部已读</view>
+    </view>
+
+    <view class="message-list">
+      <view
+        class="message-card {{item.unread ? 'message-card-unread' : ''}}"
+        wx:for="{{visibleMessages}}"
+        wx:key="id"
+        bindtap="onMessageTap"
+        data-id="{{item.id}}"
+      >
+        <view class="message-top">
+          <text class="category-label">{{item.categoryLabel}}</text>
+          <text class="message-time">{{item.time}}</text>
+        </view>
+        <view class="message-title-row">
+          <view class="unread-dot" wx:if="{{item.unread}}"></view>
+          <text class="message-title">{{item.title}}</text>
+        </view>
+        <text class="message-preview">{{item.preview}}</text>
+        <view class="message-bottom">
+          <text class="message-job" wx:if="{{item.job}}">{{item.job.title}} · {{item.job.company}}</text>
+          <text class="message-job" wx:else>平台服务提醒</text>
+          <text
+            class="read-action"
+            wx:if="{{item.unread}}"
+            catchtap="onMarkRead"
+            data-id="{{item.id}}"
+          >本页标为已读</text>
+          <text class="detail-action" wx:else>查看详情 &gt;</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="empty-card" wx:if="{{!visibleMessages.length}}">
+      <view class="empty-title">{{loadState === 'empty' ? '本地演示当前没有消息' : '当前没有符合条件的消息'}}</view>
+      <view class="empty-text">可切换分类、关闭“只看未读”或选择其他本地状态。</view>
+    </view>
+
+    <view class="pagination-card" wx:if="{{allMessages.length}}">
+      <view class="page-error" wx:if="{{loadMoreState === 'error'}}">
+        <view class="state-kicker">{{pageErrorKind}}</view>
+        <view class="page-error-text">{{pageErrorMessage}} 已有消息仍保留。</view>
+        <button class="state-button" bindtap="onRetryLoadMore">重试加载下页</button>
+      </view>
+      <button
+        class="load-more-button"
+        wx:elif="{{hasMore}}"
+        bindtap="onLoadMore"
+        disabled="{{loadMoreState === 'loading'}}"
+        loading="{{loadMoreState === 'loading'}}"
+      >加载更多本地消息</button>
+      <view class="page-end" wx:else>本地演示消息已全部加载</view>
+    </view>
+  </view>
+</view>

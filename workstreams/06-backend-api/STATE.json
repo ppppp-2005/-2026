@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "workstream": "06-backend-api",
+  "title": "后端 API 与数据设计",
+  "phase": "BUILD",
+  "state": "active",
+  "priority": "P0",
+  "currentSlice": "api-contract-v1",
+  "ownerThreadId": null,
+  "summary": "前端框架已 SHIP,现在进入真实数据/API 阶段。第一个切片 api-contract-v1:扫描全部 data/*.js mock 数据,提取真实数据字段清单,定义 API 接口规范,区分后端字段与微信开放能力字段。",
+  "nextAction": "REVIEW API_SPEC.md,确认 v1 范围决策并处理投递/简历/报名/隐私等待补接口后推进 SHIP。",
+  "blockers": [],
+  "dependencies": [
+    "01-project-shell",
+    "02-home-ui",
+    "03-jobs",
+    "04-user-profile",
+    "05-employer",
+    "07-quality-review",
+    "08-skill-training",
+    "09-policy",
+    "10-campus",
+    "11-labor-info",
+    "12-return-home",
+    "13-training-signup",
+    "14-messages",
+    "15-events"
+  ],
+  "evidence": [],
+  "tags": [
+    "backend",
+    "api",
+    "data-contract"
+  ],
+  "codePaths": [
+    "workstreams/06-backend-api/**",
+    "docs/blueprint/backend-design-placeholder.md"
+  ],
+  "updatedAt": "2026-06-23T00:00:00+08:00",
+  "handoffRef": "HANDOFF.md"
+}

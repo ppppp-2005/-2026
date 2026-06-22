@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "workstream": "09-policy",
+  "title": "就业政策展示页",
+  "phase": "SHIP",
+  "state": "shipped",
+  "priority": "P1",
+  "currentSlice": "quality-touch-target-v1",
+  "ownerThreadId": null,
+  "summary": "三个政策操作按钮已移除 58-64rpx 固定高度，改为适配大字的 88rpx 最小触控区域；自动 VERIFY 已通过。",
+  "nextAction": "由总控选择下一个切片，并用精简上下文启动新线程。",
+  "blockers": [],
+  "dependencies": [
+    "01-project-shell",
+    "02-home-ui",
+    "07-quality-review"
+  ],
+  "evidence": [
+    {
+      "kind": "automated",
+      "status": "passed",
+      "summary": "09 verifier 确认三个目标选择器无低固定高度、min-height 不低于 88rpx，且 WXML bindtap 仍存在。",
+      "ref": "workstreams/08-skill-training/verify.cjs"
+    },
+    {
+      "kind": "accessibility",
+      "status": "passed",
+      "summary": ".important-action、.detail-button 和 .consult-button 使用 min-height、垂直内边距、border-box 和可增长行高。",
+      "ref": "miniprogram/pages/policy/index.wxss"
+    },
+    {
+      "kind": "independent-review",
+      "status": "passed",
+      "summary": "07 P2 修复批次独立 REVIEW 通过：导航失败文案、18 个触控目标和企业验证集成兼容均复验通过。",
+      "ref": "workstreams/07-quality-review/REPORT.md"
+    }
+  ],
+  "tags": [
+    "policy",
+    "content",
+    "mock"
+  ],
+  "codePaths": [
+    "miniprogram/pages/policy/**",
+    "miniprogram/data/policy.js",
+    "miniprogram/data/policy.ts"
+  ],
+  "updatedAt": "2026-06-19T15:57:41.832Z",
+  "handoffRef": "HANDOFF.md"
+}

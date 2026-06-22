@@ -1,0 +1,54 @@
+<view class="applications-page">
+  <view class="page-hero">
+    <view class="hero-copy">
+      <text class="hero-label">{{applications.header.label}}</text>
+      <view class="hero-title">{{applications.header.title}}</view>
+      <view class="hero-subtitle">{{applications.header.subtitle}}</view>
+    </view>
+    <text class="hero-badge">{{applications.header.dataLabel}}</text>
+  </view>
+
+  <view class="feedback-card">{{feedback}}</view>
+
+  <scroll-view class="filter-scroll" scroll-x="true" show-scrollbar="false">
+    <view class="filter-row">
+      <view
+        class="filter-chip {{activeFilter === item.id ? 'filter-chip-active' : ''}}"
+        wx:for="{{filters}}"
+        wx:key="id"
+        bindtap="onFilterTap"
+        data-status="{{item.id}}"
+      >{{item.name}} {{item.count}}</view>
+    </view>
+  </scroll-view>
+
+  <view class="record-count">当前显示 {{visibleRecords.length}} 条演示记录</view>
+  <view class="record-list">
+    <view class="record-card" wx:for="{{visibleRecords}}" wx:key="id" bindtap="onRecordTap" data-id="{{item.id}}">
+      <view class="record-top">
+        <view class="record-title-copy">
+          <text class="job-title">{{item.jobTitle}}</text>
+          <text class="company-name">{{item.company}}</text>
+        </view>
+        <text class="status-badge status-{{item.status}}">{{item.statusLabel}}</text>
+      </view>
+      <text class="salary">{{item.salary}}</text>
+      <view class="record-meta">
+        <text>{{item.location}}</text>
+        <text>{{item.appliedAt}}</text>
+      </view>
+      <view class="update-box">
+        <text class="update-label">演示进度</text>
+        <text class="update-text">{{item.updateText}}</text>
+      </view>
+      <view class="record-detail" wx:if="{{expandedId === item.id}}">
+        <text class="detail-title">下一步说明</text>
+        <text class="detail-text">{{item.nextStep}}</text>
+        <button class="contact-button" catchtap="onContactTap">联系暂未开放</button>
+      </view>
+      <text class="expand-text">{{expandedId === item.id ? '收起说明' : '查看说明'}} &gt;</text>
+    </view>
+  </view>
+
+  <view class="empty-card" wx:if="{{!visibleRecords.length}}">当前筛选没有演示记录。</view>
+</view>

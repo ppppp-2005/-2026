@@ -1,0 +1,93 @@
+<view class="events-page">
+  <view class="events-hero">
+    <view class="hero-top">
+      <text class="hero-label">{{header.label}}</text>
+      <text class="hero-data">{{header.dataLabel}}</text>
+    </view>
+    <view class="hero-title">{{header.title}}</view>
+    <view class="hero-subtitle">{{header.subtitle}}</view>
+  </view>
+
+  <view class="truth-note">
+    <text class="truth-title">先看清活动说明</text>
+    <text class="truth-copy">活动时间、地点和主办方均为本地示例；本页不提供真实直播、报名或订阅。</text>
+  </view>
+
+  <view class="type-tabs">
+    <button
+      class="type-tab {{activeTypeId === item.id ? 'type-tab-active' : ''}}"
+      wx:for="{{typeTabs}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      bindtap="onTypeTap"
+    >{{item.name}}</button>
+  </view>
+
+  <scroll-view class="status-scroll" scroll-x="true" show-scrollbar="false">
+    <view class="status-row">
+      <button
+        class="status-chip {{activeStatusId === item.id ? 'status-chip-active' : ''}}"
+        wx:for="{{statusFilters}}"
+        wx:key="id"
+        data-id="{{item.id}}"
+        bindtap="onStatusTap"
+      >{{item.name}}</button>
+    </view>
+  </scroll-view>
+
+  <view class="section-head">
+    <view>
+      <text class="section-title">示例活动</text>
+      <text class="section-subtitle">按类型和状态查看，信息不会自动更新</text>
+    </view>
+    <text class="result-count">{{visibleEvents.length}} 场</text>
+  </view>
+
+  <view wx:if="{{loadState === 'loading'}}" class="state-card">
+    <text class="state-title">正在加载</text>
+    <text class="state-copy">{{stateMessage}}</text>
+  </view>
+
+  <view wx:elif="{{loadState === 'error'}}" class="state-card state-card-error">
+    <text class="state-title">暂时无法显示</text>
+    <text class="state-copy">{{stateMessage}}</text>
+    <button class="state-action" bindtap="onRetry">重新加载</button>
+  </view>
+
+  <view wx:elif="{{loadState === 'empty'}}" class="state-card">
+    <text class="state-title">当前没有活动</text>
+    <text class="state-copy">{{stateMessage}}</text>
+    <button class="state-action" bindtap="onShowAllStatuses">查看本类全部</button>
+  </view>
+
+  <view wx:else class="event-list">
+    <view class="event-card" wx:for="{{visibleEvents}}" wx:key="id">
+      <view class="card-top">
+        <text class="type-badge">{{item.typeLabel}}</text>
+        <text class="status-badge status-{{item.status}}">{{item.statusLabel}}</text>
+      </view>
+      <text class="event-title">{{item.title}}</text>
+      <text class="event-summary">{{item.summary}}</text>
+
+      <view class="event-facts">
+        <view class="fact-row">
+          <text class="fact-label">时间</text>
+          <text class="fact-value">{{item.time}}</text>
+        </view>
+        <view class="fact-row">
+          <text class="fact-label">{{item.locationLabel}}</text>
+          <text class="fact-value">{{item.location}}</text>
+        </view>
+        <view class="fact-row">
+          <text class="fact-label">主办方</text>
+          <text class="fact-value">{{item.organizer}}</text>
+        </view>
+      </view>
+
+      <view class="card-bottom">
+        <text class="card-hint">查看详情后再决定</text>
+        <button class="detail-action" data-id="{{item.id}}" bindtap="onOpenDetail">查看详情</button>
+      </view>
+    </view>
+  </view>
+</view>

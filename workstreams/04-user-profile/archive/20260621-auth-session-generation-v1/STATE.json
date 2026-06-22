@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "workstream": "04-user-profile",
+  "title": "User profile frontend",
+  "phase": "REVIEW",
+  "state": "accepted",
+  "priority": "P0",
+  "currentSlice": "auth-session-generation-v1",
+  "ownerThreadId": null,
+  "summary": "Auth snapshots now expose an immutable in-memory generation that advances on every real session mutation and detects identical-session ABA changes.",
+  "nextAction": "由 00-main-control 执行当前切片的 SHIP 与归档。",
+  "blockers": [],
+  "dependencies": [
+    "01-project-shell",
+    "07-quality-review"
+  ],
+  "evidence": [
+    {
+      "kind": "automated",
+      "status": "passed",
+      "summary": "The 04 verifier covers immutable numeric generation, real and no-op transitions, and expired then identical relogin ABA behavior.",
+      "ref": "workstreams/04-user-profile/verify.cjs"
+    },
+    {
+      "kind": "mirror",
+      "status": "passed",
+      "summary": "auth-session JS syntax and exact JS/TS mirror checks passed.",
+      "ref": "miniprogram/services/auth-session.js"
+    },
+    {
+      "kind": "context-validation",
+      "status": "passed",
+      "summary": "Global context validation and refresh passed.",
+      "ref": "workstreams/00-main-control/STATUS.md"
+    },
+    {
+      "kind": "independent-review",
+      "status": "passed",
+      "summary": "auth-session-generation-v1 independent review PASS; immutable monotonic generation and ABA regression verified",
+      "ref": "workstreams/04-user-profile/HANDOFF.md"
+    }
+  ],
+  "tags": [
+    "profile",
+    "auth",
+    "session-generation",
+    "frontend"
+  ],
+  "codePaths": [
+    "miniprogram/services/auth-session.js",
+    "miniprogram/services/auth-session.ts"
+  ],
+  "updatedAt": "2026-06-21T09:14:40.641Z",
+  "handoffRef": "HANDOFF.md"
+}

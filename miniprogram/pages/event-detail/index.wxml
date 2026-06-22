@@ -1,0 +1,76 @@
+<view class="detail-page">
+  <view wx:if="{{loadState === 'loading'}}" class="state-card">
+    <text class="state-title">正在加载</text>
+    <text class="state-copy">{{stateMessage}}</text>
+  </view>
+
+  <view wx:elif="{{loadState === 'error'}}" class="state-card state-card-error">
+    <text class="state-title">详情无法显示</text>
+    <text class="state-copy">{{stateMessage}}</text>
+    <view class="state-actions">
+      <button class="button-secondary" bindtap="onBack">返回活动中心</button>
+      <button class="button-primary" bindtap="onRetry">重新读取</button>
+    </view>
+  </view>
+
+  <block wx:else>
+    <view class="detail-hero">
+      <view class="hero-badges">
+        <text class="type-badge">{{event.typeLabel}}</text>
+        <text class="status-badge status-{{event.status}}">{{event.statusLabel}}</text>
+      </view>
+      <text class="event-title">{{event.title}}</text>
+      <text class="event-summary">{{event.summary}}</text>
+    </view>
+
+    <view class="truth-card">
+      <text class="truth-title">本地示例说明</text>
+      <text class="truth-copy">当前不会真实报名、播放直播或订阅提醒，也不会向主办方发送任何信息。</text>
+    </view>
+
+    <view class="detail-card">
+      <text class="card-title">活动信息</text>
+      <view class="detail-row">
+        <text class="detail-label">类型与状态</text>
+        <text class="detail-value">{{event.typeLabel}} · {{event.statusLabel}}</text>
+      </view>
+      <view class="detail-row">
+        <text class="detail-label">活动时间</text>
+        <text class="detail-value">{{event.time}}</text>
+      </view>
+      <view class="detail-row">
+        <text class="detail-label">{{event.locationLabel}}</text>
+        <text class="detail-value">{{event.location}}</text>
+      </view>
+      <view class="detail-row">
+        <text class="detail-label">主办方</text>
+        <text class="detail-value">{{event.organizer}}</text>
+      </view>
+    </view>
+
+    <view class="detail-card">
+      <text class="card-title">适合人群</text>
+      <view class="audience-row" wx:for="{{event.audience}}" wx:key="*this">
+        <text class="audience-mark"></text>
+        <text class="audience-copy">{{item}}</text>
+      </view>
+    </view>
+
+    <view class="detail-card">
+      <text class="card-title">活动说明</text>
+      <text class="body-copy" wx:for="{{event.description}}" wx:key="*this">{{item}}</text>
+    </view>
+
+    <view class="interest-status {{isInterested ? 'interest-status-active' : ''}}">
+      <text class="interest-title">{{isInterested ? '本页已标记感兴趣' : '尚未做本页标记'}}</text>
+      <text class="interest-copy">{{interestFeedback}}</text>
+    </view>
+
+    <view class="bottom-actions">
+      <button class="signup-info-button" bindtap="onSignupInfoTap">查看报名说明</button>
+      <button class="interest-button {{isInterested ? 'interest-button-active' : ''}}" bindtap="onInterestTap">
+        {{isInterested ? '取消本页标记' : '本页标记感兴趣'}}
+      </button>
+    </view>
+  </block>
+</view>

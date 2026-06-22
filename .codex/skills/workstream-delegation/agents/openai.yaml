@@ -1,0 +1,4 @@
+interface:
+  display_name: "Workstream Delegation"
+  short_description: "Delegate work and retrieve compact project context."
+  default_prompt: "Use $workstream-delegation to coordinate this workstream with compact handoffs and targeted context retrieval."

@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "workstream": "04-user-profile",
+  "title": "用户中心前端框架",
+  "phase": "REVIEW",
+  "state": "accepted",
+  "priority": "P0",
+  "currentSlice": "profile-frontend-framework-v1",
+  "ownerThreadId": "profile_frontend_framework",
+  "summary": "我的 Tab、演示登录、简历编辑预览和投递记录筛选前端框架已完成，全部行为保持本地演示。",
+  "nextAction": "归档 profile-frontend-framework-v1；新增普通页面路由交由最终 01-project-shell 集成。",
+  "blockers": [],
+  "dependencies": [
+    "01-project-shell"
+  ],
+  "evidence": [
+    {
+      "kind": "static-review",
+      "status": "passed",
+      "summary": "四个页面五件套、JSON、JS/TS 语法、数据镜像与 WXML 事件检查通过",
+      "ref": "workstreams/04-user-profile/HANDOFF.md"
+    },
+    {
+      "kind": "safety-scan",
+      "status": "passed",
+      "summary": "禁止登录、网络、存储、上传 API 与虚假成功文案扫描无命中",
+      "ref": "workstreams/04-user-profile/HANDOFF.md"
+    },
+    {
+      "kind": "route-contract",
+      "status": "passed",
+      "summary": "三个普通页面路由已列出且未修改 app.json",
+      "ref": "workstreams/04-user-profile/TASKS.md"
+    },
+    {
+      "kind": "main-review",
+      "status": "passed",
+      "summary": "00-main-control 独立复核四页五件套、JS/TS 镜像、事件绑定、禁用 API、诚实文案与文本化身份卡，静态 REVIEW 通过",
+      "ref": "workstreams/04-user-profile/HANDOFF.md"
+    }
+  ],
+  "tags": [
+    "profile",
+    "resume",
+    "applications",
+    "frontend"
+  ],
+  "codePaths": [
+    "miniprogram/pages/profile/**",
+    "miniprogram/pages/profile-login/**",
+    "miniprogram/pages/profile-resume/**",
+    "miniprogram/pages/profile-applications/**",
+    "miniprogram/data/profile.js",
+    "miniprogram/data/profile.ts"
+  ],
+  "updatedAt": "2026-06-19T01:16:32+08:00",
+  "handoffRef": "HANDOFF.md"
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "workstream": "06-backend-api",
+  "title": "Backend API and data architecture",
+  "phase": "REVIEW",
+  "state": "accepted",
+  "priority": "P1",
+  "currentSlice": "backend-architecture-v1",
+  "ownerThreadId": "/root/backend_architecture_compact",
+  "summary": "Backend architecture v1 locks the modular monolith, PostgreSQL, REST, WeChat authentication, opaque sessions, role model, object storage boundary, Docker layout, API contracts, and gated delivery plan.",
+  "nextAction": "归档 backend-architecture-v1，并为 Phase 1 Foundation And Identity 创建新的 BUILD 线程。",
+  "blockers": [],
+  "dependencies": [],
+  "evidence": [
+    {
+      "kind": "architecture-plan",
+      "status": "passed",
+      "summary": "Backend architecture v1 contains the locked decisions and required design contracts.",
+      "ref": "docs/blueprint/backend-design-placeholder.md"
+    },
+    {
+      "kind": "architecture-review",
+      "status": "passed",
+      "summary": "00-main-control 已复核并接受后端架构 v1，模块、数据、鉴权、API、安全与分阶段门槛满足 BUILD 前置要求",
+      "ref": "docs/blueprint/backend-design-placeholder.md"
+    }
+  ],
+  "tags": [
+    "backend",
+    "api",
+    "database",
+    "auth",
+    "architecture"
+  ],
+  "codePaths": [
+    "docs/blueprint/backend-design-placeholder.md"
+  ],
+  "updatedAt": "2026-06-19T00:49:31+08:00",
+  "handoffRef": "HANDOFF.md"
+}

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "workstream": "04-user-profile",
+  "title": "用户中心前端框架",
+  "phase": "REVIEW",
+  "state": "accepted",
+  "priority": "P0",
+  "currentSlice": "auth-role-privacy-frontend-v1",
+  "ownerThreadId": null,
+  "summary": "纯内存会话、双协议隐私说明、登录失效和求职者/招聘方角色切换已完成，行为 verifier 通过。",
+  "nextAction": "由 00-main-control 执行当前切片的 SHIP 与归档。",
+  "blockers": [],
+  "dependencies": [
+    "01-project-shell",
+    "07-quality-review"
+  ],
+  "evidence": [
+    {
+      "kind": "automated",
+      "status": "passed",
+      "summary": "auth-session 状态转移、重复提交、timeout/offline/unauthorized 与中文错误映射均通过。",
+      "ref": "workstreams/04-user-profile/verify.cjs"
+    },
+    {
+      "kind": "privacy-boundary",
+      "status": "passed",
+      "summary": "双协议门槛、可展开收集边界、退出清除说明、敏感信息提示及禁用 API/硬编码扫描通过。",
+      "ref": "workstreams/04-user-profile/verify.cjs"
+    },
+    {
+      "kind": "integration",
+      "status": "passed",
+      "summary": "profile onShow 恢复、未登录招聘方引导、已登录 employer 导航和返回角色一致性通过。",
+      "ref": "workstreams/04-user-profile/verify.cjs"
+    },
+    {
+      "kind": "independent-review",
+      "status": "passed",
+      "summary": "Independent review PASS; main control confirmed verifier, context validation, and unchanged app/employer/resume/application baselines.",
+      "ref": "workstreams/04-user-profile/HANDOFF.md"
+    }
+  ],
+  "tags": [
+    "profile",
+    "auth",
+    "privacy",
+    "roles",
+    "frontend"
+  ],
+  "codePaths": [
+    "miniprogram/pages/profile/**",
+    "miniprogram/pages/profile-login/**",
+    "miniprogram/pages/profile-resume/**",
+    "miniprogram/pages/profile-applications/**",
+    "miniprogram/data/profile.js",
+    "miniprogram/data/profile.ts",
+    "miniprogram/services/auth-session.js",
+    "miniprogram/services/auth-session.ts"
+  ],
+  "updatedAt": "2026-06-21T04:15:13.086Z",
+  "handoffRef": "HANDOFF.md"
+}

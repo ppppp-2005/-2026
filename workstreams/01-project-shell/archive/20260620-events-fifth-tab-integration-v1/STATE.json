@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "workstream": "01-project-shell",
+  "title": "Events fifth-tab route integration",
+  "phase": "REVIEW",
+  "state": "accepted",
+  "priority": "P1",
+  "currentSlice": "events-fifth-tab-integration-v1",
+  "ownerThreadId": null,
+  "summary": "The delivered event list and detail routes are registered, and the shell now exposes the ordered five-item 首页/交流/职位/消息/我的 Tab contract with full route regression coverage.",
+  "nextAction": "由 00-main-control 执行当前切片的 SHIP 与归档。",
+  "blockers": [],
+  "dependencies": [
+    "15-events"
+  ],
+  "evidence": [
+    {
+      "kind": "automated",
+      "status": "passed",
+      "summary": "verify.cjs passes 19 preserved routes, two event routes, 21 page five-file sets, five ordered unique Tabs, first-five placement, detail exclusion, and retained shell regressions.",
+      "ref": "workstreams/01-project-shell/verify.cjs"
+    },
+    {
+      "kind": "context-validation",
+      "status": "passed",
+      "summary": "Context validation and refresh pass after the current-slice handoff update.",
+      "ref": "workstreams/01-project-shell/HANDOFF.md"
+    },
+    {
+      "kind": "independent-review",
+      "status": "passed",
+      "summary": "Independent reviewer PASS after write-window scope evidence: event routes and five-tab contract verified.",
+      "ref": "workstreams/01-project-shell/HANDOFF.md"
+    }
+  ],
+  "tags": [
+    "shell",
+    "routes",
+    "events",
+    "tab-bar"
+  ],
+  "codePaths": [
+    "miniprogram/app.json",
+    "workstreams/01-project-shell/**"
+  ],
+  "updatedAt": "2026-06-20T06:49:48.228Z",
+  "handoffRef": "HANDOFF.md"
+}

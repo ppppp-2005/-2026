@@ -1,0 +1,84 @@
+<view class="login-page">
+  <view class="page-hero">
+    <view class="hero-copy">
+      <text class="hero-label">{{login.header.label}}</text>
+      <view class="hero-title">{{login.header.title}}</view>
+      <view class="hero-subtitle">{{login.header.subtitle}}</view>
+    </view>
+    <text class="hero-badge">{{login.header.dataLabel}}</text>
+  </view>
+
+  <view class="status-card status-card-{{sessionStatus}}">
+    <text class="status-title">{{statusTitle}}</text>
+    <text class="status-text">{{statusText}}</text>
+  </view>
+
+  <view class="section-card">
+    <text class="section-title">数据边界</text>
+    <view class="permission-row" wx:for="{{login.permissions}}" wx:key="id">
+      <text class="permission-name">{{item.name}}</text>
+      <text class="permission-state">{{item.state}}</text>
+    </view>
+  </view>
+
+  <view class="section-card">
+    <text class="section-title">演示方式</text>
+    <text class="section-note">用于验证页面反馈，不会发起网络请求。</text>
+    <view class="scenario-grid">
+      <button
+        class="scenario-button {{selectedScenario === item.id ? 'scenario-button-active' : ''}}"
+        wx:for="{{login.scenarios}}"
+        wx:key="id"
+        data-scenario="{{item.id}}"
+        bindtap="onScenarioTap"
+        disabled="{{submitting}}"
+      >
+        <text class="scenario-name">{{item.name}}</text>
+        <text class="scenario-note">{{item.note}}</text>
+      </button>
+    </view>
+  </view>
+
+  <checkbox-group class="agreement-list" bindchange="onAgreementsChange">
+    <view class="agreement-card" wx:for="{{login.agreements}}" wx:key="id">
+      <label class="agreement-label">
+        <checkbox
+          value="{{item.id}}"
+          checked="{{item.id === 'terms' ? termsAgreed : privacyAgreed}}"
+          color="#1f7a4d"
+        />
+        <view class="agreement-copy">
+          <text class="agreement-title">{{item.title}}</text>
+          <text class="agreement-summary">{{item.summary}}</text>
+        </view>
+      </label>
+      <button class="detail-button" data-id="{{item.id}}" catchtap="onAgreementDetailTap">
+        {{item.id === 'terms' ? (termsExpanded ? '收起用户协议' : '查看用户协议') : (privacyExpanded ? '收起隐私说明' : '查看隐私说明')}}
+      </button>
+      <text
+        class="agreement-detail"
+        wx:if="{{item.id === 'terms' ? termsExpanded : privacyExpanded}}"
+      >{{item.detail}}</text>
+      <view wx:if="{{item.id === 'privacy' && privacyExpanded}}">
+        <view class="disclosure-row" wx:for="{{login.disclosures}}" wx:key="id">
+          <text class="disclosure-title">{{item.title}}</text>
+          <text class="disclosure-text">{{item.text}}</text>
+        </view>
+      </view>
+    </view>
+  </checkbox-group>
+
+  <view class="feedback-card">{{feedback}}</view>
+  <button
+    class="primary-button"
+    bindtap="onDemoLoginTap"
+    disabled="{{submitting || !allAgreed}}"
+    loading="{{submitting}}"
+  >{{sessionStatus === 'expired' ? '重新体验本地登录' : login.actionText}}</button>
+  <button
+    class="secondary-button"
+    bindtap="onExpireTap"
+    disabled="{{submitting || sessionStatus !== 'authenticated'}}"
+  >{{login.expireText}}</button>
+  <button class="text-button" bindtap="onLogoutTap" disabled="{{submitting}}">{{login.logoutText}}</button>
+</view>

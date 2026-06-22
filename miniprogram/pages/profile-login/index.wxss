@@ -1,0 +1,64 @@
+.login-page {
+  min-height: 100vh;
+  padding: 24rpx 24rpx 48rpx;
+  background: #f6f7f2;
+}
+
+.page-hero {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 28rpx;
+  color: #fff;
+  background: linear-gradient(135deg, #1f7a4d, #2d8a58 65%, #d78a38);
+  border-radius: 8rpx;
+}
+
+.hero-copy { flex: 1; min-width: 0; padding-right: 16rpx; }
+.hero-label, .hero-badge { padding: 8rpx 14rpx; font-size: 22rpx; border-radius: 8rpx; }
+.hero-label { display: inline-flex; background: rgba(22, 64, 43, .34); }
+.hero-badge { flex: 0 0 auto; background: rgba(255, 255, 255, .16); border: 1rpx solid rgba(255, 255, 255, .32); }
+.hero-title { margin-top: 20rpx; font-size: 44rpx; font-weight: 700; line-height: 1.2; }
+.hero-subtitle { margin-top: 12rpx; font-size: 26rpx; line-height: 1.45; }
+
+.status-card, .section-card, .agreement-card {
+  margin-top: 18rpx;
+  padding: 24rpx;
+  background: #fff;
+  border: 1rpx solid #e7ebe3;
+  border-radius: 8rpx;
+}
+.status-card { margin-top: 24rpx; border-left: 8rpx solid #d78a38; }
+.status-card-authenticated { border-left-color: #1f7a4d; }
+.status-card-expired { border-left-color: #b54a3d; }
+.status-title, .section-title, .step-title { display: block; color: #16251d; font-weight: 700; }
+.status-title, .section-title { font-size: 32rpx; line-height: 1.3; }
+.status-text, .section-note, .disclosure-text, .agreement-summary, .agreement-detail { display: block; margin-top: 10rpx; color: #6f7972; font-size: 24rpx; line-height: 1.5; }
+.permission-row { display: flex; justify-content: space-between; margin-top: 16rpx; padding-top: 16rpx; border-top: 1rpx solid #edf1eb; }
+.permission-name { color: #3f4c44; font-size: 27rpx; }
+.permission-state { color: #1f7a4d; font-size: 25rpx; font-weight: 700; }
+.disclosure-row { margin-top: 18rpx; padding-top: 16rpx; border-top: 1rpx solid #edf1eb; }
+.disclosure-title, .agreement-title, .scenario-name { display: block; color: #25342b; font-size: 27rpx; font-weight: 700; line-height: 1.35; }
+.scenario-grid { display: flex; flex-wrap: wrap; margin: 10rpx -6rpx -6rpx; }
+.scenario-button { box-sizing: border-box; display: flex; align-items: flex-start; justify-content: center; width: calc(50% - 12rpx); min-height: 88rpx; margin: 6rpx; padding: 14rpx 16rpx; flex-direction: column; color: #48554d; background: #f7f8f5; border: 1rpx solid #dfe5df; border-radius: 8rpx; }
+.scenario-button-active { color: #1f7a4d; background: #e8f4ed; border-color: #1f7a4d; }
+.scenario-note { display: block; margin-top: 4rpx; font-size: 21rpx; line-height: 1.35; text-align: left; }
+.scenario-button::after, .detail-button::after { border: 0; }
+.agreement-list { display: block; }
+.agreement-label { display: flex; align-items: flex-start; color: #334139; font-size: 26rpx; line-height: 1.45; }
+.agreement-label checkbox { flex: 0 0 auto; margin-right: 12rpx; }
+.agreement-copy { flex: 1; min-width: 0; }
+.agreement-summary { margin-top: 4rpx; }
+.detail-button { box-sizing: border-box; display: flex; align-items: center; justify-content: center; width: 100%; min-height: 88rpx; margin-top: 14rpx; padding: 12rpx 20rpx; color: #1f7a4d; font-size: 25rpx; line-height: 1.4; background: #f3f8f4; border-radius: 8rpx; }
+.agreement-detail { padding: 16rpx; color: #4b574f; background: #f8f9f6; border-radius: 8rpx; }
+.feedback-card { margin-top: 18rpx; padding: 18rpx 22rpx; color: #765c39; font-size: 24rpx; line-height: 1.45; background: #fff7e8; border: 1rpx solid #f3dfb7; border-radius: 8rpx; }
+.primary-button, .secondary-button, .text-button { box-sizing: border-box; display: flex; align-items: center; justify-content: center; width: 100%; min-height: 88rpx; margin-top: 16rpx; padding: 14rpx 24rpx; font-size: 28rpx; font-weight: 600; line-height: 1.4; border-radius: 8rpx; }
+.primary-button { color: #fff; background: #1f7a4d; }
+.secondary-button { color: #1f7a4d; background: #fff; border: 1rpx solid #1f7a4d; }
+.text-button { color: #6f7972; font-size: 24rpx; background: transparent; }
+.primary-button::after, .secondary-button::after, .text-button::after { border: 0; }
+.primary-button[disabled], .secondary-button[disabled], .text-button[disabled], .scenario-button[disabled] { color: #919991; background: #e8ebe7; opacity: 1; }
+
+@media (max-width: 340px) {
+  .scenario-button { width: calc(100% - 12rpx); }
+}

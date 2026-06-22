@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "workstream": "00-main-control",
+  "title": "总控与上下文治理",
+  "phase": "REVIEW",
+  "state": "accepted",
+  "priority": "P0",
+  "currentSlice": "backend-architecture-review-v1",
+  "ownerThreadId": "current-main-thread",
+  "summary": "后端架构 v1 已通过总控评审并 SHIP，真实后端实现可从 Foundation And Identity 独立切片开始。",
+  "nextAction": "归档 backend-architecture-review-v1；下一线程按架构文档启动 Phase 1 BUILD。",
+  "blockers": [],
+  "dependencies": [],
+  "evidence": [
+    {
+      "kind": "architecture-review",
+      "status": "passed",
+      "summary": "后端架构覆盖技术边界、数据模型、鉴权、API 契约、安全隐私、环境与分阶段验收门槛",
+      "ref": "docs/blueprint/backend-design-placeholder.md"
+    },
+    {
+      "kind": "repository-validation",
+      "status": "passed",
+      "summary": "架构交接与时间戳修正后，十三个 workstream 校验为零错误、零警告",
+      "ref": "workstreams/06-backend-api/HANDOFF.md"
+    }
+  ],
+  "tags": [
+    "control",
+    "memory",
+    "rag",
+    "workflow",
+    "backend-architecture"
+  ],
+  "codePaths": [
+    ".codex/skills/workstream-delegation/**",
+    "docs/blueprint/**",
+    "workstreams/00-main-control/**"
+  ],
+  "updatedAt": "2026-06-19T00:50:37+08:00",
+  "handoffRef": "HANDOFF.md"
+}

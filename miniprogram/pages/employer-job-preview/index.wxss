@@ -1,0 +1,261 @@
+.page {
+  min-height: 100vh;
+  padding: 24rpx 24rpx 56rpx;
+  color: #183126;
+  background: #f6f7f2;
+  box-sizing: border-box;
+}
+
+.preview-banner {
+  padding: 28rpx;
+  color: #ffffff;
+  background: #1f7a4d;
+  border-radius: 10rpx;
+}
+
+.preview-label,
+.preview-title,
+.preview-text,
+.job-title,
+.job-salary,
+.info-label,
+.empty-benefit {
+  display: block;
+}
+
+.preview-label {
+  width: fit-content;
+  padding: 8rpx 14rpx;
+  font-size: 24rpx;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1rpx solid rgba(255, 255, 255, 0.35);
+  border-radius: 8rpx;
+}
+
+.preview-title {
+  margin-top: 18rpx;
+  font-size: 42rpx;
+  font-weight: 700;
+}
+
+.preview-text {
+  margin-top: 12rpx;
+  color: #e7f4eb;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+
+.source-note,
+.confirmed-note,
+.confirmation-note {
+  margin-top: 18rpx;
+  padding: 18rpx 20rpx;
+  font-size: 24rpx;
+  line-height: 1.5;
+  border-radius: 8rpx;
+}
+
+.source-note {
+  color: #66572e;
+  background: #fff7e8;
+  border: 1rpx solid #efddb9;
+}
+
+.job-card {
+  margin-top: 18rpx;
+  padding: 28rpx;
+  background: #ffffff;
+  border: 1rpx solid #e1e8e1;
+  border-radius: 10rpx;
+}
+
+.job-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 22rpx;
+  border-bottom: 1rpx solid #e8ede8;
+}
+
+.job-copy {
+  flex: 1;
+  min-width: 0;
+  padding-right: 20rpx;
+}
+
+.job-title {
+  font-size: 38rpx;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.job-salary {
+  margin-top: 10rpx;
+  color: #d56722;
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.preview-chip {
+  flex: 0 0 auto;
+  padding: 8rpx 12rpx;
+  color: #9b4338;
+  font-size: 23rpx;
+  background: #fff0ed;
+  border-radius: 8rpx;
+}
+
+.info-row {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20rpx;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+
+.info-label {
+  flex: 0 0 auto;
+  width: 142rpx;
+  color: #6c786f;
+}
+
+.info-value {
+  flex: 1;
+  min-width: 0;
+}
+
+.benefit-block {
+  margin-top: 22rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #e8ede8;
+}
+
+.benefit-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12rpx;
+}
+
+.benefit {
+  margin: 0 10rpx 10rpx 0;
+  padding: 9rpx 13rpx;
+  color: #1f7a4d;
+  font-size: 23rpx;
+  background: #e7f3ea;
+  border-radius: 8rpx;
+}
+
+.empty-benefit {
+  margin-top: 10rpx;
+  color: #748077;
+  font-size: 24rpx;
+}
+
+.confirmed-note {
+  color: #1f6a44;
+  background: #e8f4ed;
+  border: 1rpx solid #c4dfce;
+}
+
+.confirmation-note {
+  color: #78571e;
+  background: #fff7e8;
+  border: 1rpx solid #f0dfbd;
+}
+
+.state-card {
+  margin-top: 18rpx;
+  padding: 46rpx 24rpx;
+  text-align: center;
+  background: #ffffff;
+  border: 1rpx solid #e1e8e1;
+  border-radius: 10rpx;
+}
+
+.state-tools {
+  margin-top: 18rpx;
+  padding: 22rpx;
+  background: #ffffff;
+  border: 1rpx solid #e1e8e1;
+  border-radius: 10rpx;
+}
+
+.tool-label {
+  display: block;
+  font-size: 26rpx;
+  font-weight: 700;
+}
+
+.tool-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12rpx;
+  gap: 10rpx;
+}
+
+.mode-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 88rpx;
+  margin: 0;
+  padding: 0 18rpx;
+  color: #536259;
+  font-size: 24rpx;
+  background: #edf1ec;
+  border-radius: 8rpx;
+}
+
+.mode-button::after {
+  border: 0;
+}
+
+.mode-button.active {
+  color: #ffffff;
+  background: #1f7a4d;
+}
+
+.state-title,
+.state-text {
+  display: block;
+}
+
+.state-title {
+  font-size: 31rpx;
+  font-weight: 700;
+}
+
+.state-text {
+  margin-top: 12rpx;
+  color: #647369;
+  font-size: 25rpx;
+  line-height: 1.5;
+}
+
+.primary-button,
+.secondary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 90rpx;
+  margin: 20rpx 0 0;
+  font-size: 29rpx;
+  font-weight: 700;
+  border-radius: 8rpx;
+}
+
+.primary-button::after,
+.secondary-button::after {
+  border: 0;
+}
+
+.primary-button {
+  color: #ffffff;
+  background: #1f7a4d;
+}
+
+.secondary-button {
+  color: #1f7a4d;
+  background: #e6f2e9;
+}

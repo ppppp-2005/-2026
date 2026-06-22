@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "workstream": "05-employer",
+  "title": "Employer frontend service states",
+  "phase": "SHIP",
+  "state": "shipped",
+  "priority": "P1",
+  "currentSlice": "employer-service-guard-auth-v1",
+  "ownerThreadId": null,
+  "summary": "Employer async states are complete; candidate append auth retries use filter generations and owned pending tokens so stale resolutions or rejections cannot issue old pages or lock the demo entry.",
+  "nextAction": "由总控选择下一个切片，并用精简上下文启动新线程。",
+  "blockers": [],
+  "dependencies": [
+    "01-project-shell",
+    "04-user-profile"
+  ],
+  "evidence": [
+    {
+      "kind": "automated",
+      "status": "passed",
+      "summary": "The 05 verifier passed append auth races, including filter invalidation, stale rejection cleanup, usable demo re-entry, and protection of a newer auth owner.",
+      "ref": "workstreams/05-employer/verify.cjs"
+    },
+    {
+      "kind": "service-contract",
+      "status": "passed",
+      "summary": "The local employer service passed six read scenarios, anonymous/expired/seeker guards, candidate pagination, field validation, and duplicate single-flight checks.",
+      "ref": "miniprogram/services/employer.js"
+    },
+    {
+      "kind": "boundary",
+      "status": "passed",
+      "summary": "Employer pages use no request, storage, socket, or upload APIs; preview and candidate actions stay local with no save, publish, notification, or enterprise receipt.",
+      "ref": "workstreams/05-employer/verify.cjs"
+    },
+    {
+      "kind": "independent-review",
+      "status": "passed",
+      "summary": "employer-service-guard-auth-v1 final independent review PASS; async states, pagination, validation, retry races and auth ownership verified",
+      "ref": "workstreams/05-employer/HANDOFF.md"
+    }
+  ],
+  "tags": [
+    "employer",
+    "service-boundary",
+    "auth-guard",
+    "pagination",
+    "job-form",
+    "job-preview",
+    "candidates",
+    "frontend"
+  ],
+  "codePaths": [
+    "miniprogram/pages/employer/**",
+    "miniprogram/pages/employer-job-form/**",
+    "miniprogram/pages/employer-job-preview/**",
+    "miniprogram/pages/employer-candidates/**",
+    "miniprogram/services/employer.js",
+    "miniprogram/services/employer.ts",
+    "miniprogram/data/employer.js",
+    "miniprogram/data/employer.ts"
+  ],
+  "updatedAt": "2026-06-21T09:21:18.754Z",
+  "handoffRef": "HANDOFF.md"
+}

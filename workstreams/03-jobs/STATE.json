@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "workstream": "03-jobs",
+  "title": "职位前端完整流程",
+  "phase": "SHIP",
+  "state": "shipped",
+  "priority": "P2",
+  "currentSlice": "jobs-service-states-pagination-v1",
+  "ownerThreadId": null,
+  "summary": "职位列表与详情已接入异步本地 jobs service，分页、显式状态、旧请求保护、会话收藏和本地投递演示已完成自动验证。",
+  "nextAction": "由总控选择下一个切片，并用精简上下文启动新线程。",
+  "blockers": [],
+  "dependencies": [
+    "04-user-profile"
+  ],
+  "evidence": [
+    {
+      "kind": "automated",
+      "status": "passed",
+      "summary": "verify.cjs 六组检查全部通过，覆盖语法、JSON、JS/TS 镜像、WXML handlers、路由、触控目标和禁用真实 API。",
+      "ref": "workstreams/03-jobs/verify.cjs"
+    },
+    {
+      "kind": "pagination",
+      "status": "passed",
+      "summary": "列表在筛选与排序后分页，校验页码和页大小，返回分页元数据，并验证追加、页尾、条件重置与旧请求保护。",
+      "ref": "workstreams/03-jobs/verify.cjs"
+    },
+    {
+      "kind": "error-states",
+      "status": "passed",
+      "summary": "列表与详情覆盖 empty、error、timeout、offline、unauthorized、缺少 id、未找到和重试行为。",
+      "ref": "workstreams/03-jobs/verify.cjs"
+    },
+    {
+      "kind": "boundary",
+      "status": "passed",
+      "summary": "页面只通过 jobs service 读取职位数据；收藏仅在模块内存中，投递仅为异步本地演示且防重复提交。",
+      "ref": "workstreams/03-jobs/verify.cjs"
+    },
+    {
+      "kind": "independent-review",
+      "status": "passed",
+      "summary": "jobs-service-states-pagination-v1 independent review PASS; no P0-P2 findings; verifier 6 groups PASS; baseline scope hashes unchanged",
+      "ref": "workstreams/03-jobs/HANDOFF.md"
+    }
+  ],
+  "tags": [
+    "jobs",
+    "detail",
+    "search",
+    "pagination",
+    "service",
+    "frontend"
+  ],
+  "codePaths": [
+    "miniprogram/services/jobs.js",
+    "miniprogram/services/jobs.ts",
+    "miniprogram/pages/jobs/**",
+    "miniprogram/pages/job-detail/**",
+    "miniprogram/data/jobs.js",
+    "miniprogram/data/jobs.ts"
+  ],
+  "updatedAt": "2026-06-21T08:23:27.003Z",
+  "handoffRef": "HANDOFF.md"
+}

@@ -1,0 +1,9 @@
+{
+  "desc": "Static first-phase miniprogram pages.",
+  "rules": [
+    {
+      "action": "allow",
+      "page": "*"
+    }
+  ]
+}

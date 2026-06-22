@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "workstream": "00-main-control",
+  "title": "总控与上下文治理",
+  "phase": "SHIP",
+  "state": "shipped",
+  "priority": "P0",
+  "currentSlice": "messages-frontend-review-v1",
+  "ownerThreadId": null,
+  "summary": "14-messages 两页前端框架已通过静态 REVIEW 并 SHIP，详情路由需求已留给最终骨架集成。",
+  "nextAction": "由总控选择下一个切片，并用精简上下文启动新线程。",
+  "blockers": [],
+  "dependencies": [],
+  "evidence": [
+    {
+      "kind": "main-review",
+      "status": "passed",
+      "summary": "消息分类、未读、本地详情、草稿校验、数据与方法镜像、事件和禁用 API 复核通过",
+      "ref": "workstreams/14-messages/HANDOFF.md"
+    },
+    {
+      "kind": "module-ship",
+      "status": "passed",
+      "summary": "14-messages 已完成 messages-frontend-framework-v1 归档并释放 owner",
+      "ref": "workstreams/14-messages/STATE.json"
+    }
+  ],
+  "tags": [
+    "control",
+    "memory",
+    "rag",
+    "workflow",
+    "frontend-roadmap"
+  ],
+  "codePaths": [
+    ".codex/skills/workstream-delegation/**",
+    "docs/blueprint/**",
+    "workstreams/00-main-control/**"
+  ],
+  "updatedAt": "2026-06-19T01:38:07+08:00",
+  "handoffRef": "HANDOFF.md"
+}

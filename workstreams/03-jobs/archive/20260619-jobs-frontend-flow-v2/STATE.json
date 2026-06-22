@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "workstream": "03-jobs",
+  "title": "职位前端完整流程",
+  "phase": "REVIEW",
+  "state": "accepted",
+  "priority": "P0",
+  "currentSlice": "jobs-frontend-flow-v2",
+  "ownerThreadId": "/root/03_jobs_frontend_v2",
+  "summary": "jobs-frontend-flow-v2 已修复首轮 REVIEW 的包吃住分类问题并重新通过 VERIFY，可进入独立复审。",
+  "nextAction": "由 00-main-control 执行当前切片的 SHIP 与归档。",
+  "blockers": [],
+  "dependencies": [
+    "04-user-profile"
+  ],
+  "evidence": [
+    {
+      "kind": "automated",
+      "status": "passed",
+      "summary": "JS/JSON 语法、JS/TS 镜像、WXML 事件处理器和禁用 API 边界检查通过。",
+      "ref": "workstreams/03-jobs/verify.cjs"
+    },
+    {
+      "kind": "behavioral",
+      "status": "passed",
+      "summary": "本地搜索、筛选、排序、四态重试、有效/缺失详情、会话收藏和诚实投递确认断言通过。",
+      "ref": "workstreams/03-jobs/verify.cjs"
+    },
+    {
+      "kind": "review-fix",
+      "status": "passed",
+      "summary": "包吃住筛选回归断言仅返回 job-1 和 job-4，明确排除仅包住的 job-2。",
+      "ref": "workstreams/03-jobs/verify.cjs"
+    },
+    {
+      "kind": "independent-review",
+      "status": "passed",
+      "summary": "独立 REVIEW 发现并修复包吃住筛选误分类；定点复验与全量自动验证通过。",
+      "ref": "workstreams/03-jobs/HANDOFF.md"
+    }
+  ],
+  "tags": [
+    "jobs",
+    "detail",
+    "search",
+    "application",
+    "frontend"
+  ],
+  "codePaths": [
+    "miniprogram/pages/jobs/**",
+    "miniprogram/pages/job-detail/**",
+    "miniprogram/data/jobs.js",
+    "miniprogram/data/jobs.ts"
+  ],
+  "updatedAt": "2026-06-19T14:00:30.372Z",
+  "handoffRef": "HANDOFF.md"
+}

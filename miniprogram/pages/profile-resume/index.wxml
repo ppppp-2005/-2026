@@ -1,0 +1,95 @@
+<view class="resume-page">
+  <view class="page-hero">
+    <view class="hero-copy">
+      <text class="hero-label">{{resume.header.label}}</text>
+      <view class="hero-title">{{resume.header.title}}</view>
+      <view class="hero-subtitle">{{resume.header.subtitle}}</view>
+    </view>
+    <text class="hero-badge">{{dirty ? '有修改' : resume.header.dataLabel}}</text>
+  </view>
+
+  <view class="feedback-card">{{feedback}}</view>
+
+  <block wx:if="{{!previewMode}}">
+    <view class="form-card">
+      <text class="section-title">基本信息</text>
+      <text class="field-label">姓名称呼 *</text>
+      <input class="field-input" value="{{form.name}}" maxlength="20" data-field="name" bindinput="onFieldInput" placeholder="例如：张师傅" />
+      <text class="field-label">籍贯</text>
+      <input class="field-input" value="{{form.hometown}}" maxlength="30" data-field="hometown" bindinput="onFieldInput" placeholder="例如：贵州修文" />
+      <text class="field-label">现居地 *</text>
+      <input class="field-input" value="{{form.currentCity}}" maxlength="30" data-field="currentCity" bindinput="onFieldInput" placeholder="例如：贵阳" />
+      <text class="field-label">工作年限</text>
+      <input class="field-input" value="{{form.years}}" type="number" maxlength="2" data-field="years" bindinput="onFieldInput" placeholder="例如：6" />
+    </view>
+
+    <view class="form-card">
+      <text class="section-title">求职意向</text>
+      <text class="field-label">期望工种 *</text>
+      <input class="field-input" value="{{form.targetRole}}" maxlength="30" data-field="targetRole" bindinput="onFieldInput" />
+      <text class="field-label">期望地点 *</text>
+      <input class="field-input" value="{{form.targetLocation}}" maxlength="30" data-field="targetLocation" bindinput="onFieldInput" />
+      <text class="field-label">期望工资 *</text>
+      <input class="field-input" value="{{form.salary}}" maxlength="30" data-field="salary" bindinput="onFieldInput" />
+    </view>
+
+    <view class="form-card">
+      <text class="section-title">技能</text>
+      <checkbox-group class="skill-list" bindchange="onSkillsChange">
+        <label class="skill-option" wx:for="{{skillChoices}}" wx:key="name">
+          <checkbox value="{{item.name}}" checked="{{item.checked}}" color="#1f7a4d" />
+          <text>{{item.name}}</text>
+        </label>
+      </checkbox-group>
+    </view>
+
+    <view class="form-card">
+      <text class="section-title">最近工作经历</text>
+      <text class="field-label">工作单位</text>
+      <input class="field-input" value="{{form.company}}" maxlength="40" data-field="company" bindinput="onFieldInput" />
+      <text class="field-label">岗位</text>
+      <input class="field-input" value="{{form.role}}" maxlength="30" data-field="role" bindinput="onFieldInput" />
+      <text class="field-label">时间</text>
+      <input class="field-input" value="{{form.period}}" maxlength="30" data-field="period" bindinput="onFieldInput" />
+      <text class="field-label">工作内容 *</text>
+      <textarea class="field-textarea" value="{{form.experience}}" maxlength="180" data-field="experience" bindinput="onFieldInput" auto-height="true" />
+    </view>
+
+    <view class="error-card" wx:if="{{errors.length}}">
+      <text class="error-title">请补充这些内容</text>
+      <text class="error-item" wx:for="{{errors}}" wx:key="*this">{{item}}</text>
+    </view>
+    <button class="primary-button" bindtap="onPreviewTap">校验并预览</button>
+    <button class="secondary-button" bindtap="onUnavailableSaveTap">保存暂未开放</button>
+    <button class="text-button" bindtap="onResetTap">恢复示例内容</button>
+  </block>
+
+  <view class="preview-card" wx:else>
+    <view class="preview-head">
+      <view>
+        <text class="preview-name">{{preview.name}}</text>
+        <text class="preview-meta">{{preview.locationLine}}</text>
+        <text class="preview-meta">{{preview.experienceLine}}</text>
+      </view>
+      <text class="preview-badge">仅预览</text>
+    </view>
+    <view class="preview-section">
+      <text class="section-title">求职意向</text>
+      <text class="preview-line">{{preview.intentLine}}</text>
+      <text class="preview-salary">{{preview.salary}}</text>
+    </view>
+    <view class="preview-section">
+      <text class="section-title">技能</text>
+      <view class="tag-row"><text class="skill-tag" wx:for="{{preview.skills}}" wx:key="*this">{{item}}</text></view>
+    </view>
+    <view class="preview-section">
+      <text class="section-title">工作经历</text>
+      <text class="preview-line strong">{{preview.workTitle}}</text>
+      <text class="preview-meta">{{preview.period}}</text>
+      <text class="preview-body">{{preview.experience}}</text>
+    </view>
+    <text class="preview-warning">此预览没有保存、上传或发送给企业。</text>
+    <button class="primary-button" bindtap="onEditTap">返回编辑</button>
+    <button class="secondary-button" bindtap="onUnavailableSaveTap">保存暂未开放</button>
+  </view>
+</view>

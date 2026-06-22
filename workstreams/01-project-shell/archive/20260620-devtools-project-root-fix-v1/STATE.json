@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "workstream": "01-project-shell",
+  "title": "WeChat DevTools project-root import fix",
+  "phase": "REVIEW",
+  "state": "accepted",
+  "priority": "P1",
+  "currentSlice": "devtools-project-root-fix-v1",
+  "ownerThreadId": null,
+  "summary": "Root project.config.json now declares miniprogramRoot so repository-root imports resolve the integrated miniprogram/app.json without changing existing project settings.",
+  "nextAction": "由 00-main-control 执行当前切片的 SHIP 与归档。",
+  "blockers": [],
+  "dependencies": [],
+  "evidence": [
+    {
+      "kind": "automated",
+      "status": "passed",
+      "summary": "Root project JSON, exact miniprogramRoot, existing settings, resolved app.json, and all prior shell contracts pass verify.cjs.",
+      "ref": "workstreams/01-project-shell/verify.cjs"
+    },
+    {
+      "kind": "context-validation",
+      "status": "passed",
+      "summary": "Context validation and refresh pass after the current-slice handoff update.",
+      "ref": "workstreams/01-project-shell/HANDOFF.md"
+    },
+    {
+      "kind": "independent-review",
+      "status": "passed",
+      "summary": "根 project.config.json 增加 miniprogramRoot 后路径解析与原壳契约复验通过。",
+      "ref": "workstreams/01-project-shell/HANDOFF.md"
+    }
+  ],
+  "tags": [
+    "shell",
+    "devtools",
+    "project-config"
+  ],
+  "codePaths": [
+    "project.config.json",
+    "workstreams/01-project-shell/**"
+  ],
+  "updatedAt": "2026-06-20T05:45:00.537Z",
+  "handoffRef": "HANDOFF.md"
+}

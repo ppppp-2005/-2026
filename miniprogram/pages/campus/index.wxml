@@ -1,0 +1,103 @@
+<view class="campus-page">
+  <view class="campus-hero">
+    <view class="hero-main">
+      <text class="hero-label">{{campus.header.label}}</text>
+      <text class="hero-title">{{campus.header.title}}</text>
+      <text class="hero-subtitle">{{campus.header.subtitle}}</text>
+    </view>
+    <view class="hero-summary">
+      <text class="hero-summary-number">{{campus.events.length}}</text>
+      <text class="hero-summary-text">场近期双选会</text>
+    </view>
+  </view>
+
+  <view class="notice-bar">
+    <text class="notice-title">示例信息</text>
+    <text class="notice-text">{{campus.header.notice}}</text>
+  </view>
+
+  <view class="section-head">
+    <view>
+      <text class="section-title">近期双选会</text>
+      <text class="section-subtitle">先看日期、时间和地点</text>
+    </view>
+    <text class="section-count">{{campus.events.length}}场</text>
+  </view>
+
+  <view class="event-list">
+    <view class="event-card" wx:for="{{campus.events}}" wx:key="id">
+      <view class="event-date">
+        <text class="event-date-main">{{item.dateText}}</text>
+        <text class="event-time">{{item.timeText}}</text>
+      </view>
+      <text class="event-title">{{item.title}}</text>
+      <text class="event-organizer">{{item.organizer}}</text>
+      <view class="event-info-row">
+        <text class="event-info-label">地点</text>
+        <text class="event-info-value">{{item.city}}{{item.district}} {{item.venue}}</text>
+      </view>
+      <view class="event-info-row">
+        <text class="event-info-label">适合</text>
+        <text class="event-info-value">{{item.audience}}</text>
+      </view>
+      <view class="event-action-row">
+        <text class="event-company-count">{{item.companyCountText}}</text>
+        <button class="event-action" bindtap="handleEventAction" data-id="{{item.id}}">{{item.actionText}}</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="section-head opportunity-head">
+    <view>
+      <text class="section-title">应届岗位和实习</text>
+      <text class="section-subtitle">选一类，列表马上更新</text>
+    </view>
+    <text class="section-count">{{visibleOpportunities.length}}个</text>
+  </view>
+
+  <view class="filter-row">
+    <button
+      class="filter-button {{activeFilterId === item.id ? 'filter-button-active' : ''}}"
+      wx:for="{{campus.opportunityFilters}}"
+      wx:key="id"
+      bindtap="handleFilterTap"
+      data-id="{{item.id}}"
+    >{{item.name}}</button>
+  </view>
+
+  <view class="opportunity-list">
+    <view class="opportunity-card" wx:for="{{visibleOpportunities}}" wx:key="id">
+      <view class="opportunity-top">
+        <view class="opportunity-title-wrap">
+          <text class="opportunity-type">{{item.typeLabel}}</text>
+          <text class="opportunity-title">{{item.title}}</text>
+        </view>
+        <text class="opportunity-pay">{{item.salaryText}}</text>
+      </view>
+      <text class="opportunity-company">{{item.company}}</text>
+      <view class="opportunity-facts">
+        <view class="fact-item">
+          <text class="fact-label">地点</text>
+          <text class="fact-value">{{item.locationText}}</text>
+        </view>
+        <view class="fact-item">
+          <text class="fact-label">学历</text>
+          <text class="fact-value">{{item.education}}</text>
+        </view>
+        <view class="fact-item">
+          <text class="fact-label">人数</text>
+          <text class="fact-value">招{{item.headcount}}人</text>
+        </view>
+      </view>
+      <view class="label-row">
+        <text class="opportunity-label" wx:for="{{item.labels}}" wx:for-item="label" wx:key="*this">{{label}}</text>
+      </view>
+      <view class="opportunity-action-row">
+        <text class="deadline-text">{{item.deadlineText}}</text>
+        <button class="opportunity-action" bindtap="handleOpportunityAction" data-id="{{item.id}}">{{item.actionText}}</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="bottom-tip">投递、报名和企业联系功能将在接入真实服务后开放。</view>
+</view>

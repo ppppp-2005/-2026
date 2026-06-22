@@ -1,0 +1,64 @@
+<view class="page">
+  <view class="preview-banner">
+    <text class="preview-label">仅预览</text>
+    <text class="preview-title">求职者当前看不到</text>
+    <text class="preview-text">{{honestNote}}</text>
+  </view>
+
+  <view class="state-tools">
+    <text class="tool-label">预览读取状态演示</text>
+    <view class="tool-buttons">
+      <button class="mode-button {{demoScenario === item.id ? 'active' : ''}}" wx:for="{{demoScenarios}}" wx:key="id" data-scenario="{{item.id}}" bindtap="onScenarioTap">{{item.name}}</button>
+    </view>
+  </view>
+
+  <view wx:if="{{loadState === 'loading'}}" class="state-card">
+    <text class="state-title">{{stateTitle}}</text>
+    <text class="state-text">{{stateMessage}}</text>
+  </view>
+
+  <view wx:elif="{{loadState === 'unauthorized'}}" class="state-card">
+    <text class="state-title">{{stateTitle}}</text>
+    <text class="state-text">{{stateMessage}}。不会进行真实登录或企业认证。</text>
+    <button class="primary-button" loading="{{authPending}}" disabled="{{authPending}}" bindtap="onStartEmployerDemo">进入企业本地演示</button>
+  </view>
+
+  <view wx:elif="{{loadState !== 'normal'}}" class="state-card">
+    <text class="state-title">{{stateTitle}}</text>
+    <text class="state-text">{{stateMessage}}</text>
+    <button class="primary-button" bindtap="onRetry">恢复正常本地预览</button>
+  </view>
+
+  <block wx:else>
+    <view class="source-note">{{loadNote}} · {{preview.sourceLabel}}</view>
+
+    <view class="job-card">
+      <view class="job-head">
+        <view class="job-copy">
+          <text class="job-title">{{preview.title}}</text>
+          <text class="job-salary">{{preview.salaryLabel}}</text>
+        </view>
+        <text class="preview-chip">未发布</text>
+      </view>
+
+      <view class="info-row"><text class="info-label">招聘人数</text><text class="info-value">{{preview.headcount}}人</text></view>
+      <view class="info-row"><text class="info-label">工作地点</text><text class="info-value">{{preview.location}}</text></view>
+      <view class="info-row"><text class="info-label">上班安排</text><text class="info-value">{{preview.workTime}}</text></view>
+      <view class="info-row"><text class="info-label">岗位要求</text><text class="info-value">{{preview.requirements}}</text></view>
+
+      <view class="benefit-block">
+        <text class="info-label">福利待遇</text>
+        <view wx:if="{{preview.benefits.length}}" class="benefit-row">
+          <text class="benefit" wx:for="{{preview.benefits}}" wx:key="*this">{{item}}</text>
+        </view>
+        <text wx:else class="empty-benefit">暂未填写福利</text>
+      </view>
+    </view>
+
+    <view wx:if="{{confirmedLocally}}" class="confirmed-note">已完成本页确认，但没有发布、没有发送，也没有企业回执，求职者仍不可见。</view>
+    <view wx:if="{{confirmationMessage}}" class="confirmation-note">{{confirmationMessage}}</view>
+
+    <button class="primary-button" loading="{{confirming}}" disabled="{{confirming}}" bindtap="onConfirmPreview">{{confirming ? '正在本地确认' : (confirmedLocally ? '再次确认预览（仍不发布）' : '确认预览内容（不发布）')}}</button>
+    <button class="secondary-button" disabled="{{confirming}}" bindtap="onBackToEdit">返回修改</button>
+  </block>
+</view>

@@ -1,0 +1,81 @@
+<view class="detail-page">
+  <view class="scenario-panel">
+    <text class="scenario-title">仅本地详情状态测试</text>
+    <text class="scenario-copy">模拟读取反馈，不会请求网络或改变真实账号。</text>
+    <scroll-view class="scenario-scroll" scroll-x="true" show-scrollbar="false">
+      <view class="scenario-row">
+        <button class="scenario-chip {{selectedScenario === item.id ? 'scenario-chip-active' : ''}}" wx:for="{{scenarios}}" wx:key="id" data-scenario="{{item.id}}" disabled="{{applySubmitting}}" bindtap="onScenarioTap">{{item.name}}</button>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view wx:if="{{loadState === 'loading'}}" class="state-card">
+    <text class="state-title">正在加载</text>
+    <text class="state-copy">{{stateMessage}}</text>
+  </view>
+
+  <view wx:elif="{{loadState === 'missing-id'}}" class="state-card state-card-error">
+    <text class="state-title">链接缺少职位编号</text>
+    <text class="state-copy">{{stateMessage}}</text>
+    <button class="button-primary single-action" bindtap="onBack">返回职位列表</button>
+  </view>
+
+  <view wx:elif="{{loadState === 'not-found'}}" class="state-card state-card-error">
+    <text class="state-title">没有找到职位</text>
+    <text class="state-copy">{{stateMessage}}</text>
+    <button class="button-primary single-action" bindtap="onBack">返回职位列表</button>
+  </view>
+
+  <view wx:elif="{{loadState === 'error'}}" class="state-card state-card-error">
+    <text class="state-title">详情服务暂时不可用</text>
+    <text class="state-copy">{{stateMessage}}</text>
+    <view class="state-actions">
+      <button class="button-secondary" bindtap="onBack">返回职位列表</button>
+      <button class="button-primary" bindtap="onRetry">重试正常状态</button>
+    </view>
+  </view>
+
+  <block wx:else>
+    <view class="detail-hero">
+      <view class="hero-badges"><text class="demo-badge">本地示例</text><text class="job-badge">{{job.badge}}</text></view>
+      <text class="job-title">{{job.title}}</text>
+      <text class="job-salary">{{job.salary}}</text>
+      <view class="job-meta"><text>{{job.location}}</text><text class="meta-dot"></text><text>{{job.distanceText}}</text></view>
+    </view>
+
+    <view class="truth-card">
+      <text class="truth-title">请注意</text>
+      <text class="truth-copy">这是本地前端演示。企业、工资和地址都不是实时招聘信息，当前不能真实投递或联系企业。</text>
+    </view>
+
+    <view class="detail-card">
+      <text class="card-title">企业信息</text><text class="company-name">{{job.company}}</text><text class="body-copy">{{job.companyInfo}}</text>
+    </view>
+    <view class="detail-card">
+      <text class="card-title">工作内容</text><text class="body-copy">{{job.description}}</text>
+      <view class="label-row"><text class="job-label" wx:for="{{job.labels}}" wx:key="*this">{{item}}</text></view>
+    </view>
+    <view class="detail-card">
+      <text class="card-title">岗位要求</text>
+      <view class="requirement" wx:for="{{job.requirements}}" wx:key="*this"><text class="requirement-dot"></text><text class="requirement-text">{{item}}</text></view>
+    </view>
+    <view class="detail-card">
+      <text class="card-title">班次与地点</text>
+      <text class="detail-label">班次说明</text><text class="body-copy">{{job.schedule}}</text>
+      <text class="detail-label detail-label-space">地点说明</text><text class="body-copy">{{job.address}}</text>
+    </view>
+
+    <view class="favorite-note">
+      <text class="favorite-note-title">收藏只在本次打开期间有效</text>
+      <text class="favorite-note-copy">不使用本地存储，也不会同步到账号或服务器。</text>
+    </view>
+    <view class="apply-status {{applyDemoDone ? 'apply-status-done' : ''}}">
+      <text class="apply-status-title">{{applyDemoDone ? '本地确认已完成，但未真实投递' : '投递前会再次确认'}}</text>
+      <text class="apply-status-copy">{{applyDemoDone ? '没有发送简历，企业不会收到任何信息。' : '点击后仅体验异步确认步骤，不会发送简历或联系企业。'}}</text>
+    </view>
+    <view class="bottom-actions">
+      <button class="favorite-button {{isFavorite ? 'favorite-button-active' : ''}}" disabled="{{applySubmitting}}" bindtap="onToggleFavorite">{{isFavorite ? '本次已收藏' : '本地收藏'}}</button>
+      <button class="apply-button" loading="{{applySubmitting}}" disabled="{{applySubmitting}}" bindtap="onApplyTap">{{applySubmitting ? '正在完成本地演示' : '体验投递确认'}}</button>
+    </view>
+  </block>
+</view>

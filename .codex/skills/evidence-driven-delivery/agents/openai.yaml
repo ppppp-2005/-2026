@@ -1,0 +1,4 @@
+interface:
+  display_name: "Evidence-Driven Delivery"
+  short_description: "Evidence-first build and runtime acceptance gates"
+  default_prompt: "Use $evidence-driven-delivery to build or verify this change with explicit evidence and honest blockers."

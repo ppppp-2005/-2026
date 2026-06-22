@@ -1,0 +1,101 @@
+<view class="labor-page">
+  <view class="labor-hero">
+    <view class="hero-copy">
+      <text class="hero-eyebrow">{{labor.header.eyebrow}}</text>
+      <view class="hero-title">{{labor.header.title}}</view>
+      <view class="hero-subtitle">{{labor.header.subtitle}}</view>
+    </view>
+    <view class="hero-summary">
+      <view class="summary-item">
+        <text class="summary-number">{{labor.header.demandCount}}</text>
+        <text class="summary-label">条需求</text>
+      </view>
+      <view class="summary-divider"></view>
+      <view class="summary-item">
+        <text class="summary-number">{{labor.header.openingCount}}</text>
+        <text class="summary-label">人用工</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="filter-section">
+    <view class="section-heading">
+      <text class="section-title">按用工时间看</text>
+      <text class="section-help">点一下就能筛选</text>
+    </view>
+    <view class="filter-grid">
+      <view
+        class="filter-card {{activeCategoryId === item.id ? 'filter-card-active' : ''}}"
+        bindtap="onCategoryTap"
+        data-category-id="{{item.id}}"
+        wx:for="{{labor.filters}}"
+        wx:key="id"
+      >
+        <text class="filter-name">{{item.name}}</text>
+        <text class="filter-description">{{item.description}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="safety-tip">
+    <text class="safety-title">{{labor.safetyTip.title}}</text>
+    <text class="safety-text">{{labor.safetyTip.text}}</text>
+  </view>
+
+  <view class="result-heading">
+    <view>
+      <text class="section-title">用工需求</text>
+      <text class="result-label">{{resultLabel}}</text>
+    </view>
+    <text class="mock-label">示例信息</text>
+  </view>
+
+  <view class="demand-list">
+    <view class="demand-card" wx:for="{{visibleDemands}}" wx:key="id">
+      <view class="card-topline">
+        <text class="category-badge category-{{item.categoryId}}">{{item.categoryName}}</text>
+        <text class="updated-text">{{item.updatedText}}</text>
+      </view>
+
+      <view class="demand-title">{{item.title}}</view>
+      <view class="employer-name">{{item.employer}}</view>
+
+      <view class="key-facts">
+        <view class="fact-item">
+          <text class="fact-label">人数</text>
+          <text class="fact-value fact-value-strong">{{item.peopleText}}</text>
+        </view>
+        <view class="fact-item fact-item-middle">
+          <text class="fact-label">工期</text>
+          <text class="fact-value">{{item.duration}}</text>
+        </view>
+        <view class="fact-item">
+          <text class="fact-label">待遇</text>
+          <text class="fact-value fact-value-pay">{{item.treatment}}</text>
+        </view>
+      </view>
+
+      <view class="detail-row">
+        <text class="detail-label">地点</text>
+        <text class="detail-value">{{item.location}}</text>
+      </view>
+      <view class="detail-row">
+        <text class="detail-label">待遇说明</text>
+        <text class="detail-value">{{item.treatmentNote}}</text>
+      </view>
+      <view class="detail-row">
+        <text class="detail-label">用工要求</text>
+        <text class="detail-value">{{item.requirements}}</text>
+      </view>
+
+      <view class="benefit-row">
+        <text class="benefit-tag" wx:for="{{item.benefits}}" wx:for-item="benefit" wx:key="*this">{{benefit}}</text>
+      </view>
+
+      <view class="card-action-row">
+        <text class="contact-note">查看服务点和示例电话</text>
+        <view class="contact-button" bindtap="onContactTap" data-demand-id="{{item.id}}">联系咨询</view>
+      </view>
+    </view>
+  </view>
+</view>

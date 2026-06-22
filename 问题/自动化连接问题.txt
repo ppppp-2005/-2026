@@ -1,0 +1,16 @@
+之前连不上的原因其实分了三层，卡点叠在一起了：
+一开始 qa-verify.js 连的是 ws://127.0.0.1:32486，但 Test-NetConnection 32486 失败，说明这个端口根本没在监听。.ide 里曾经记录了 32486，但那只是旧端口/状态文件，不代表当前服务还活着。
+
+你在微信开发者工具里打开“服务端口”后，.ide 变成了 41611，并且 Test-NetConnection 41611 成功。这说明微信开发者工具的 IDE 服务端口 已经起来了。
+
+但我们一度把 41611 当成 miniprogram-automator 的 WebSocket 端口写进了 qa-verify.js，所以仍然失败。真正的关系是：
+
+41611 = 微信开发者工具 IDE HTTP 服务端口，给 cli.bat --port 用
+37502 = automation WebSocket 端口，给 qa-verify.js 的 ws://127.0.0.1:37502 用
+最后成功的关键命令是：
+& "D:\微信web开发者工具\cli.bat" auto --project "D:\work\wecaht app\miniprogram" --port 41611 --auto-port 37502 --trust-project
+然后 qa-verify.js 改回：
+const WS_ENDPOINT = 'ws://127.0.0.1:37502';
+这时脚本显示：
+✓ 连接成功
+所以结论是：服务端口和 automation WebSocket 端口不是同一个端口。之前一直失败，是因为要么连旧端口 32486，要么把 HTTP 服务端口 41611 当 WebSocket 端口连。

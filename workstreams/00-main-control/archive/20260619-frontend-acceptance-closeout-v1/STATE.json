@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "workstream": "00-main-control",
+  "title": "总控与上下文治理",
+  "phase": "REVIEW",
+  "state": "accepted",
+  "priority": "P0",
+  "currentSlice": "frontend-acceptance-closeout-v1",
+  "ownerThreadId": "current-main-thread",
+  "summary": "用户人工验收通过，当前静态前端批次的十个功能模块与质量模块均已 SHIP 并释放旧线程。",
+  "nextAction": "归档 frontend-acceptance-closeout-v1，并启动 06-backend-api 的 DEFINE/PLAN 新切片。",
+  "blockers": [],
+  "dependencies": [],
+  "evidence": [
+    {
+      "kind": "user-acceptance",
+      "status": "passed",
+      "summary": "用户于 2026-06-19 明确确认人工验收完成，未报告缺陷",
+      "ref": "workstreams/07-quality-review/HANDOFF.md"
+    },
+    {
+      "kind": "batch-ship",
+      "status": "passed",
+      "summary": "01、02、03、05、07、08、09、10、11、12、13 均完成 SHIP 归档并清除 owner",
+      "ref": "workstreams/00-main-control/STATUS.md"
+    }
+  ],
+  "tags": [
+    "control",
+    "memory",
+    "rag",
+    "workflow",
+    "acceptance"
+  ],
+  "codePaths": [
+    ".codex/skills/workstream-delegation/**",
+    "docs/blueprint/**",
+    "workstreams/00-main-control/**"
+  ],
+  "updatedAt": "2026-06-19T00:32:46+08:00",
+  "handoffRef": "HANDOFF.md"
+}

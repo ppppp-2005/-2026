@@ -1,0 +1,173 @@
+<view class="return-page">
+  <view class="return-hero">
+    <text class="hero-label">{{returnHome.header.eyebrow}}</text>
+    <view class="hero-title">{{returnHome.header.title}}</view>
+    <view class="hero-subtitle">{{returnHome.header.subtitle}}</view>
+    <view class="hero-notice">{{returnHome.header.notice}}</view>
+  </view>
+
+  <view class="category-panel">
+    <view class="category-heading">先看你要办什么</view>
+    <view class="category-grid">
+      <button
+        class="category-card {{activeCategory === item.id ? 'category-card-active' : ''}}"
+        wx:for="{{returnHome.categories}}"
+        wx:key="id"
+        data-id="{{item.id}}"
+        data-target="{{item.target}}"
+        bindtap="onCategoryTap"
+      >
+        <text class="category-name">{{item.name}}</text>
+        <text class="category-summary">{{item.summary}}</text>
+        <text class="category-count">{{item.countLabel}}</text>
+      </button>
+    </view>
+  </view>
+
+  <view class="content-section" id="local-jobs">
+    <view class="section-head">
+      <view>
+        <text class="section-kicker">工作</text>
+        <text class="section-title">本地岗位</text>
+        <text class="section-subtitle">先看工资、地点和工作内容</text>
+      </view>
+      <text class="section-count">{{visibleLocalJobs.length}}个</text>
+    </view>
+
+    <scroll-view class="filter-scroll" scroll-x="true" show-scrollbar="false">
+      <view class="filter-row">
+        <button
+          class="filter-chip {{activeRegion === item.regionCode ? 'filter-chip-active' : ''}}"
+          wx:for="{{returnHome.jobFilters}}"
+          wx:key="id"
+          data-region-code="{{item.regionCode}}"
+          bindtap="onJobFilterTap"
+        >
+          {{item.label}}
+        </button>
+      </view>
+    </scroll-view>
+
+    <view class="job-list">
+      <view class="job-card" wx:for="{{visibleLocalJobs}}" wx:key="id">
+        <view class="job-card-top">
+          <view class="job-title-wrap">
+            <text class="job-title">{{item.title}}</text>
+            <text class="job-type">{{item.employmentType}}</text>
+          </view>
+          <text class="job-salary">{{item.salary}}</text>
+        </view>
+
+        <view class="job-place">{{item.region}} · {{item.district}}</view>
+        <view class="job-company">{{item.company}}　招{{item.hiringCount}}人</view>
+        <view class="job-summary">{{item.summary}}</view>
+
+        <view class="tag-row">
+          <text class="info-tag" wx:for="{{item.benefits}}" wx:for-item="benefit" wx:key="*this">
+            {{benefit}}
+          </text>
+        </view>
+
+        <view class="card-action-row">
+          <view class="action-note">
+            <text class="action-note-label">咨询地点</text>
+            <text class="action-note-text">{{item.contactChannel}}</text>
+          </view>
+          <button
+            class="primary-action"
+            data-feedback="{{item.feedback}}"
+            bindtap="onActionTap"
+          >
+            {{item.actionText}}
+          </button>
+        </view>
+      </view>
+    </view>
+
+    <view class="plain-tip">
+      <text class="plain-tip-title">联系前问清楚</text>
+      <text class="plain-tip-text">工资怎么发、是否包吃住、每天上多久、有没有费用。</text>
+    </view>
+  </view>
+
+  <view class="content-section" id="startup-support">
+    <view class="section-head">
+      <view>
+        <text class="section-kicker section-kicker-warm">创业</text>
+        <text class="section-title">创业支持</text>
+        <text class="section-subtitle">先问自己是否符合条件，不急着交材料</text>
+      </view>
+    </view>
+
+    <view class="support-list">
+      <view class="support-card" wx:for="{{returnHome.startupSupports}}" wx:key="id">
+        <text class="support-title">{{item.title}}</text>
+        <view class="detail-line">
+          <text class="detail-label">适合谁</text>
+          <text class="detail-text">{{item.audience}}</text>
+        </view>
+        <view class="detail-line">
+          <text class="detail-label">能问什么</text>
+          <text class="detail-text">{{item.support}}</text>
+        </view>
+        <view class="detail-line">
+          <text class="detail-label">去哪里</text>
+          <text class="detail-text">{{item.servicePlace}}</text>
+        </view>
+        <view class="reminder-box">{{item.reminder}}</view>
+        <button
+          class="secondary-action"
+          data-feedback="{{item.feedback}}"
+          bindtap="onActionTap"
+        >
+          {{item.actionText}}
+        </button>
+      </view>
+    </view>
+  </view>
+
+  <view class="content-section" id="return-services">
+    <view class="section-head">
+      <view>
+        <text class="section-kicker section-kicker-blue">服务</text>
+        <text class="section-title">返乡服务</text>
+        <text class="section-subtitle">材料先带齐，少跑一趟</text>
+      </view>
+    </view>
+
+    <view class="service-list">
+      <view class="service-card" wx:for="{{returnHome.services}}" wx:key="id">
+        <text class="service-title">{{item.title}}</text>
+        <text class="service-purpose">{{item.purpose}}</text>
+
+        <view class="service-info">
+          <view class="service-info-row">
+            <text class="service-info-label">带什么</text>
+            <text class="service-info-text">{{item.materials}}</text>
+          </view>
+          <view class="service-info-row">
+            <text class="service-info-label">去哪里</text>
+            <text class="service-info-text">{{item.servicePlace}}</text>
+          </view>
+          <view class="service-info-row">
+            <text class="service-info-label">先注意</text>
+            <text class="service-info-text">{{item.serviceHours}}</text>
+          </view>
+        </view>
+
+        <button
+          class="secondary-action service-action"
+          data-feedback="{{item.feedback}}"
+          bindtap="onActionTap"
+        >
+          {{item.actionText}}
+        </button>
+      </view>
+    </view>
+  </view>
+
+  <view class="data-note">
+    <text class="data-note-title">信息说明</text>
+    <text class="data-note-text">{{returnHome.meta.sourceLabel}}，更新日期 {{returnHome.meta.dataVersion}}。岗位、政策和办理时间以后端及当地窗口最新信息为准。</text>
+  </view>
+</view>

@@ -1,0 +1,1219 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="社会服务赛道参赛创意：三都职通，帮助家乡群众找工作、帮助本地企业更高效招工。">
+  <title>三都职通｜社会服务赛道创意展示</title>
+  <style>
+    :root {
+      --green-900: #123c2a;
+      --green-800: #18563a;
+      --green-700: #1f7149;
+      --green-600: #2e8658;
+      --green-100: #e9f4ed;
+      --cream: #f6f4ec;
+      --paper: #ffffff;
+      --orange: #bd7b38;
+      --orange-soft: #fff0d7;
+      --ink: #17251d;
+      --muted: #637067;
+      --line: #dfe6dc;
+      --shadow: 0 18px 46px rgba(18, 60, 42, 0.10);
+      --radius-lg: 22px;
+      --radius-md: 14px;
+      --content: 1160px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+      line-height: 1.7;
+      background: var(--cream);
+    }
+
+    button,
+    a {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 99;
+      padding: 10px 16px;
+      color: #fff;
+      background: var(--green-900);
+      border-radius: 8px;
+      transform: translateY(-150%);
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid rgba(223, 230, 220, 0.9);
+      background: rgba(246, 244, 236, 0.94);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: min(calc(100% - 36px), var(--content));
+      min-height: 72px;
+      margin: 0 auto;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-seal {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      color: var(--green-800);
+      font-size: 18px;
+      background: #fff;
+      border: 2px solid var(--green-700);
+      border-radius: 50%;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      color: #385044;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--green-700);
+    }
+
+    .print-button,
+    .primary-button,
+    .secondary-button,
+    .role-button,
+    .scenario-button {
+      min-height: 48px;
+      border-radius: 10px;
+    }
+
+    .print-button {
+      padding: 10px 18px;
+      color: var(--green-800);
+      font-weight: 700;
+      background: #fff;
+      border: 1px solid #bdd2c4;
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    .hero {
+      position: relative;
+      padding: 92px 0 72px;
+      color: #fff;
+      background: linear-gradient(135deg, var(--green-900) 0%, var(--green-700) 58%, var(--orange) 100%);
+    }
+
+    .hero::after {
+      position: absolute;
+      right: -10%;
+      bottom: -110px;
+      width: 520px;
+      height: 230px;
+      content: "";
+      background: rgba(255, 240, 215, 0.14);
+      border-radius: 50%;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+      width: min(calc(100% - 36px), var(--content));
+      margin: 0 auto;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 5px 13px;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      background: rgba(10, 44, 28, 0.34);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 8px;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 720px;
+      margin: 22px 0 18px;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+    }
+
+    .hero-lead {
+      max-width: 700px;
+      margin-bottom: 30px;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: clamp(18px, 2.2vw, 24px);
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .primary-button,
+    .secondary-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 22px;
+      font-weight: 800;
+    }
+
+    .primary-button {
+      color: var(--green-900);
+      background: #fff;
+      border: 1px solid #fff;
+    }
+
+    .secondary-button {
+      color: #fff;
+      background: rgba(10, 44, 28, 0.24);
+      border: 1px solid rgba(255, 255, 255, 0.42);
+    }
+
+    .hero-panel {
+      padding: 28px;
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(255, 255, 255, 0.72);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
+    .panel-kicker {
+      margin-bottom: 8px;
+      color: var(--green-700);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-panel h2 {
+      margin-bottom: 18px;
+      font-size: 30px;
+      line-height: 1.3;
+    }
+
+    .promise-list {
+      display: grid;
+      margin: 0;
+      padding: 0;
+      gap: 12px;
+      list-style: none;
+    }
+
+    .promise-list li {
+      padding: 14px 16px;
+      color: #355044;
+      font-weight: 700;
+      background: var(--green-100);
+      border-left: 4px solid var(--green-700);
+      border-radius: 8px;
+    }
+
+    .section {
+      padding: 86px 0;
+    }
+
+    .section-alt {
+      background: #fff;
+    }
+
+    .container {
+      width: min(calc(100% - 36px), var(--content));
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      margin-bottom: 36px;
+      gap: 36px;
+      align-items: end;
+    }
+
+    .section-label {
+      margin-bottom: 8px;
+      color: var(--green-700);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 0;
+      font-size: clamp(32px, 4.2vw, 50px);
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+    }
+
+    .section-heading p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .story-grid,
+    .audience-grid,
+    .feature-grid,
+    .value-grid,
+    .roadmap-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .story-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .story-card,
+    .audience-card,
+    .feature-card,
+    .value-card,
+    .roadmap-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+    }
+
+    .story-card {
+      padding: 30px;
+    }
+
+    .story-card strong {
+      display: block;
+      margin-bottom: 14px;
+      color: var(--green-700);
+      font-size: 18px;
+    }
+
+    .story-card h3 {
+      margin-bottom: 12px;
+      font-size: 27px;
+    }
+
+    .story-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .origin-note {
+      margin-top: 18px;
+      padding: 24px 28px;
+      color: #6f531f;
+      background: var(--orange-soft);
+      border: 1px solid #e9d5ae;
+      border-radius: var(--radius-md);
+    }
+
+    .origin-note b {
+      color: #704413;
+    }
+
+    .audience-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .audience-card {
+      padding: 24px;
+      background: #f8faf6;
+    }
+
+    .card-index {
+      display: inline-block;
+      margin-bottom: 28px;
+      color: var(--orange);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+    }
+
+    .audience-card h3,
+    .feature-card h3,
+    .value-card h3,
+    .roadmap-card h3 {
+      margin-bottom: 10px;
+      font-size: 23px;
+    }
+
+    .audience-card p,
+    .feature-card p,
+    .value-card p,
+    .roadmap-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .experience-shell {
+      display: grid;
+      grid-template-columns: 310px minmax(0, 1fr);
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
+    .experience-nav {
+      padding: 28px;
+      background: var(--green-900);
+    }
+
+    .experience-nav h3 {
+      margin-bottom: 10px;
+      color: #fff;
+      font-size: 25px;
+    }
+
+    .experience-nav p {
+      margin-bottom: 22px;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 15px;
+    }
+
+    .role-buttons,
+    .scenario-buttons {
+      display: grid;
+      gap: 10px;
+    }
+
+    .role-button,
+    .scenario-button {
+      width: 100%;
+      padding: 11px 14px;
+      text-align: left;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .role-button {
+      color: #fff;
+      font-weight: 800;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .role-button[aria-selected="true"] {
+      color: var(--green-900);
+      background: #fff;
+    }
+
+    .experience-main {
+      min-height: 500px;
+      padding: 38px;
+    }
+
+    .experience-main h3 {
+      margin-bottom: 12px;
+      font-size: 32px;
+    }
+
+    .experience-intro {
+      max-width: 720px;
+      margin-bottom: 26px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .flow-list {
+      display: grid;
+      margin: 0;
+      padding: 0;
+      gap: 12px;
+      list-style: none;
+    }
+
+    .flow-item {
+      display: grid;
+      grid-template-columns: 46px minmax(0, 1fr);
+      padding: 18px;
+      gap: 16px;
+      background: #f8faf6;
+      border: 1px solid #e5ebe2;
+      border-radius: 12px;
+    }
+
+    .flow-number {
+      display: grid;
+      width: 42px;
+      height: 42px;
+      place-items: center;
+      color: #fff;
+      font-weight: 800;
+      background: var(--green-700);
+      border-radius: 10px;
+    }
+
+    .flow-copy strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 18px;
+    }
+
+    .flow-copy span {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .scenario-block {
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .scenario-block h4 {
+      margin: 0 0 12px;
+      font-size: 17px;
+    }
+
+    .scenario-buttons {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .scenario-button {
+      color: #355044;
+      background: #fff;
+      border-color: #cbdacf;
+    }
+
+    .scenario-button[aria-pressed="true"] {
+      color: var(--green-800);
+      font-weight: 800;
+      background: var(--green-100);
+      border-color: #9bc1a7;
+    }
+
+    .scenario-result {
+      min-height: 62px;
+      margin-top: 12px;
+      padding: 14px 16px;
+      color: #704413;
+      background: var(--orange-soft);
+      border: 1px solid #e7cc9f;
+      border-radius: 10px;
+    }
+
+    .feature-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .feature-card {
+      min-height: 226px;
+      padding: 26px;
+    }
+
+    .feature-tag {
+      display: inline-flex;
+      min-height: 30px;
+      margin-bottom: 28px;
+      padding: 4px 10px;
+      align-items: center;
+      color: var(--green-700);
+      font-size: 13px;
+      font-weight: 800;
+      background: var(--green-100);
+      border-radius: 7px;
+    }
+
+    .status-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 22px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+    }
+
+    .status-column {
+      padding: 28px;
+      background: #fff;
+    }
+
+    .status-column + .status-column {
+      background: #fff8eb;
+      border-left: 1px solid var(--line);
+    }
+
+    .status-column h3 {
+      margin-bottom: 14px;
+      font-size: 23px;
+    }
+
+    .plain-list {
+      margin: 0;
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    .plain-list li + li {
+      margin-top: 8px;
+    }
+
+    .value-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .value-card {
+      padding: 28px;
+      background: #f8faf6;
+    }
+
+    .value-statement {
+      margin-bottom: 14px;
+      color: var(--green-700);
+      font-size: 34px;
+      font-weight: 900;
+      line-height: 1.15;
+    }
+
+    .roadmap-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .roadmap-card {
+      position: relative;
+      padding: 26px;
+      background: #fff;
+    }
+
+    .roadmap-stage {
+      display: inline-block;
+      margin-bottom: 24px;
+      color: var(--orange);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+    }
+
+    .roadmap-card-current {
+      border-color: #98bfa4;
+      box-shadow: 0 10px 30px rgba(31, 113, 73, 0.08);
+    }
+
+    .closing {
+      padding: 70px 0;
+      color: #fff;
+      text-align: center;
+      background: linear-gradient(135deg, var(--green-800), var(--green-700));
+    }
+
+    .closing h2 {
+      max-width: 780px;
+      margin: 0 auto 16px;
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1.25;
+    }
+
+    .closing p {
+      max-width: 720px;
+      margin: 0 auto;
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 18px;
+    }
+
+    footer {
+      padding: 24px 18px;
+      color: #667169;
+      font-size: 14px;
+      text-align: center;
+      background: #fff;
+    }
+
+    :focus-visible {
+      outline: 3px solid #e6a55c;
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .section-heading,
+      .experience-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 68px;
+      }
+
+      .audience-grid,
+      .roadmap-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .feature-grid,
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      .experience-nav h3,
+      .experience-nav p {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .site-header {
+        position: static;
+      }
+
+      .nav {
+        min-height: 64px;
+      }
+
+      .brand-text {
+        font-size: 15px;
+      }
+
+      .print-button {
+        padding-right: 12px;
+        padding-left: 12px;
+      }
+
+      .hero-grid {
+        gap: 34px;
+      }
+
+      .section {
+        padding: 62px 0;
+      }
+
+      .story-grid,
+      .audience-grid,
+      .roadmap-grid,
+      .status-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .status-column + .status-column {
+        border-top: 1px solid var(--line);
+        border-left: 0;
+      }
+
+      .experience-nav {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-main {
+        padding: 28px 20px;
+      }
+
+      .scenario-buttons {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+
+    @media print {
+      .site-header,
+      .hero-actions,
+      .experience-nav,
+      .scenario-block {
+        display: none !important;
+      }
+
+      body {
+        color: #111;
+        background: #fff;
+      }
+
+      .hero,
+      .closing {
+        color: #111;
+        background: #fff;
+        border: 1px solid #bbb;
+      }
+
+      .hero-lead,
+      .closing p {
+        color: #333;
+      }
+
+      .section {
+        padding: 38px 0;
+      }
+
+      .hero-panel,
+      .experience-shell {
+        box-shadow: none;
+      }
+
+      .experience-shell {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="页面导航">
+      <a class="brand" href="#top" aria-label="返回顶部">
+        <span class="brand-seal" aria-hidden="true">职</span>
+        <span class="brand-text">三都职通</span>
+      </a>
+      <div class="nav-links">
+        <a href="#origin">项目缘起</a>
+        <a href="#users">服务对象</a>
+        <a href="#experience">使用体验</a>
+        <a href="#value">社会价值</a>
+        <a href="#roadmap">落地计划</a>
+      </div>
+      <button class="print-button" type="button" id="printButton">打印 / 导出 PDF</button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">社会服务赛道 · 家乡就业服务</span>
+          <h1>让工作机会，离家乡群众更近一点</h1>
+          <p class="hero-lead">
+            “三都职通”是一款服务三都县群众与本地用人单位的招聘小程序创意，
+            让群众少跑腿、让企业少下乡摆摊，让就业信息更快、更清楚地到达真正需要的人。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#experience">体验双向招聘流程</a>
+            <a class="secondary-button" href="#roadmap">查看真实落地计划</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="创意概览">
+          <p class="panel-kicker">创意名称</p>
+          <h2>三都职通</h2>
+          <ul class="promise-list">
+            <li>群众在家也能看到合适岗位</li>
+            <li>企业用更低成本触达求职者</li>
+            <li>政府与劳务服务人员更容易组织就业服务</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="origin">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">01 · 项目缘起</p>
+            <h2>来自家人的真实工作，也来自家乡的真实困难</h2>
+          </div>
+          <p>
+            家人长期从事劳务输出，日常需要组织群众到外省务工。这个项目不是凭空想象，
+            而是从一次次线下找人、打电话、贴公告和下乡招工中长出来的。
+          </p>
+        </div>
+
+        <div class="story-grid">
+          <article class="story-card">
+            <strong>群众这一边</strong>
+            <h3>有劳动能力，却不知道哪里正在招人</h3>
+            <p>
+              部分群众受教育程度不高、数字渠道有限，找工作常依赖熟人介绍或前往人力资源公司询问。
+              想找本地工作或外出务工，都需要花费较多时间和路费。
+            </p>
+          </article>
+          <article class="story-card">
+            <strong>用人单位这一边</strong>
+            <h3>有岗位需求，却很难高效找到合适的人</h3>
+            <p>
+              本地商户仍会把招聘信息贴在公告栏，企业有时需要从县城到乡镇摆摊招聘。
+              信息传播范围有限，招聘成本高，供需双方常常彼此错过。
+            </p>
+          </article>
+        </div>
+
+        <div class="origin-note">
+          <b>创作契机：</b>
+          在学习编程和接触 Vibe Coding 后，我意识到智能体可以帮助普通学生把真实需求变成可验证的产品原型。
+          我希望借助比赛，先把家乡就业服务这件事认真做出第一步。
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="users">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">02 · 目标用户</p>
+            <h2>不只服务一种人，而是连接整个县域就业供需</h2>
+          </div>
+          <p>
+            产品优先服务真实、常见、容易被忽视的就业场景，不把功能做得过度复杂，
+            让第一次使用智能手机求职的人也能看懂、敢点、知道下一步。
+          </p>
+        </div>
+
+        <div class="audience-grid">
+          <article class="audience-card">
+            <span class="card-index">USER 01</span>
+            <h3>普通务工群众</h3>
+            <p>寻找县内服务业、制造业或外省务工岗位。</p>
+          </article>
+          <article class="audience-card">
+            <span class="card-index">USER 02</span>
+            <h3>持证技术工人</h3>
+            <p>按叉车、电工、焊工等技能快速匹配岗位。</p>
+          </article>
+          <article class="audience-card">
+            <span class="card-index">USER 03</span>
+            <h3>本地商户与企业</h3>
+            <p>发布真实岗位，减少反复下乡招人的成本。</p>
+          </article>
+          <article class="audience-card">
+            <span class="card-index">USER 04</span>
+            <h3>就业服务人员</h3>
+            <p>集中维护岗位、活动、培训和政策信息。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">03 · 核心体验</p>
+            <h2>两条路线，一次说清招聘与求职怎么发生</h2>
+          </div>
+          <p>
+            点击左侧身份切换，查看群众与企业各自的完整路径。交互仅用于展示产品方案，
+            当前不会提交真实个人信息或岗位数据。
+          </p>
+        </div>
+
+        <div class="experience-shell">
+          <div class="experience-nav">
+            <h3>选择体验身份</h3>
+            <p>页面会根据身份展示对应的使用流程。</p>
+            <div class="role-buttons" role="tablist" aria-label="体验身份">
+              <button class="role-button" type="button" role="tab" aria-selected="true" data-role="worker">我是求职群众</button>
+              <button class="role-button" type="button" role="tab" aria-selected="false" data-role="employer">我是用人单位</button>
+            </div>
+          </div>
+
+          <div class="experience-main" role="tabpanel" aria-live="polite">
+            <h3 id="roleTitle">群众求职路线</h3>
+            <p class="experience-intro" id="roleIntro">
+              以“持有叉车证、希望找到稳定工作”为例，用户不必逐家工厂询问，可以直接查看匹配岗位和报名要求。
+            </p>
+            <ol class="flow-list" id="flowList"></ol>
+
+            <div class="scenario-block">
+              <h4>切换一个真实使用场景</h4>
+              <div class="scenario-buttons">
+                <button class="scenario-button" type="button" aria-pressed="true" data-scenario="skill">持证技术工找岗位</button>
+                <button class="scenario-button" type="button" aria-pressed="false" data-scenario="local">在县城找服务员工作</button>
+              </div>
+              <div class="scenario-result" id="scenarioResult" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">04 · 产品方案</p>
+            <h2>先把最有价值的就业服务做好</h2>
+          </div>
+          <p>
+            产品不追求一次覆盖所有政务服务，第一阶段专注“看岗位、懂岗位、能投递、有人处理、收到结果”这条核心链路。
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-tag">群众端</span>
+            <h3>职位搜索与清楚筛选</h3>
+            <p>按地区、工种、薪资和技能查看岗位，文案简短，大字展示，减少理解成本。</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-tag">群众端</span>
+            <h3>简历与投递进度</h3>
+            <p>维护基本经历和技能，投递后清楚看到待查看、面试或结束状态。</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-tag">企业端</span>
+            <h3>岗位发布与候选人处理</h3>
+            <p>企业经过审核后发布岗位，集中查看求职者并更新处理结果。</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-tag">就业服务</span>
+            <h3>招聘会与宣讲活动</h3>
+            <p>集中展示招聘会、直播带岗和宣讲会，让线下活动更容易被群众看见。</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-tag">就业服务</span>
+            <h3>培训与政策信息</h3>
+            <p>提供技能培训、就业政策、劳动用工和返乡服务入口，帮助群众做好求职准备。</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-tag">适老易读</span>
+            <h3>简单、诚实、容易操作</h3>
+            <p>按钮足够大，重要状态说清楚；未接入的能力不提示虚假成功，避免误导群众。</p>
+          </article>
+        </div>
+
+        <div class="status-strip">
+          <div class="status-column">
+            <h3>当前已经完成的原型</h3>
+            <ul class="plain-list">
+              <li>首页、职位、交流、消息、个人中心五个核心入口</li>
+              <li>职位详情、本地筛选、简历、投递记录和企业招聘框架</li>
+              <li>招聘活动、培训、政策、返乡与用工信息页面</li>
+              <li>加载、空状态、异常和重试等基础体验</li>
+            </ul>
+          </div>
+          <div class="status-column">
+            <h3>真正上线前必须补齐</h3>
+            <ul class="plain-list">
+              <li>真实微信登录、手机号和角色权限</li>
+              <li>后端、数据库、企业认证和岗位审核</li>
+              <li>真实投递、状态通知、文件上传和数据保护</li>
+              <li>微信开发者工具、真机和不同字体尺寸验收</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="value">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">05 · 价值与意义</p>
+            <h2>技术的价值，不是功能多，而是让真实的人少走弯路</h2>
+          </div>
+          <p>
+            三都职通希望成为县域就业服务的一块数字基础设施：降低信息差，让岗位、人才和公共就业服务在同一个入口相遇。
+          </p>
+        </div>
+
+        <div class="value-grid">
+          <article class="value-card">
+            <div class="value-statement">少跑腿</div>
+            <h3>降低群众求职成本</h3>
+            <p>在家即可了解岗位、活动和培训信息，把时间和路费留给真正需要的面试与上岗。</p>
+          </article>
+          <article class="value-card">
+            <div class="value-statement">快触达</div>
+            <h3>降低企业招聘成本</h3>
+            <p>减少反复张贴公告和下乡摆摊，让岗位更精准地被合适的求职者看见。</p>
+          </article>
+          <article class="value-card">
+            <div class="value-statement">可持续</div>
+            <h3>沉淀本地就业服务能力</h3>
+            <p>逐步形成可信岗位、技能人才和就业活动数据，为后续公共服务协作提供基础。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="roadmap">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">06 · 落地计划</p>
+            <h2>从可展示原型，走向真正有人使用</h2>
+          </div>
+          <p>
+            不盲目追求大而全。先用一个县、一个核心就业闭环验证价值，再根据真实使用反馈扩展培训、返乡和公共服务。
+          </p>
+        </div>
+
+        <div class="roadmap-grid">
+          <article class="roadmap-card roadmap-card-current">
+            <span class="roadmap-stage">阶段 01 · 当前</span>
+            <h3>完成前端原型</h3>
+            <p>验证页面结构、操作方式和群众能否看懂。</p>
+          </article>
+          <article class="roadmap-card">
+            <span class="roadmap-stage">阶段 02 · MVP</span>
+            <h3>打通真实求职闭环</h3>
+            <p>完成登录、岗位、投递、企业处理和通知。</p>
+          </article>
+          <article class="roadmap-card">
+            <span class="roadmap-stage">阶段 03 · 试点</span>
+            <h3>邀请真实用户试用</h3>
+            <p>与家人、本地商户和少量求职群众开展小范围测试。</p>
+          </article>
+          <article class="roadmap-card">
+            <span class="roadmap-stage">阶段 04 · 协作</span>
+            <h3>连接公共就业服务</h3>
+            <p>在数据合规前提下，与企业及相关服务单位逐步合作。</p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="container">
+        <h2>从一条真实招聘信息开始，让更多家乡群众看到工作的可能</h2>
+        <p>
+          三都职通不是要取代线下就业服务，而是让线下经验拥有一个更高效、更可信、更容易触达群众的数字入口。
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    社会服务赛道创意展示 · 三都职通 · 当前为前端原型，真实业务能力以未来正式上线版本为准
+  </footer>
+
+  <script>
+    const roleContent = {
+      worker: {
+        title: "群众求职路线",
+        intro: "以“持有叉车证、希望找到稳定工作”为例，用户不必逐家工厂询问，可以直接查看匹配岗位和报名要求。",
+        steps: [
+          ["选择求职方向", "用简单分类选择本地就业、外出务工或技能岗位。"],
+          ["查看可信岗位", "清楚阅读薪资、地点、工时、食宿和技能要求。"],
+          ["完善基础简历", "填写工作经历、技能证书和求职意向。"],
+          ["投递并看进度", "看到企业是否查看、是否邀请面试以及最终处理状态。"]
+        ]
+      },
+      employer: {
+        title: "企业招聘路线",
+        intro: "企业或本地商户完成主体审核后，可以发布岗位并集中处理候选人，减少反复下乡招工和电话登记。",
+        steps: [
+          ["完成企业认证", "提交必要主体信息，由平台审核招聘资格。"],
+          ["发布真实岗位", "填写工种、人数、薪资、地点、工时和食宿条件。"],
+          ["查看匹配人才", "按技能、意向和地区查看投递人员。"],
+          ["更新处理结果", "发送面试邀请并及时更新录用或结束状态。"]
+        ]
+      }
+    };
+
+    const scenarios = {
+      skill: "系统按“叉车证、工作地区、薪资范围”筛选岗位，让持证工人先看到真正匹配的机会。",
+      local: "系统集中展示县城餐饮、商超和服务业岗位，减少逐店询问和重复奔波。"
+    };
+
+    const flowList = document.getElementById("flowList");
+    const roleTitle = document.getElementById("roleTitle");
+    const roleIntro = document.getElementById("roleIntro");
+    const roleButtons = Array.from(document.querySelectorAll(".role-button"));
+    const scenarioButtons = Array.from(document.querySelectorAll(".scenario-button"));
+    const scenarioResult = document.getElementById("scenarioResult");
+
+    function renderRole(role) {
+      const content = roleContent[role];
+      roleTitle.textContent = content.title;
+      roleIntro.textContent = content.intro;
+      flowList.innerHTML = content.steps.map((step, index) => `
+        <li class="flow-item">
+          <span class="flow-number">${index + 1}</span>
+          <span class="flow-copy"><strong>${step[0]}</strong><span>${step[1]}</span></span>
+        </li>
+      `).join("");
+
+      roleButtons.forEach((button) => {
+        button.setAttribute("aria-selected", String(button.dataset.role === role));
+      });
+    }
+
+    function renderScenario(scenario) {
+      scenarioResult.textContent = scenarios[scenario];
+      scenarioButtons.forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.scenario === scenario));
+      });
+    }
+
+    roleButtons.forEach((button) => {
+      button.addEventListener("click", () => renderRole(button.dataset.role));
+    });
+
+    scenarioButtons.forEach((button) => {
+      button.addEventListener("click", () => renderScenario(button.dataset.scenario));
+    });
+
+    document.getElementById("printButton").addEventListener("click", () => window.print());
+
+    renderRole("worker");
+    renderScenario("skill");
+  </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<view class="policy-page">
+  <view class="policy-hero">
+    <view class="hero-main">
+      <text class="hero-label">{{policy.header.label}}</text>
+      <view class="hero-title">{{policy.header.title}}</view>
+      <view class="hero-subtitle">{{policy.header.subtitle}}</view>
+    </view>
+    <view class="hero-count">
+      <text class="hero-count-number">{{policy.policies.length}}</text>
+      <text class="hero-count-label">{{policy.header.countLabel}}</text>
+    </view>
+  </view>
+
+  <view class="important-card">
+    <view class="important-top">
+      <text class="important-tag">{{policy.reminder.tag}}</text>
+      <text class="important-title">{{policy.reminder.title}}</text>
+    </view>
+    <text class="important-text">{{policy.reminder.text}}</text>
+    <view class="important-action" bindtap="onReminderTap">{{policy.reminder.actionText}}</view>
+  </view>
+
+  <view class="category-section">
+    <view class="section-heading">
+      <view>
+        <text class="section-title">你想看哪一类</text>
+        <text class="section-subtitle">点一下，只看和你有关的政策</text>
+      </view>
+      <text class="section-side">{{selectedCategoryName}}</text>
+    </view>
+
+    <scroll-view class="category-scroll" scroll-x="true" show-scrollbar="false">
+      <view class="category-row">
+        <view
+          class="category-card {{selectedCategoryId === item.id ? 'category-card-active' : ''}}"
+          wx:for="{{policy.categories}}"
+          wx:key="id"
+          data-id="{{item.id}}"
+          data-name="{{item.name}}"
+          bindtap="onCategoryTap"
+        >
+          <text class="category-mark">{{item.mark}}</text>
+          <text class="category-name">{{item.name}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="list-heading">
+    <view>
+      <text class="section-title">政策办理提示</text>
+      <text class="section-subtitle">先看适用人群，再准备材料</text>
+    </view>
+    <text class="result-count">{{visiblePolicies.length}} 项</text>
+  </view>
+
+  <view class="policy-list">
+    <view class="policy-card" wx:for="{{visiblePolicies}}" wx:key="id">
+      <view class="policy-meta">
+        <text class="policy-category">{{item.categoryName}}</text>
+        <text class="policy-date">更新 {{item.publishedAt}}</text>
+      </view>
+
+      <text class="policy-title">{{item.title}}</text>
+      <text class="policy-summary">{{item.summary}}</text>
+
+      <view class="benefit-box">
+        <text class="benefit-label">能得到什么</text>
+        <text class="benefit-value">{{item.amountLabel}}</text>
+      </view>
+
+      <view class="info-row">
+        <text class="info-label">适用人群</text>
+        <text class="info-value">{{item.audience}}</text>
+      </view>
+
+      <view class="tag-row">
+        <text class="policy-tag" wx:for="{{item.tags}}" wx:for-item="tag" wx:key="*this">{{tag}}</text>
+      </view>
+
+      <view class="card-action-row">
+        <view class="office-copy">
+          <text class="office-label">去哪里问</text>
+          <text class="office-name">{{item.office}}</text>
+        </view>
+        <view class="detail-button" data-id="{{item.id}}" bindtap="onPolicyDetailTap">
+          {{expandedPolicyId === item.id ? '收起要点' : '查看要点'}}
+        </view>
+      </view>
+
+      <view class="detail-panel" wx:if="{{expandedPolicyId === item.id}}">
+        <view class="detail-block">
+          <text class="detail-title">补贴或支持</text>
+          <text class="detail-text">{{item.benefit}}</text>
+        </view>
+
+        <view class="detail-block">
+          <text class="detail-title">要准备什么</text>
+          <view class="detail-line" wx:for="{{item.materials}}" wx:for-item="material" wx:key="*this">
+            <text class="detail-number">{{index + 1}}</text>
+            <text class="detail-line-text">{{material}}</text>
+          </view>
+        </view>
+
+        <view class="detail-block">
+          <text class="detail-title">怎么办</text>
+          <view class="detail-line" wx:for="{{item.steps}}" wx:for-item="step" wx:key="*this">
+            <text class="detail-number detail-number-green">{{index + 1}}</text>
+            <text class="detail-line-text">{{step}}</text>
+          </view>
+        </view>
+
+        <view class="consult-button" data-office="{{item.office}}" bindtap="onConsultTap">查看咨询提醒</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="source-note">
+    <text class="source-note-title">信息说明</text>
+    <text class="source-note-text">{{policy.meta.sourceNote}}</text>
+    <text class="source-note-date">演示数据更新：{{policy.meta.updatedAt}}</text>
+  </view>
+</view>

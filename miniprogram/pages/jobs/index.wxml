@@ -1,0 +1,114 @@
+<view class="jobs-page">
+  <view class="jobs-hero">
+    <view class="hero-copy">
+      <text class="hero-label">本地演示</text>
+      <view class="hero-title">{{header.title}}</view>
+      <view class="hero-subtitle">{{header.subtitle}}</view>
+    </view>
+    <view class="hero-count">
+      <text class="hero-count-number">{{total}}</text>
+      <text class="hero-count-label">个筛选结果</text>
+    </view>
+  </view>
+
+  <view class="search-box">
+    <view class="search-icon"></view>
+    <input class="search-input" value="{{query}}" placeholder="{{header.searchPlaceholder}}" confirm-type="search" bindinput="onSearchInput" />
+    <button wx:if="{{query}}" class="search-clear" bindtap="onClearSearch">清空</button>
+  </view>
+
+  <view class="zone-grid">
+    <button class="zone-card {{activeZoneId === item.id ? 'zone-card-active' : ''}}" wx:for="{{zones}}" wx:key="id" data-id="{{item.id}}" bindtap="onZoneTap">
+      <view class="zone-mark" style="background-color: {{item.color}};">{{item.mark}}</view>
+      <view class="zone-main">
+        <text class="zone-title">{{item.title}}</text>
+        <text class="zone-desc">{{item.desc}}</text>
+      </view>
+    </button>
+  </view>
+
+  <scroll-view class="filter-scroll" scroll-x="true" show-scrollbar="false">
+    <view class="filter-row">
+      <button class="filter-chip {{activeFilterId === item.id ? 'filter-chip-active' : ''}}" wx:for="{{filters}}" wx:key="id" data-id="{{item.id}}" bindtap="onFilterTap">{{item.name}}</button>
+    </view>
+  </scroll-view>
+
+  <view class="sort-panel">
+    <text class="sort-label">排序</text>
+    <scroll-view class="sort-scroll" scroll-x="true" show-scrollbar="false">
+      <view class="sort-row">
+        <button class="sort-chip {{activeSortId === item.id ? 'sort-chip-active' : ''}}" wx:for="{{sorts}}" wx:key="id" data-id="{{item.id}}" bindtap="onSortTap">{{item.name}}</button>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="scenario-panel">
+    <text class="scenario-title">仅本地状态测试</text>
+    <text class="scenario-copy">切换只影响内存中的模拟读取，不会请求网络。</text>
+    <scroll-view class="scenario-scroll" scroll-x="true" show-scrollbar="false">
+      <view class="scenario-row">
+        <button class="scenario-chip {{selectedScenario === item.id ? 'scenario-chip-active' : ''}}" wx:for="{{scenarios}}" wx:key="id" data-scenario="{{item.id}}" bindtap="onScenarioTap">{{item.name}}</button>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="safe-tip">
+    <text class="safe-tip-strong">先核实再决定</text>
+    <text class="safe-tip-text">工资、地点和企业均为示例，当前不能真实投递。</text>
+  </view>
+
+  <view class="section-head">
+    <view>
+      <text class="section-title">示例岗位</text>
+      <text class="section-subtitle">本次打开期间收藏 {{favoriteCount}} 个，退出后不会保存</text>
+    </view>
+    <text class="section-more">已显示 {{visibleJobs.length}} / {{total}}</text>
+  </view>
+
+  <view wx:if="{{loadState === 'loading'}}" class="state-card">
+    <text class="state-title">正在加载</text>
+    <text class="state-copy">{{stateMessage}}</text>
+  </view>
+
+  <view wx:elif="{{loadState === 'error'}}" class="state-card state-card-error">
+    <text class="state-title">暂时无法显示</text>
+    <text class="state-copy">{{stateMessage}}</text>
+    <button class="state-action" bindtap="onRetry">按当前条件重试正常状态</button>
+  </view>
+
+  <view wx:elif="{{loadState === 'empty'}}" class="state-card">
+    <text class="state-title">没有合适结果</text>
+    <text class="state-copy">{{stateMessage}}</text>
+    <button class="state-action" bindtap="onClearConditions">清空条件并回到正常状态</button>
+  </view>
+
+  <view wx:else class="job-list">
+    <view class="job-card" wx:for="{{visibleJobs}}" wx:key="id">
+      <view class="job-card-top">
+        <view class="job-title-wrap">
+          <text class="job-title">{{item.title}}</text>
+          <text class="job-badge">{{item.badge}}</text>
+        </view>
+        <text class="job-salary">{{item.salary}}</text>
+      </view>
+      <view class="job-meta">
+        <text>{{item.location}}</text><text class="meta-dot"></text><text>{{item.distanceText}}</text>
+      </view>
+      <view class="company-info">{{item.company}}</view>
+      <view class="company-info">{{item.companyInfo}}</view>
+      <view class="label-row">
+        <text class="job-label" wx:for="{{item.labels}}" wx:for-item="label" wx:key="*this">{{label}}</text>
+      </view>
+      <view class="job-action-row">
+        <button class="favorite-action {{item.isFavorite ? 'favorite-action-active' : ''}}" data-id="{{item.id}}" bindtap="onToggleFavorite">{{item.isFavorite ? '本次已收藏' : '本地收藏'}}</button>
+        <button class="job-action" data-id="{{item.id}}" bindtap="onOpenDetail">查看详情</button>
+      </view>
+    </view>
+    <view wx:if="{{pageFeedback}}" class="page-feedback">
+      <text>{{pageFeedback}}</text>
+      <button class="page-retry" bindtap="onLoadMore">重试加载更多</button>
+    </view>
+    <button wx:elif="{{hasMore}}" class="page-action" loading="{{loadingMore}}" disabled="{{loadingMore}}" bindtap="onLoadMore">{{loadingMore ? '正在加载下一页' : '加载更多'}}</button>
+    <view wx:else class="page-end">没有更多本地示例岗位</view>
+  </view>
+</view>

@@ -1,0 +1,100 @@
+<view class="training-page">
+  <view class="training-hero">
+    <view class="hero-copy">
+      <text class="hero-label">{{training.header.label}}</text>
+      <view class="hero-title">{{training.header.title}}</view>
+      <view class="hero-subtitle">{{training.header.subtitle}}</view>
+    </view>
+    <view class="hero-count">
+      <text class="hero-count-number">{{training.courses.length}}</text>
+      <text class="hero-count-label">门示例课程</text>
+    </view>
+  </view>
+
+  <view class="category-section">
+    <view class="section-head">
+      <view>
+        <text class="section-title">想学哪一类</text>
+        <text class="section-subtitle">点分类，只看相关课程</text>
+      </view>
+      <text class="section-status">{{activeCategoryName}}</text>
+    </view>
+
+    <scroll-view class="category-scroll" scroll-x="true" show-scrollbar="false">
+      <view class="category-row">
+        <view
+          class="category-chip {{activeCategoryId === item.id ? 'category-chip-active' : ''}}"
+          wx:for="{{training.categories}}"
+          wx:key="id"
+          data-category-id="{{item.id}}"
+          bindtap="onCategoryTap"
+        >
+          {{item.name}}
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="notice-card">
+    <text class="notice-title">{{training.notice.title}}</text>
+    <text class="notice-text">{{training.notice.text}}</text>
+  </view>
+
+  <view class="course-heading">
+    <view>
+      <text class="section-title">推荐课程</text>
+      <text class="section-subtitle">共 {{filteredCourses.length}} 门，先看时间、地点和费用</text>
+    </view>
+    <text class="section-status">本地示例</text>
+  </view>
+
+  <view class="course-list">
+    <view class="course-card" wx:for="{{filteredCourses}}" wx:key="id">
+      <view class="course-top">
+        <view class="course-title-wrap">
+          <text class="course-title">{{item.title}}</text>
+          <text class="course-badge">{{item.badge}}</text>
+        </view>
+        <view class="course-fee">
+          <text class="course-fee-label">费用</text>
+          <text class="course-fee-value">{{item.fee}}</text>
+        </view>
+      </view>
+
+      <text class="course-summary">{{item.summary}}</text>
+
+      <view class="info-list">
+        <view class="info-row">
+          <text class="info-label">时间</text>
+          <view class="info-value-wrap">
+            <text class="info-value">{{item.schedule}}</text>
+            <text class="info-note">{{item.classTime}}</text>
+          </view>
+        </view>
+        <view class="info-row">
+          <text class="info-label">地点</text>
+          <text class="info-value">{{item.location}}</text>
+        </view>
+        <view class="info-row">
+          <text class="info-label">适合</text>
+          <text class="info-value">{{item.audience}}</text>
+        </view>
+      </view>
+
+      <view class="tag-row">
+        <text class="course-tag" wx:for="{{item.tags}}" wx:for-item="tag" wx:key="*this">{{tag}}</text>
+      </view>
+
+      <view class="course-footer">
+        <text class="provider-name">{{item.provider}}</text>
+        <button
+          class="detail-button"
+          data-course-id="{{item.id}}"
+          bindtap="onCourseDetailTap"
+        >
+          {{training.actions.courseInfoLabel}}
+        </button>
+      </view>
+    </view>
+  </view>
+</view>
