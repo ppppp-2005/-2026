@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "workstream": "06-backend-api",
   "title": "后端 API 与数据设计",
-  "phase": "SHIP",
-  "state": "shipped",
+  "phase": "PLAN",
+  "state": "active",
   "priority": "P0",
-  "currentSlice": "demo-cleanup-v1",
+  "currentSlice": "backend-foundation-v1",
   "ownerThreadId": null,
-  "summary": "mock-replacement-v1 + demo-cleanup-v1 全部 SHIP。F1-F10 代码+静态+真机验收通过；演示文案 0 残留、mock 数据清空。",
-  "nextAction": "军师决定下一个 workstream 或切片方向。",
+  "summary": "api-contract-v1 已 SHIP。backend-foundation-v1 进入 PLAN。已拆 6 个 F 级 BUILD 任务（F1 Prisma Schema → F6 Docker Compose），每任务含目标/文件清单/禁止项/验收命令/回滚/证据要求。等待 PLAN → BUILD 闸门签字。",
+  "nextAction": "人确认 PLAN 后进入 BUILD 阶段，按 F1→F6 顺序派 Trae/子 Agent 执行，不做一次性大改。",
   "blockers": [],
   "dependencies": [
     "01-project-shell",
@@ -27,6 +27,24 @@
     "15-events"
   ],
   "evidence": [
+    {
+      "kind": "api-contract",
+      "status": "passed",
+      "summary": "API_SPEC.md v1.1 已生成（46KB，覆盖首页/职位/交流/消息/用户/企业/培训/政策/用工/校园/返乡模块，字段分级 B/W/F）。",
+      "ref": "API_SPEC.md"
+    },
+    {
+      "kind": "review",
+      "status": "passed",
+      "summary": "API_SPEC.md v1.1 REVIEW 通过：5 项待补全部交叉验证覆盖，6 项 v1 范围决策全部接受，5 个 minor gaps（G1-G5）已修复。",
+      "ref": "API_SPEC.md"
+    },
+    {
+      "kind": "context-governance",
+      "status": "passed",
+      "summary": "context.mjs validate → 16 workstreams / 0 error / 0 warning。STATE.json / SPEC.md / TASKS.md / HANDOFF.md 全部对齐。",
+      "ref": "STATE.json"
+    },
     {
       "kind": "static-review",
       "status": "passed",
@@ -54,9 +72,9 @@
   ],
   "tags": [
     "backend-api",
+    "api-contract",
     "mock-replacement",
-    "demo-cleanup",
-    "shipped"
+    "demo-cleanup"
   ],
   "codePaths": [
     "workstreams/06-backend-api/**",

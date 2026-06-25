@@ -11,63 +11,63 @@
       "files": [
         {
           "path": "docs/blueprint/agent-skills-process.md",
-          "bytes": 1518,
-          "sha256": "fe94ec161d0ae824b8fd70923d82343caebf6a0cf90ea5f73bba5fbca8ced70a"
+          "bytes": 1556,
+          "sha256": "8599ee52162ed167b0a0026ab02416bf5b9d4bc785e651cf8ddf16f23c1e34f9"
         },
         {
           "path": "docs/blueprint/backend-design-placeholder.md",
-          "bytes": 15015,
-          "sha256": "06834d91ec3a214763afa51e6204dec84a95bd6046f8aed70e9e49ccd16c9b87"
+          "bytes": 15178,
+          "sha256": "1ed578a0fbda0d7e7917a4a6e1aa1fab19cc9f3fd05e8fc636ca93015e8a8d4c"
         },
         {
           "path": "docs/blueprint/decisions.md",
-          "bytes": 1601,
-          "sha256": "4a7b74cc45d4284a9c79a7b56fbf4e2ce474c560e10a76c7cb168f2cf89827bf"
+          "bytes": 1614,
+          "sha256": "0218505b92d9079264a13b1a13a9fc5bb8603d45c01bec17e27b73bfd1e32066"
         },
         {
           "path": "docs/blueprint/frontend-completion-roadmap.md",
-          "bytes": 1421,
-          "sha256": "70802e98cbf56015ea5fad79781b8ab18b45ae1d0b0b49622a521f9ede87d22b"
+          "bytes": 1444,
+          "sha256": "ebdd98c9c6364156c28cec8079eec420ee88a00a1348b60cdad0735ca5b3a20c"
         },
         {
           "path": "docs/blueprint/product-blueprint.md",
-          "bytes": 2253,
-          "sha256": "e245dfdfe9aded54e4e65cfc187ce6c1e5e49356d8143d5b6f02ee0ec4c3af0d"
+          "bytes": 2297,
+          "sha256": "9a17fc2e250ba74223fcae851bab2858ded8e3468e280090d5549985c05fd834"
         },
         {
           "path": "docs/blueprint/ui-home-reference.md",
-          "bytes": 1063,
-          "sha256": "36f4f07d2199b4bb8d9e65ab544adce4edbbb9df6aaa155e1ad11cc08ba789cb"
+          "bytes": 1102,
+          "sha256": "6386277bf748793cee2f4560558f034258c1572ef41607c0e1f7319873091b9c"
         },
         {
           "path": "docs/blueprint/workflow.md",
-          "bytes": 2776,
-          "sha256": "d8eef8aa32b72edbc88d11f8ada99b84c32677339c0acb460a8e0a3e5ed02109"
+          "bytes": 2836,
+          "sha256": "817aca4ee7dffc43e67d6df08b2a7c2b45cfe792f1ec36697e81adeb7e85295b"
         },
         {
           "path": ".codex/skills/workstream-delegation/agents/openai.yaml",
-          "bytes": 257,
-          "sha256": "680680ea772cf06e3b0ec5b851e213964c3590a88ed9b303944f9be6790f0b12"
+          "bytes": 261,
+          "sha256": "8fbb3860b3e0878440495eeeb0b7727a2261cbf37166b53042cffa71d4a22fee"
         },
         {
           "path": ".codex/skills/workstream-delegation/references/context-protocol.md",
-          "bytes": 2720,
-          "sha256": "03024ee63adb6c64a570bee64cb834f83dfd3a2242d770281153cfe9a7fb933d"
+          "bytes": 2785,
+          "sha256": "9ee9397f1667114d469d4e19f7a01f32fa071c00afd80f037c598adbf97bd1f8"
         },
         {
           "path": ".codex/skills/workstream-delegation/scripts/context.mjs",
-          "bytes": 39690,
-          "sha256": "bbc2f75ab22a2d254b3d93f64cc503107d1bed782654b7201c129bc352407fef"
+          "bytes": 40582,
+          "sha256": "fb1bb9922575cf70648028c9023c8d1e49a4aa4ceafa422c16b26304a65ede34"
         },
         {
           "path": ".codex/skills/workstream-delegation/scripts/context.test.mjs",
-          "bytes": 2912,
-          "sha256": "f1bd58f35fd3c3c16ccb563ec1e21edbeb2d5e972964d5117bf967bd8e962084"
+          "bytes": 2998,
+          "sha256": "f6f8c7cddefb19bfe9b08d02f4c59e7f76e5c9b22916d90f8764c73ef63acfd4"
         },
         {
           "path": ".codex/skills/workstream-delegation/SKILL.md",
-          "bytes": 17290,
-          "sha256": "9fc2810aa56a06625490a9b56f31a8be06f00464d5864191b7e42789d71d11e5"
+          "bytes": 17632,
+          "sha256": "460afa020c58c911cd5d58d88bc189259ee7bf9a2ac075915b061f78846ccad5"
         }
       ]
     },
@@ -81,113 +81,113 @@
       "files": [
         {
           "path": "miniprogram/config/environments.js",
-          "bytes": 2590,
-          "sha256": "b4acd0f94dfdf935ab5041040d23e4f96c5fc84c35d4a72c0ea15d0283700404"
+          "bytes": 2679,
+          "sha256": "27900f0842d31d7783cf9e93e93fb699504a5473b322a7b5eb43da2e4b5f9a2b"
         },
         {
           "path": "miniprogram/config/environments.ts",
-          "bytes": 2590,
-          "sha256": "b4acd0f94dfdf935ab5041040d23e4f96c5fc84c35d4a72c0ea15d0283700404"
+          "bytes": 2679,
+          "sha256": "27900f0842d31d7783cf9e93e93fb699504a5473b322a7b5eb43da2e4b5f9a2b"
         },
         {
           "path": "miniprogram/services/.gitkeep",
-          "bytes": 1,
-          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+          "bytes": 2,
+          "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
         },
         {
           "path": "miniprogram/services/auth-session.js",
-          "bytes": 2730,
-          "sha256": "7926d2e07632e0a54fad4c236f8cdae62aefac20af6b35fbbc4f13ce8e3f455a"
+          "bytes": 2841,
+          "sha256": "fdaf9fb8481b12354637614a3d8c91f538f756acb6d7e5bc73f35295d67cf4c0"
         },
         {
           "path": "miniprogram/services/auth-session.ts",
-          "bytes": 2730,
-          "sha256": "7926d2e07632e0a54fad4c236f8cdae62aefac20af6b35fbbc4f13ce8e3f455a"
+          "bytes": 2841,
+          "sha256": "fdaf9fb8481b12354637614a3d8c91f538f756acb6d7e5bc73f35295d67cf4c0"
         },
         {
           "path": "miniprogram/services/employer.js",
-          "bytes": 8154,
-          "sha256": "368e23eb131aa571ee46ceccc13093310cdb08d2ed017128700a52c7ccf1b53b"
+          "bytes": 8400,
+          "sha256": "f084f0870b97ce4203d1fdaad9dc9d64577fd40b827079e3fda15aaaa421b6b4"
         },
         {
           "path": "miniprogram/services/employer.ts",
-          "bytes": 8154,
-          "sha256": "368e23eb131aa571ee46ceccc13093310cdb08d2ed017128700a52c7ccf1b53b"
+          "bytes": 8400,
+          "sha256": "f084f0870b97ce4203d1fdaad9dc9d64577fd40b827079e3fda15aaaa421b6b4"
         },
         {
           "path": "miniprogram/services/errors.js",
-          "bytes": 2988,
-          "sha256": "4348cc8e08fc0b77ee4ba150e9847f51387d7498de02ea0ec58f767be78142ef"
+          "bytes": 3071,
+          "sha256": "c9621f78998c140cad4f7294c69c06911384ebec7c75c4595128187663e87ad4"
         },
         {
           "path": "miniprogram/services/errors.ts",
-          "bytes": 2988,
-          "sha256": "4348cc8e08fc0b77ee4ba150e9847f51387d7498de02ea0ec58f767be78142ef"
+          "bytes": 3071,
+          "sha256": "c9621f78998c140cad4f7294c69c06911384ebec7c75c4595128187663e87ad4"
         },
         {
           "path": "miniprogram/services/jobs.js",
-          "bytes": 5346,
-          "sha256": "1ba2b7c775682ea3ac013c1e0d6ac3d8aedb1c0807ad83ead79c1373f24c01d6"
+          "bytes": 5523,
+          "sha256": "86001af65718db55332d09128e38446ca51535b423e576a28a38038c7cdefd3a"
         },
         {
           "path": "miniprogram/services/jobs.ts",
-          "bytes": 5346,
-          "sha256": "1ba2b7c775682ea3ac013c1e0d6ac3d8aedb1c0807ad83ead79c1373f24c01d6"
+          "bytes": 5523,
+          "sha256": "86001af65718db55332d09128e38446ca51535b423e576a28a38038c7cdefd3a"
         },
         {
           "path": "miniprogram/services/messages.js",
-          "bytes": 4411,
-          "sha256": "f9e4c3c9c9dde176826d04296f6a39586518183f9083e09d0abfbde4ff8824a3"
+          "bytes": 4530,
+          "sha256": "5d0f3ec37facfd5c087ba6eb4f1937bcf6e8eb6981482dd14103b80a3908cc87"
         },
         {
           "path": "miniprogram/services/messages.ts",
-          "bytes": 4411,
-          "sha256": "f9e4c3c9c9dde176826d04296f6a39586518183f9083e09d0abfbde4ff8824a3"
+          "bytes": 4530,
+          "sha256": "5d0f3ec37facfd5c087ba6eb4f1937bcf6e8eb6981482dd14103b80a3908cc87"
         },
         {
           "path": "miniprogram/services/mock-runtime.js",
-          "bytes": 3673,
-          "sha256": "78a5a256f3ce9704a8de2367704386507dae4cd63d876fa53cc0627a10566e04"
+          "bytes": 3768,
+          "sha256": "3d58b86f1b75f937d0ce6c2d82c4f454c061bd13c978e3f0c8bcdb362ab4b071"
         },
         {
           "path": "miniprogram/services/mock-runtime.ts",
-          "bytes": 3673,
-          "sha256": "78a5a256f3ce9704a8de2367704386507dae4cd63d876fa53cc0627a10566e04"
+          "bytes": 3768,
+          "sha256": "3d58b86f1b75f937d0ce6c2d82c4f454c061bd13c978e3f0c8bcdb362ab4b071"
         },
         {
           "path": "miniprogram/services/README.md",
-          "bytes": 2422,
-          "sha256": "8a03f02daac44c0a4d59fad988ab4e8317f90168692529359bfeaef47469836d"
+          "bytes": 2485,
+          "sha256": "aa7aa203d9d237dd497443bce7faa4cb18723c9f4ef732be977b1f5fa14e6f19"
         },
         {
           "path": "miniprogram/services/registry.js",
-          "bytes": 2421,
-          "sha256": "d7f298b3130c2fbb320d09fc9eda02619fb7b3a9f0eb0f7622821074e0b39113"
+          "bytes": 2501,
+          "sha256": "1b793e0dc81c186f2184e5d96217962c588915635cc77841912df180a1e755b7"
         },
         {
           "path": "miniprogram/services/registry.ts",
-          "bytes": 2421,
-          "sha256": "d7f298b3130c2fbb320d09fc9eda02619fb7b3a9f0eb0f7622821074e0b39113"
+          "bytes": 2501,
+          "sha256": "1b793e0dc81c186f2184e5d96217962c588915635cc77841912df180a1e755b7"
         },
         {
           "path": "miniprogram/services/submission-guard.js",
-          "bytes": 878,
-          "sha256": "81a4e1f9fe16b070d274ac644e302b0221b51f9cb6bc323bfddd02057bb5330b"
+          "bytes": 911,
+          "sha256": "2ce220c14a4bcd01a2d269a740cad50ab75812a9f7cb2e3ed96fd413057468cf"
         },
         {
           "path": "miniprogram/services/submission-guard.ts",
-          "bytes": 878,
-          "sha256": "81a4e1f9fe16b070d274ac644e302b0221b51f9cb6bc323bfddd02057bb5330b"
+          "bytes": 911,
+          "sha256": "2ce220c14a4bcd01a2d269a740cad50ab75812a9f7cb2e3ed96fd413057468cf"
         },
         {
           "path": "miniprogram/services/transport.js",
-          "bytes": 2630,
-          "sha256": "07bd165cce5deaf3439eeef6bb8978bde4ab951cdc64a19f74e47ed84682f44f"
+          "bytes": 2707,
+          "sha256": "e9abb4fba7200a20d37ef831c24d2ed37409b1b237a267e0901e77034ecb89c4"
         },
         {
           "path": "miniprogram/services/transport.ts",
-          "bytes": 2630,
-          "sha256": "07bd165cce5deaf3439eeef6bb8978bde4ab951cdc64a19f74e47ed84682f44f"
+          "bytes": 2707,
+          "sha256": "e9abb4fba7200a20d37ef831c24d2ed37409b1b237a267e0901e77034ecb89c4"
         }
       ]
     },
@@ -199,8 +199,8 @@
       "files": [
         {
           "path": "miniprogram/pages/home/index.wxml",
-          "bytes": 3137,
-          "sha256": "dd83027e1d3239181b07b88f6ff2af81b2794c735fa9c523e9df358f5b36a277"
+          "bytes": 3227,
+          "sha256": "5b0b70783abb812c22f65be9fcd02b253788aa799930cc6d9b507f5c12ba370c"
         }
       ]
     },
@@ -217,73 +217,73 @@
       "files": [
         {
           "path": "miniprogram/data/jobs.js",
-          "bytes": 5149,
-          "sha256": "d480e4fd6cd4ed697b60b2ab4b444dcc27c17b0c8373f6027f68e06c29380b16"
+          "bytes": 5287,
+          "sha256": "7585854884108a2d3d583003a63efb026de530eff1563704dc511d76f87ae244"
         },
         {
           "path": "miniprogram/data/jobs.ts",
-          "bytes": 5096,
-          "sha256": "23ee89b6aa11eafde3415bae03ba86398ab75462187440bb89411060ad59ba30"
+          "bytes": 5227,
+          "sha256": "3df5c7aa91135e939eafb02c1b7c60054574d9930a910f4ec7106e973df7a886"
         },
         {
           "path": "miniprogram/pages/job-detail/index.js",
-          "bytes": 4241,
-          "sha256": "7618a96350ca9d2e5e4798ca6fd1b6f6f632c5674d484464aa7e0fd68f5fca52"
+          "bytes": 4376,
+          "sha256": "6ea89dd084fb6b934276ecf1f92624518d0d924e7f06e3485b99b65f0776320f"
         },
         {
           "path": "miniprogram/pages/job-detail/index.json",
-          "bytes": 48,
-          "sha256": "c14911053680ef0bc18cafd3d0667d92bf71a1ee86c0c042ceef81d0418edd3a"
+          "bytes": 52,
+          "sha256": "21964fe60836adfd4197057e4f30035b9c0289d95dbe7eeb8cc04c9dd716d12e"
         },
         {
           "path": "miniprogram/pages/job-detail/index.ts",
-          "bytes": 4241,
-          "sha256": "7618a96350ca9d2e5e4798ca6fd1b6f6f632c5674d484464aa7e0fd68f5fca52"
+          "bytes": 4376,
+          "sha256": "6ea89dd084fb6b934276ecf1f92624518d0d924e7f06e3485b99b65f0776320f"
         },
         {
           "path": "miniprogram/pages/job-detail/index.wxml",
-          "bytes": 4681,
-          "sha256": "fcfe5785fe35de13d306afc881521bb0af067d2b12ab3487d8b5a8862829b98b"
+          "bytes": 4762,
+          "sha256": "0dfadfe68a76c68e80121515f3667f35eebe25f5c1d94d98f8bc483495353774"
         },
         {
           "path": "miniprogram/pages/job-detail/index.wxss",
-          "bytes": 5272,
-          "sha256": "51ba38f2a0519be1995ccbaeb250b6b6810d7b17236dbfc15353c589d5ff9418"
+          "bytes": 5630,
+          "sha256": "7692d74c301018cc6181fb33f3a36e5324ced20124715a1f96ad92cd1ae924d8"
         },
         {
           "path": "miniprogram/pages/jobs/index.js",
-          "bytes": 5486,
-          "sha256": "3476f2e2d26ba5f07ec17d4c01d219567e1ab2b6a5f4359c08542d0a861d8342"
+          "bytes": 5679,
+          "sha256": "6a27de6c13527d533f232c98e6a0dae7b93fa876b7c7a5e00f9b2effc56345d5"
         },
         {
           "path": "miniprogram/pages/jobs/index.json",
-          "bytes": 41,
-          "sha256": "242324ebe42c430955e2826867f908300716d1acbbacb2dce8f68a77acd9e259"
+          "bytes": 44,
+          "sha256": "f52e608a00e2bd6c2fea44ea2f000aea39a7f37724ed4c0f77ba6ef0f2f11681"
         },
         {
           "path": "miniprogram/pages/jobs/index.ts",
-          "bytes": 5486,
-          "sha256": "3476f2e2d26ba5f07ec17d4c01d219567e1ab2b6a5f4359c08542d0a861d8342"
+          "bytes": 5679,
+          "sha256": "6a27de6c13527d533f232c98e6a0dae7b93fa876b7c7a5e00f9b2effc56345d5"
         },
         {
           "path": "miniprogram/pages/jobs/index.wxml",
-          "bytes": 5415,
-          "sha256": "8aa54e5b36f1a521f472ea0406ac00691a6a24979b0de4201f8f3bddb3eba191"
+          "bytes": 5529,
+          "sha256": "118c193499f7e7cd7ce85535659c5505e146fc4aa95465fca47a3d029ad80b27"
         },
         {
           "path": "miniprogram/pages/jobs/index.wxss",
-          "bytes": 8757,
-          "sha256": "bb8c14bfc7dbf6292d0dd3ec73e66aeb3bbabe295414331edde997f43e376a8d"
+          "bytes": 9316,
+          "sha256": "3cb62c6bc8f68987ee867b340ca9a04fe8755f4bfbfc45d338035d8cec07f418"
         },
         {
           "path": "miniprogram/services/jobs.js",
-          "bytes": 5346,
-          "sha256": "1ba2b7c775682ea3ac013c1e0d6ac3d8aedb1c0807ad83ead79c1373f24c01d6"
+          "bytes": 5523,
+          "sha256": "86001af65718db55332d09128e38446ca51535b423e576a28a38038c7cdefd3a"
         },
         {
           "path": "miniprogram/services/jobs.ts",
-          "bytes": 5346,
-          "sha256": "1ba2b7c775682ea3ac013c1e0d6ac3d8aedb1c0807ad83ead79c1373f24c01d6"
+          "bytes": 5523,
+          "sha256": "86001af65718db55332d09128e38446ca51535b423e576a28a38038c7cdefd3a"
         }
       ]
     },
@@ -296,13 +296,13 @@
       "files": [
         {
           "path": "miniprogram/services/auth-session.js",
-          "bytes": 2730,
-          "sha256": "7926d2e07632e0a54fad4c236f8cdae62aefac20af6b35fbbc4f13ce8e3f455a"
+          "bytes": 2841,
+          "sha256": "fdaf9fb8481b12354637614a3d8c91f538f756acb6d7e5bc73f35295d67cf4c0"
         },
         {
           "path": "miniprogram/services/auth-session.ts",
-          "bytes": 2730,
-          "sha256": "7926d2e07632e0a54fad4c236f8cdae62aefac20af6b35fbbc4f13ce8e3f455a"
+          "bytes": 2841,
+          "sha256": "fdaf9fb8481b12354637614a3d8c91f538f756acb6d7e5bc73f35295d67cf4c0"
         }
       ]
     },
@@ -321,123 +321,123 @@
       "files": [
         {
           "path": "miniprogram/data/employer.js",
-          "bytes": 12220,
-          "sha256": "004b52d190b7ca381ad1b516feb269a46dfe8749e49cfaebf633c9ea45942a76"
+          "bytes": 12553,
+          "sha256": "b20498ec917060329dae59e4f51071b91b52f9c552d64ec9aeaf6cfd0c4bfa5b"
         },
         {
           "path": "miniprogram/data/employer.ts",
-          "bytes": 12055,
-          "sha256": "7003a3ad187c285571cea9c970e214523135e1dc7cf7b7b7d47864cd321c0015"
+          "bytes": 12375,
+          "sha256": "5c898d04cd8a1ce0762d9bf4ecbb81815d914373455463c262db103f895deb53"
         },
         {
           "path": "miniprogram/pages/employer-candidates/index.js",
-          "bytes": 10426,
-          "sha256": "583f0c348beabcbcb97b8793341ed38b5f8addc91be5e90f4a144323c1926a12"
+          "bytes": 10734,
+          "sha256": "915e7e223292a910904105be09af0eae9977f7f147e8ea5367bb3b8b3f63a0a8"
         },
         {
           "path": "miniprogram/pages/employer-candidates/index.json",
-          "bytes": 82,
-          "sha256": "eaccd4479e4cc1645ee70b8a9a2cae4165907fe72879f02f34973232051adf7d"
+          "bytes": 86,
+          "sha256": "a32a336accbeacc53eb1141f228235fde5e398e5d6bc228e8be4184e26e198f2"
         },
         {
           "path": "miniprogram/pages/employer-candidates/index.ts",
-          "bytes": 10426,
-          "sha256": "583f0c348beabcbcb97b8793341ed38b5f8addc91be5e90f4a144323c1926a12"
+          "bytes": 10734,
+          "sha256": "915e7e223292a910904105be09af0eae9977f7f147e8ea5367bb3b8b3f63a0a8"
         },
         {
           "path": "miniprogram/pages/employer-candidates/index.wxml",
-          "bytes": 5139,
-          "sha256": "3aafa25ebbedf932a005f5e7e2dfc481b7e2d201c724dfb70dc402a5bd83b8a8"
+          "bytes": 5225,
+          "sha256": "72bb69be9f9cbfaed84ee9a62356dff424051e8a3bd2601a4eaed406d70c9359"
         },
         {
           "path": "miniprogram/pages/employer-candidates/index.wxss",
-          "bytes": 4359,
-          "sha256": "918d86b191394fe5a05213c7a2378c07e97db1d67bb0ffbb84a95244ae7ce06e"
+          "bytes": 4672,
+          "sha256": "bff31237f9a77fb052cec4c3057eaf9014e9344c7d35b890fce5eb2e76bca912"
         },
         {
           "path": "miniprogram/pages/employer-job-form/index.js",
-          "bytes": 5744,
-          "sha256": "aad80b3755fc46405b2eaf6440178de75b4a8ca4432c4600cd1586106a213e90"
+          "bytes": 5907,
+          "sha256": "2cf3b6fdc6aee586f1f901071402723a089640038d650e8b29d0d8c7e9b3c53a"
         },
         {
           "path": "miniprogram/pages/employer-job-form/index.json",
-          "bytes": 79,
-          "sha256": "ba20a8b4828d5876dca8b72135f4bd42627eb9d911f30c4bcc1f2875947c7af4"
+          "bytes": 83,
+          "sha256": "53ec0c85d16c26df03d1b3e923fed02c2890c6d357cb197b9b7d1b009ebca1a3"
         },
         {
           "path": "miniprogram/pages/employer-job-form/index.ts",
-          "bytes": 5744,
-          "sha256": "aad80b3755fc46405b2eaf6440178de75b4a8ca4432c4600cd1586106a213e90"
+          "bytes": 5907,
+          "sha256": "2cf3b6fdc6aee586f1f901071402723a089640038d650e8b29d0d8c7e9b3c53a"
         },
         {
           "path": "miniprogram/pages/employer-job-form/index.wxml",
-          "bytes": 3066,
-          "sha256": "ac6cf3d818ccfc0e2a9833fdf95eea758606d05a62cde466084ab300dad9c950"
+          "bytes": 3121,
+          "sha256": "99dfbd13a39b10675f24df65040fd25aa59e0a6d1eae003d5a98866bc1ebf3a3"
         },
         {
           "path": "miniprogram/pages/employer-job-form/index.wxss",
-          "bytes": 3508,
-          "sha256": "4fac5fefb242480d5ddae89589337136958ff0df49a0752b5ab04088e242f4fb"
+          "bytes": 3759,
+          "sha256": "6821c30be04cb9d77182eaf086280bc8742605110ec37d535a14e3ff082ca1a4"
         },
         {
           "path": "miniprogram/pages/employer-job-preview/index.js",
-          "bytes": 4932,
-          "sha256": "8f7d385aed825d28457db9ec0a71e78d342de5790bca8afb1ee77e69ad59d9f5"
+          "bytes": 5065,
+          "sha256": "b143e770d855d55878a7cda9a7e0b6b98fcc37f94f86ce6f56f19c98c16e30c7"
         },
         {
           "path": "miniprogram/pages/employer-job-preview/index.json",
-          "bytes": 79,
-          "sha256": "1c211cca8696f9706eefb4614b8a2f17f6c7a07d87778008265fef7ccad1525c"
+          "bytes": 83,
+          "sha256": "3002764ffd918f6e3d7af1a402c6d3bf3bb3fe7bcd98d3fad38c7634ccf34ebc"
         },
         {
           "path": "miniprogram/pages/employer-job-preview/index.ts",
-          "bytes": 4932,
-          "sha256": "8f7d385aed825d28457db9ec0a71e78d342de5790bca8afb1ee77e69ad59d9f5"
+          "bytes": 5065,
+          "sha256": "b143e770d855d55878a7cda9a7e0b6b98fcc37f94f86ce6f56f19c98c16e30c7"
         },
         {
           "path": "miniprogram/pages/employer-job-preview/index.wxml",
-          "bytes": 3361,
-          "sha256": "46939daef0005b1793e0dd67ae2c70f760aa2841cdc56e5abf23f7b7599b56a8"
+          "bytes": 3425,
+          "sha256": "52dc77722ef5f03faeddada6f31984a86ba49939a7d3cc9d3d66a13022ff1e36"
         },
         {
           "path": "miniprogram/pages/employer-job-preview/index.wxss",
-          "bytes": 3881,
-          "sha256": "e9ce6d8ed81109f2120021ac43729c334fde873c8472ad44a1f92e57a451df2e"
+          "bytes": 4142,
+          "sha256": "4801f68b491a80c9de2ef6552a1a02a3d57c975ea74f04c3e50c3276e51f9bb3"
         },
         {
           "path": "miniprogram/pages/employer/index.js",
-          "bytes": 6096,
-          "sha256": "4c8d716649ccbda61e5fd0f760cf1e3482c899d348d254b8dbb8c9453f0fea43"
+          "bytes": 6281,
+          "sha256": "4a725655f6e37045aeb10293eca583f49e86f71ed0a35d3cab340070db1b0193"
         },
         {
           "path": "miniprogram/pages/employer/index.json",
-          "bytes": 113,
-          "sha256": "ae123a443b50c6b628cb837598e8b3f8d8d5531c6a7f7f26fcd596be5532b82a"
+          "bytes": 118,
+          "sha256": "c5a78f72ade7e3b89287db229e50f53080f5728f04af2df203c270a536b0e5c8"
         },
         {
           "path": "miniprogram/pages/employer/index.ts",
-          "bytes": 6096,
-          "sha256": "4c8d716649ccbda61e5fd0f760cf1e3482c899d348d254b8dbb8c9453f0fea43"
+          "bytes": 6281,
+          "sha256": "4a725655f6e37045aeb10293eca583f49e86f71ed0a35d3cab340070db1b0193"
         },
         {
           "path": "miniprogram/pages/employer/index.wxml",
-          "bytes": 5266,
-          "sha256": "75f0b35eb3277ecf7b9ebed9aa08271bb6dd81419299aa02f72d175242ae60a6"
+          "bytes": 5369,
+          "sha256": "22e160dc7795c5d6b48da57f2ec3562e939c8a04f8a53877a6beb6bbb64ec1c7"
         },
         {
           "path": "miniprogram/pages/employer/index.wxss",
-          "bytes": 5468,
-          "sha256": "d81769048a1cc0870e46e3502d7c24374e31066fd49bebf846622fafea150e7b"
+          "bytes": 5858,
+          "sha256": "108f9f430df483bb53da19a3ac97c7d6df8e85ccb66a365bb4de30dc066d84e0"
         },
         {
           "path": "miniprogram/services/employer.js",
-          "bytes": 8154,
-          "sha256": "368e23eb131aa571ee46ceccc13093310cdb08d2ed017128700a52c7ccf1b53b"
+          "bytes": 8400,
+          "sha256": "f084f0870b97ce4203d1fdaad9dc9d64577fd40b827079e3fda15aaaa421b6b4"
         },
         {
           "path": "miniprogram/services/employer.ts",
-          "bytes": 8154,
-          "sha256": "368e23eb131aa571ee46ceccc13093310cdb08d2ed017128700a52c7ccf1b53b"
+          "bytes": 8400,
+          "sha256": "f084f0870b97ce4203d1fdaad9dc9d64577fd40b827079e3fda15aaaa421b6b4"
         }
       ]
     },
@@ -445,13 +445,93 @@
       "workstream": "06-backend-api",
       "codePaths": [
         "workstreams/06-backend-api/**",
-        "docs/blueprint/backend-design-placeholder.md"
+        "miniprogram/config/environments.js",
+        "miniprogram/services/auth-session.js",
+        "miniprogram/services/transport.js",
+        "miniprogram/app.js",
+        "miniprogram/data/*.js",
+        "miniprogram/pages/**/*.{js,wxml,wxss}"
       ],
       "files": [
         {
-          "path": "docs/blueprint/backend-design-placeholder.md",
-          "bytes": 15015,
-          "sha256": "06834d91ec3a214763afa51e6204dec84a95bd6046f8aed70e9e49ccd16c9b87"
+          "path": "miniprogram/app.js",
+          "bytes": 71,
+          "sha256": "cc3b7c686c81cd41e11346cff60d3aaea6c0bedcb55e4367414acb1192cd9846"
+        },
+        {
+          "path": "miniprogram/config/environments.js",
+          "bytes": 2679,
+          "sha256": "27900f0842d31d7783cf9e93e93fb699504a5473b322a7b5eb43da2e4b5f9a2b"
+        },
+        {
+          "path": "miniprogram/data/campus.js",
+          "bytes": 4572,
+          "sha256": "33f79025f4b53d6a427e1c64ee4e40a3c8ac3a6fc510e156cd793e70ef090cd6"
+        },
+        {
+          "path": "miniprogram/data/employer.js",
+          "bytes": 12553,
+          "sha256": "b20498ec917060329dae59e4f51071b91b52f9c552d64ec9aeaf6cfd0c4bfa5b"
+        },
+        {
+          "path": "miniprogram/data/events.js",
+          "bytes": 5411,
+          "sha256": "77893924a80b1cc121ddb518ae7eeebf10ccf0396a1e2fcf2d0127fc99ab7e9e"
+        },
+        {
+          "path": "miniprogram/data/home.js",
+          "bytes": 5614,
+          "sha256": "4181ca61de695e2332c73a52a6cd6f055fa1a447299f601511125035c1f8122a"
+        },
+        {
+          "path": "miniprogram/data/jobs.js",
+          "bytes": 5287,
+          "sha256": "7585854884108a2d3d583003a63efb026de530eff1563704dc511d76f87ae244"
+        },
+        {
+          "path": "miniprogram/data/labor.js",
+          "bytes": 5363,
+          "sha256": "266d83f1291e5412169b1b24412ece80e317a06d870791185914b74cf74cbed9"
+        },
+        {
+          "path": "miniprogram/data/messages.js",
+          "bytes": 3362,
+          "sha256": "14172b244f601671b0dd419742c76502391e83fc7f5880c69db27abff5ca7611"
+        },
+        {
+          "path": "miniprogram/data/policy.js",
+          "bytes": 6580,
+          "sha256": "994f0c7d7371f3bc9c5f68ac51358c43c4a4c8667966d192fe9e946f5b7fc7dc"
+        },
+        {
+          "path": "miniprogram/data/profile.js",
+          "bytes": 7710,
+          "sha256": "b20b3f951d684a349bff11efdc1795334a8bcae92acf48fbdbe49ef571c779cb"
+        },
+        {
+          "path": "miniprogram/data/return-home.js",
+          "bytes": 6295,
+          "sha256": "41449779f69429c2bee115ce9ce1d4a8e92a727ebccd069e30b5be09d16be8be"
+        },
+        {
+          "path": "miniprogram/data/training-signup.js",
+          "bytes": 5815,
+          "sha256": "11f23f099ab84a470729ad691dd5dbcb8b34c7282f6f2d15d8cd58a17cd754be"
+        },
+        {
+          "path": "miniprogram/data/training.js",
+          "bytes": 4076,
+          "sha256": "17d0af0c10212077f357359bfceb885ec3dbf5ba334ab6f5d8e713e4c89dde3a"
+        },
+        {
+          "path": "miniprogram/services/auth-session.js",
+          "bytes": 2841,
+          "sha256": "fdaf9fb8481b12354637614a3d8c91f538f756acb6d7e5bc73f35295d67cf4c0"
+        },
+        {
+          "path": "miniprogram/services/transport.js",
+          "bytes": 2707,
+          "sha256": "e9abb4fba7200a20d37ef831c24d2ed37409b1b237a267e0901e77034ecb89c4"
         }
       ]
     },
@@ -472,38 +552,38 @@
       "files": [
         {
           "path": "miniprogram/data/training.js",
-          "bytes": 3964,
-          "sha256": "3ecf26de60925f7edb3a5611cd833b3c42c804d3c36f55dca744461b70cff8b2"
+          "bytes": 4076,
+          "sha256": "17d0af0c10212077f357359bfceb885ec3dbf5ba334ab6f5d8e713e4c89dde3a"
         },
         {
           "path": "miniprogram/data/training.ts",
-          "bytes": 3933,
-          "sha256": "ef58cc9f025294fd2f6dc91d7f2ebbb16866b8575ac71d209ebf5263d0e7f88c"
+          "bytes": 4041,
+          "sha256": "66f22f38ea5f2d606562c914e8c62f99536acfc9e26fcd984f94829eb21e7ceb"
         },
         {
           "path": "miniprogram/pages/training/index.js",
-          "bytes": 1283,
-          "sha256": "0829e26c0698a7b9b9a9cd03469830aede58124ca993fabe969ddb7abbc67757"
+          "bytes": 1336,
+          "sha256": "da7c80baceeff0d5db41f272768070e237bac16af9143a73532b307fb39cd109"
         },
         {
           "path": "miniprogram/pages/training/index.json",
-          "bytes": 47,
-          "sha256": "355eae9dda4d9a123b8bdd671fc589be9ad867bdb933a3566fb7ffc587b66f94"
+          "bytes": 50,
+          "sha256": "74497d65ed40008ed45676c2a2c7c391ef598c346d8d709278d0a03ba1827290"
         },
         {
           "path": "miniprogram/pages/training/index.ts",
-          "bytes": 1398,
-          "sha256": "2905dbc709b0fb9a00843d4bd66ae9ff4f5cc1e4ec406d7452411209fed004e9"
+          "bytes": 1451,
+          "sha256": "3f8bf26a72eb10051bfd1e578edd43f484d7724ac6de32df181964b4dc50910d"
         },
         {
           "path": "miniprogram/pages/training/index.wxml",
-          "bytes": 3378,
-          "sha256": "8b7bb777d7751fd4f7b2711dc8dc8f3476c78e0b44ce4e14bdd4ee6ae56daf83"
+          "bytes": 3478,
+          "sha256": "740de42d1f7368513355b437ff85a960426621800d265eac4206bf6dcd73451f"
         },
         {
           "path": "miniprogram/pages/training/index.wxss",
-          "bytes": 5716,
-          "sha256": "50e7df44ee0e086f42304833dbedec691729100681554553b0cc3eea4f1f17a8"
+          "bytes": 6073,
+          "sha256": "e8fcc398a11bfb97463a3ea53f9dfc96fc85b5e40c9252f0e9b0632625551045"
         }
       ]
     },
@@ -517,38 +597,38 @@
       "files": [
         {
           "path": "miniprogram/data/policy.js",
-          "bytes": 6458,
-          "sha256": "164918ce5b0c5361094e257a953f156618d7d9189a21ad0552be0f4665b312a7"
+          "bytes": 6580,
+          "sha256": "994f0c7d7371f3bc9c5f68ac51358c43c4a4c8667966d192fe9e946f5b7fc7dc"
         },
         {
           "path": "miniprogram/data/policy.ts",
-          "bytes": 6429,
-          "sha256": "1d998ddc2c31bc6fb533cd546b5b9bdf9413f24eadeeb6fdbaf65501c33f118e"
+          "bytes": 6547,
+          "sha256": "7f185cce0351502e4566a5c7620eb55824f44e846c5b7586b4033fea9f6b045f"
         },
         {
           "path": "miniprogram/pages/policy/index.js",
-          "bytes": 1576,
-          "sha256": "0d0c83315e44e3d5f8eb8095fb1e4bb18ea11c6b404ec5e7ae91acb465d92ccb"
+          "bytes": 1644,
+          "sha256": "598341feedd21a0e02ae41e346a5626af9c843a5ee22448b62bdbdb83f6032ad"
         },
         {
           "path": "miniprogram/pages/policy/index.json",
-          "bytes": 126,
-          "sha256": "3ea8603891459567a1d51dc21286cee181b405f4258e0e12d008a44c5423ac8f"
+          "bytes": 131,
+          "sha256": "e490a5e75da02b3ae1e6d375783e188a85c2605ba2fb21af007d0ad031a9367f"
         },
         {
           "path": "miniprogram/pages/policy/index.ts",
-          "bytes": 1669,
-          "sha256": "ad664b247fbe70d4ff7e6e7a6379eeb285909caa545e35dd29e4b976016b2e3b"
+          "bytes": 1737,
+          "sha256": "7a5836f35bde6a58eb10e94a74811b8edbc0d12fad748879ce18df3e07e1b81b"
         },
         {
           "path": "miniprogram/pages/policy/index.wxml",
-          "bytes": 4700,
-          "sha256": "06fac2d5387313b495b4fd41eba80a10993049d07568aada78164b73782cf09a"
+          "bytes": 4823,
+          "sha256": "2307800e277bd3067f370c2387eb35b0c8c3bc0110cf39e429200dada39edc7e"
         },
         {
           "path": "miniprogram/pages/policy/index.wxss",
-          "bytes": 8325,
-          "sha256": "357d8401724ed267ae9930bd9f63c5a8e606e039e4a6c014856d33deba391d70"
+          "bytes": 8836,
+          "sha256": "3b6d13700b3cd26fc879312f2e8cc4d80bee6357985c044707289afefb601319"
         }
       ]
     },
@@ -562,38 +642,38 @@
       "files": [
         {
           "path": "miniprogram/data/campus.js",
-          "bytes": 4440,
-          "sha256": "b04c9f14b0cd6ea37ffa2340a5f8eb694cc951a49b78ebf1a6366e4f11f9dd74"
+          "bytes": 4572,
+          "sha256": "33f79025f4b53d6a427e1c64ee4e40a3c8ac3a6fc510e156cd793e70ef090cd6"
         },
         {
           "path": "miniprogram/data/campus.ts",
-          "bytes": 5525,
-          "sha256": "ab3f66e6876a9d551e622d3326dba703511a8b147f3824a58dd7e5baa7c386e1"
+          "bytes": 5707,
+          "sha256": "bf72640e882d433e8b9e146debc7ab44a8af026f88081a4f71f75703e6385c5a"
         },
         {
           "path": "miniprogram/pages/campus/index.js",
-          "bytes": 966,
-          "sha256": "69618a2f7eefe5e089916ca5a10dc3f3479ef82fefa4f578b576215056e66170"
+          "bytes": 1007,
+          "sha256": "e4f64178cecc6c183410f6b9ed84c598086298065fa5631962f1ca002e650aa5"
         },
         {
           "path": "miniprogram/pages/campus/index.json",
-          "bytes": 44,
-          "sha256": "c8b807cea62ae93d68ba3fe636b110ffc95a0bfa38b7884aa2498b0e2e8ab3cd"
+          "bytes": 47,
+          "sha256": "c995fdcd4cecb0460b9b92829bc234c45becf7452ed99399df758b5364342596"
         },
         {
           "path": "miniprogram/pages/campus/index.ts",
-          "bytes": 1028,
-          "sha256": "e66849d639472cce1b8e1f3fdccbe5c0e65639ef195598ddac6f2f5c35bff59e"
+          "bytes": 1069,
+          "sha256": "a1074e3dc364dfd6c443017d6725e1bbf61b87328cb9e03cfee197674810bd28"
         },
         {
           "path": "miniprogram/pages/campus/index.wxml",
-          "bytes": 4066,
-          "sha256": "45e75bb9acb8992af051d6874beb5e1cc750a467b48a2cc26bf8d72380b1d0e2"
+          "bytes": 4169,
+          "sha256": "1cdaea1aa06fd34fff115bc9034d043c91014c98affca852d62a6ec50b029370"
         },
         {
           "path": "miniprogram/pages/campus/index.wxss",
-          "bytes": 6481,
-          "sha256": "895ef3bea39d5fefd227f8ad80cbf312580499be4a74b3462c851320bdd6f47c"
+          "bytes": 6879,
+          "sha256": "bdeaf9b7f85ab45a09b2f67805f8d4fd4833834760d7d5f912ed569ca654f6cd"
         }
       ]
     },
@@ -607,38 +687,38 @@
       "files": [
         {
           "path": "miniprogram/data/labor.js",
-          "bytes": 5212,
-          "sha256": "64e258c553e9e78df7586e4bdb68be612abbde046afb6a9b18a84ce094dcd08b"
+          "bytes": 5363,
+          "sha256": "266d83f1291e5412169b1b24412ece80e317a06d870791185914b74cf74cbed9"
         },
         {
           "path": "miniprogram/data/labor.ts",
-          "bytes": 5184,
-          "sha256": "22d1f1d1fb5afe8158992cc15421e6cf7daaf3cb7c17d6b4a01366d5016012df"
+          "bytes": 5331,
+          "sha256": "1ac665f8d490ccb876fbeb776f241f1038400ed61a2ede9c4876b295cccf146c"
         },
         {
           "path": "miniprogram/pages/labor/index.js",
-          "bytes": 1640,
-          "sha256": "1ea4101be382299b0d9364ff25e7a066bdbe62c5ce5cef686c89c34949f13f97"
+          "bytes": 1702,
+          "sha256": "0c44b0bd5870ef97c310175dff3bda19477504a19ce2d4ac9e1065c097bfd17a"
         },
         {
           "path": "miniprogram/pages/labor/index.json",
-          "bytes": 47,
-          "sha256": "ccefe60db3f7925f33dd3196f7919dddca202b6eb9fd04510c96130fd3cc2a93"
+          "bytes": 50,
+          "sha256": "1d8c9a9b1f4f6efaf0459e0e04dd897b656c393eaecbb5f691c3e19429dd8df1"
         },
         {
           "path": "miniprogram/pages/labor/index.ts",
-          "bytes": 1879,
-          "sha256": "6f4156a4d3ed0e535c06807802cbd1e675b8bbbea50533afc55e789e0c11374c"
+          "bytes": 1957,
+          "sha256": "9613f1012305290ee785686290ba88728a1306284956e31efb77b78ec6e52a2f"
         },
         {
           "path": "miniprogram/pages/labor/index.wxml",
-          "bytes": 3664,
-          "sha256": "a5e7eb0549baceba641c6de5a0dd1abd2a2426fce92b8fdec28ce18eb2e8c558"
+          "bytes": 3765,
+          "sha256": "a3c5259191318e9902a6ecd1042aef9218470ff8c14ea77ca8375e3505c75bb7"
         },
         {
           "path": "miniprogram/pages/labor/index.wxss",
-          "bytes": 5988,
-          "sha256": "349211965f2eb3b942d6a14469d54ab406b57c9d1864c20615334559253defad"
+          "bytes": 6374,
+          "sha256": "a671264d44fa2a7e364257682e85d7d3264f0f257e40675f93bda6ab95682764"
         }
       ]
     },
@@ -652,38 +732,38 @@
       "files": [
         {
           "path": "miniprogram/data/return-home.js",
-          "bytes": 6118,
-          "sha256": "180596228be2acdc9d5dfe9ec0af3c375dc5d89f63a2a0653e86e221082159ed"
+          "bytes": 6295,
+          "sha256": "41449779f69429c2bee115ce9ce1d4a8e92a727ebccd069e30b5be09d16be8be"
         },
         {
           "path": "miniprogram/data/return-home.ts",
-          "bytes": 6085,
-          "sha256": "0122267dc690711d7cb040f0320ab852e559709323602c999c6dbfd5233c8cbb"
+          "bytes": 6258,
+          "sha256": "d17ef94a95a5a2c934b5a7c60a5a16dcdc0914d9a21d6eb023ac7cb54b63039a"
         },
         {
           "path": "miniprogram/pages/return-home/index.js",
-          "bytes": 1373,
-          "sha256": "6a6df0a17d7f726282b18f22a5b541321038c5c8c75591a56c42e75e9d332d02"
+          "bytes": 1432,
+          "sha256": "13d722985b4ab037644410643bc59f783dcefb1822ba79ab27bb0439381c784b"
         },
         {
           "path": "miniprogram/pages/return-home/index.json",
-          "bytes": 161,
-          "sha256": "1a0cf4e444176383db53182071bff296a7e4b12920b252fd6d75f5e21018a7d7"
+          "bytes": 167,
+          "sha256": "1ef0d376c76ab8be17e293bdba4351590fbf9e8deeb78278bd8f9513b22fbc62"
         },
         {
           "path": "miniprogram/pages/return-home/index.ts",
-          "bytes": 1560,
-          "sha256": "f80515db26597f0b6fa5f1547ce51295e2e013cda31e66163f84e5f3b215a125"
+          "bytes": 1630,
+          "sha256": "3ba22da67dfa264916e2305bd3b5cc25cf89e12f64d14af3f01aa2083d9d2cb8"
         },
         {
           "path": "miniprogram/pages/return-home/index.wxml",
-          "bytes": 6351,
-          "sha256": "1e223424ac0499c588d2dd891e93fa4149b59fd32310d3755ab80f253064f551"
+          "bytes": 6524,
+          "sha256": "2f2c12e154ff4ce475ae55169098a2b9f257d358ebdeec4459688a4dbe7082e4"
         },
         {
           "path": "miniprogram/pages/return-home/index.wxss",
-          "bytes": 8054,
-          "sha256": "1dedf803503c2d725586690ae660a319adf59d6f261bdab06515f499bd7f867a"
+          "bytes": 8561,
+          "sha256": "e94a3b349eac8739b50ea52f4deeb1bcad8a13013c494bf3c9cc8eae07926b9d"
         }
       ]
     },
@@ -697,38 +777,38 @@
       "files": [
         {
           "path": "miniprogram/data/training-signup.js",
-          "bytes": 5634,
-          "sha256": "10b643e3ad5565fb67c6381e84d604d0222b049744e0f63fb051f8b3570e7aaf"
+          "bytes": 5815,
+          "sha256": "11f23f099ab84a470729ad691dd5dbcb8b34c7282f6f2d15d8cd58a17cd754be"
         },
         {
           "path": "miniprogram/data/training-signup.ts",
-          "bytes": 5597,
-          "sha256": "3871b23d31b7ef048073558b625ce36d7c2262df1f39c8bcf013bb179add8c9b"
+          "bytes": 5774,
+          "sha256": "2335dd43460f6f6d276754785ef66aac616dc26628ccc9f1875f7a2148484a06"
         },
         {
           "path": "miniprogram/pages/training-signup/index.js",
-          "bytes": 1505,
-          "sha256": "289b0016de2b679b1cfb273500b135cbc87ef68d915c23ff6fe855e4b14576d4"
+          "bytes": 1570,
+          "sha256": "63306c133bbe62e932861b44b131bbaaa322e33f57eb3a30f73649cb63d3c974"
         },
         {
           "path": "miniprogram/pages/training-signup/index.json",
-          "bytes": 47,
-          "sha256": "24f91c5351a8854988835faff48c64d02e325200f1d57a2a561bc4a21e792266"
+          "bytes": 50,
+          "sha256": "556764ab98aa882349d0688d3289abd452a53b6de21ca162859fbdc397ab1870"
         },
         {
           "path": "miniprogram/pages/training-signup/index.ts",
-          "bytes": 1566,
-          "sha256": "ded78d845b889a215f7de62fe69413fb6241ab1b9c443e84a1bf0ec0ac873883"
+          "bytes": 1631,
+          "sha256": "8e240b906fd8526e7db89884ecdc0135f0c2c516580f97b523b47eb640953797"
         },
         {
           "path": "miniprogram/pages/training-signup/index.wxml",
-          "bytes": 3994,
-          "sha256": "1b541b62a75e8c36b79e7c5ae6bbc2cbb0f6fe9449390677b4d84aec57546964"
+          "bytes": 4102,
+          "sha256": "8913d48c28ce38d0539ae16653565f3e497ca7912090c6c21a86ba018f05c249"
         },
         {
           "path": "miniprogram/pages/training-signup/index.wxss",
-          "bytes": 6603,
-          "sha256": "331634972216c0a234b87dd1f97fea09c2a5e9c77306f604afae86616847a824"
+          "bytes": 7025,
+          "sha256": "ed000820203d73fb5d68cac26124b3b53c4ee26c46ee4800da72ddc835a0c199"
         }
       ]
     },
@@ -745,73 +825,73 @@
       "files": [
         {
           "path": "miniprogram/data/messages.js",
-          "bytes": 3271,
-          "sha256": "7f72c5771753f74f98be6bb967dc889dcfd5e27405fa21cda57beee1f403178e"
+          "bytes": 3362,
+          "sha256": "14172b244f601671b0dd419742c76502391e83fc7f5880c69db27abff5ca7611"
         },
         {
           "path": "miniprogram/data/messages.ts",
-          "bytes": 3243,
-          "sha256": "9978cd14fa78ae04e8a66e1b319163b6a39c76e2e54795ed80b94ff8a853031e"
+          "bytes": 3332,
+          "sha256": "5b6cb5e8ff85bef1490a2cb9430dede2a2ab0598613d8d54a7960c1f6682942f"
         },
         {
           "path": "miniprogram/pages/message-detail/index.js",
-          "bytes": 7007,
-          "sha256": "f2e57706cc2fcee7a21f1a1f744ee64027a954b5c9f57e330fe45c8af0a7326e"
+          "bytes": 7222,
+          "sha256": "24383395acc93c9edabece3a52ce11118e34d9a2dff86da859aca3bec785e9a7"
         },
         {
           "path": "miniprogram/pages/message-detail/index.json",
-          "bytes": 47,
-          "sha256": "2e0894a14198112e3532f2d1b86d2159484d4e3d7c2057b0c5773d0c6872b946"
+          "bytes": 50,
+          "sha256": "1e67daa566045bb7ae39180a3c6d0c44a877a117f4a0b769583055d54438333e"
         },
         {
           "path": "miniprogram/pages/message-detail/index.ts",
-          "bytes": 7007,
-          "sha256": "f2e57706cc2fcee7a21f1a1f744ee64027a954b5c9f57e330fe45c8af0a7326e"
+          "bytes": 7222,
+          "sha256": "24383395acc93c9edabece3a52ce11118e34d9a2dff86da859aca3bec785e9a7"
         },
         {
           "path": "miniprogram/pages/message-detail/index.wxml",
-          "bytes": 5213,
-          "sha256": "28102aada155e0a09e51a0c5997499ffc7efecfb2f0ec5ea3a5cba8a642a3d57"
+          "bytes": 5345,
+          "sha256": "5a80d5ca9041d12b06f2d89dc39a5d8b65d5249ea3bbf5aadd5604572e472d24"
         },
         {
           "path": "miniprogram/pages/message-detail/index.wxss",
-          "bytes": 6561,
-          "sha256": "cf16c2583a7eef9420517d20cce1b5e4f6360c0839cabd5b48b94c195d5ed04b"
+          "bytes": 6992,
+          "sha256": "6b5e3ee01c50078ed73ac1cd038e3ba1539203a8577b33d0463a4a37c5edfecf"
         },
         {
           "path": "miniprogram/pages/messages/index.js",
-          "bytes": 10025,
-          "sha256": "3cdd6d4a9bb1defe32221bfa9a100737576ff05323b81b585a4bfef657b5bf5c"
+          "bytes": 10319,
+          "sha256": "f45bd31e176aa2cfc7f79745f1c29f642776e87056314fe52e4aaf1acc1944c3"
         },
         {
           "path": "miniprogram/pages/messages/index.json",
-          "bytes": 47,
-          "sha256": "9c3daddf33a1dbb3d5526e673cb88b4d094b0a188a4a013a11caeb1dc577512e"
+          "bytes": 50,
+          "sha256": "fb1d2e2eb74001fdd0c035c1181bcd59c6f5d1d3cf05bae0f9832ff7ec1ad2af"
         },
         {
           "path": "miniprogram/pages/messages/index.ts",
-          "bytes": 10025,
-          "sha256": "3cdd6d4a9bb1defe32221bfa9a100737576ff05323b81b585a4bfef657b5bf5c"
+          "bytes": 10319,
+          "sha256": "f45bd31e176aa2cfc7f79745f1c29f642776e87056314fe52e4aaf1acc1944c3"
         },
         {
           "path": "miniprogram/pages/messages/index.wxml",
-          "bytes": 5252,
-          "sha256": "524f6501a62c5e4c4b7945b2a9aec134d4103747565ed451de9701e26610c5a9"
+          "bytes": 5382,
+          "sha256": "b5f12e79a94e9e3b25a84f5dc51251f2810bb71313e30f000ef48320a34342cb"
         },
         {
           "path": "miniprogram/pages/messages/index.wxss",
-          "bytes": 6842,
-          "sha256": "0c3b676c9c23c2126b9c0dc2efe7d782966bb506a6c636d97d9cd6c1acb6afd0"
+          "bytes": 7283,
+          "sha256": "3082e4cd683d3894b38ee59fb9e539dcbfe0a2465ef92e7ab70311b727feb248"
         },
         {
           "path": "miniprogram/services/messages.js",
-          "bytes": 4411,
-          "sha256": "f9e4c3c9c9dde176826d04296f6a39586518183f9083e09d0abfbde4ff8824a3"
+          "bytes": 4530,
+          "sha256": "5d0f3ec37facfd5c087ba6eb4f1937bcf6e8eb6981482dd14103b80a3908cc87"
         },
         {
           "path": "miniprogram/services/messages.ts",
-          "bytes": 4411,
-          "sha256": "f9e4c3c9c9dde176826d04296f6a39586518183f9083e09d0abfbde4ff8824a3"
+          "bytes": 4530,
+          "sha256": "5d0f3ec37facfd5c087ba6eb4f1937bcf6e8eb6981482dd14103b80a3908cc87"
         }
       ]
     },
@@ -826,63 +906,63 @@
       "files": [
         {
           "path": "miniprogram/data/events.js",
-          "bytes": 5276,
-          "sha256": "45cab5c22d4c1a3a4e5db436b8569583c926658974594f6f53aef33213353aaf"
+          "bytes": 5411,
+          "sha256": "77893924a80b1cc121ddb518ae7eeebf10ccf0396a1e2fcf2d0127fc99ab7e9e"
         },
         {
           "path": "miniprogram/data/events.ts",
-          "bytes": 5241,
-          "sha256": "238d6472624e7843be057c2a85183021b5cddaa84e040370a09c50af31090542"
+          "bytes": 5374,
+          "sha256": "33c87b5fe19a5ca8f350beaeacdf4acba26e9e5824ccd3f9c78df500fcfcb38e"
         },
         {
           "path": "miniprogram/pages/event-detail/index.js",
-          "bytes": 2784,
-          "sha256": "6a05c3d7eba1245c9abc7a28d466b9da6d932a5c3859584710fc9b928993eb38"
+          "bytes": 2887,
+          "sha256": "812b1d80af8399f26480d50589f40c691fb6e0f361dce2bde968c2f793b376b6"
         },
         {
           "path": "miniprogram/pages/event-detail/index.json",
-          "bytes": 81,
-          "sha256": "5e17e3867fb6fee7626cdd54e6f99c762f93091ca95bcbcb3fe22097175c1e50"
+          "bytes": 85,
+          "sha256": "3cde614f5ff665f3208d3f105d0998eb3ff407d0f125040822a0901e59deb7c2"
         },
         {
           "path": "miniprogram/pages/event-detail/index.ts",
-          "bytes": 2784,
-          "sha256": "6a05c3d7eba1245c9abc7a28d466b9da6d932a5c3859584710fc9b928993eb38"
+          "bytes": 2887,
+          "sha256": "812b1d80af8399f26480d50589f40c691fb6e0f361dce2bde968c2f793b376b6"
         },
         {
           "path": "miniprogram/pages/event-detail/index.wxml",
-          "bytes": 3103,
-          "sha256": "adbea1246ad269f169c852aa500ebc7f2d52f5adc753a6c47d9340fdb40656f9"
+          "bytes": 3179,
+          "sha256": "c65459c0da82464b0e9c482790a1513cc9f618bd0dce1c462114692d5a076eec"
         },
         {
           "path": "miniprogram/pages/event-detail/index.wxss",
-          "bytes": 4631,
-          "sha256": "dca63d9716546e8adf9786236367f2d0fafa3fe90628ff3f2983a588a24b79cf"
+          "bytes": 4946,
+          "sha256": "f161f9a90345137f4e83bc3b356129ceb80ff4bb08daf38f6562286ae0621cc7"
         },
         {
           "path": "miniprogram/pages/events/index.js",
-          "bytes": 2785,
-          "sha256": "bc4c5b92f827742f3199849b7baa85b3398402aa80e91dfaf51d61cf2b82f890"
+          "bytes": 2896,
+          "sha256": "6fb8d4dce5f29d9351db547a8a697f181c0aa992d10228eec687de8547dc483f"
         },
         {
           "path": "miniprogram/pages/events/index.json",
-          "bytes": 81,
-          "sha256": "cf69e552eab176abd59d196a3ca6dcb06401395c80d883513b7751acb2a8d338"
+          "bytes": 85,
+          "sha256": "92e7d7a0cba781c79fc3f803e582d36fe15eab9cba49a452a952a8e73ff05be7"
         },
         {
           "path": "miniprogram/pages/events/index.ts",
-          "bytes": 2785,
-          "sha256": "bc4c5b92f827742f3199849b7baa85b3398402aa80e91dfaf51d61cf2b82f890"
+          "bytes": 2896,
+          "sha256": "6fb8d4dce5f29d9351db547a8a697f181c0aa992d10228eec687de8547dc483f"
         },
         {
           "path": "miniprogram/pages/events/index.wxml",
-          "bytes": 3401,
-          "sha256": "8adf1586dd42e7f8eeee40ca8bbae769877e6d517071b5ed9abd1c5dd07d37dc"
+          "bytes": 3494,
+          "sha256": "b9aa3cee5f9987f3ae9730fd3a4b8b9fc6cffa6cc053cf8184a18cac053fcec4"
         },
         {
           "path": "miniprogram/pages/events/index.wxss",
-          "bytes": 5666,
-          "sha256": "cdb38741fc48a1b79c1bf4b39fc3672d19677ff2af7a8b6965eee4d099c18ccc"
+          "bytes": 6048,
+          "sha256": "0d9fbd9efb649f597f55e77678e97d641128ade85b258fe952e0551d95afde21"
         }
       ]
     }

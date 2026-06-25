@@ -1,40 +1,37 @@
 # 06-backend-api TASKS
 
-## Phase: BUILD
-## Slice: api-contract-v1
+## Phase: PLAN
+## Slice: backend-foundation-v1
 ## State: active
 
 ---
 
 ## COMPLETED
 
-- [x] 扫描 miniprogram/data/*.js 全部 10 个 mock 文件
-- [x] 提取真实数据字段清单
-- [x] 定义 API 接口规范(API_SPEC.md)
-- [x] 区分后端字段(B) / 微信开放能力字段(W) / 前端计算字段(F)
-- [x] 梳理核心实体关系(User/Job/Company/Candidate/Event/TrainingSession/Policy/Message)
-- [x] 定义通用规范(请求头/响应格式/分页/错误码)
-- [x] 列出 6 项待确认事项
-- [x] 记录 v1 范围建议: 手动手机号、人工企业审核、站内消息、后端简单搜索、暂缓地图定位、暂缓文件上传
+- [x] 起草 `SPEC-backend-foundation-v1.md`（数据库 11 张表 + Express/Prisma/TypeScript/Zod 框架方案 + opaque bearer token 认证）
+- [x] D1-D5 关键决策由人确认（MySQL 8 / Express / TypeScript / Zod / Vitest+Supertest）
+- [x] 起草 `PLAN-backend-foundation-v1.md`（6 个 F 级 BUILD 任务，F1→F6 顺序）
 
 ---
 
-## IN PROGRESS
+## BUILD TASKS (F1 → F6)
 
-- [ ] REVIEW API_SPEC.md 并确认 v1 范围决策
-- [ ] 处理 REVIEW 待补清单: 投递、我的投递、简历、培训报名、隐私同意
+| # | 任务 | 依赖 | 分钟 |
+|---|------|------|------|
+| F1 | Prisma Schema — 基于 SPEC 重写 11 张表 | — | ~30 |
+| F2 | Express + TypeScript 脚手架 | F1 | ~20 |
+| F3 | 中间件链（requestId/errorHandler/validate/rateLimit） | F2 | ~20 |
+| F4 | Auth 中间件 + WeChat Mock 登录 | F3 | ~30 |
+| F5 | Health Check（/health/live + /ready + 根路由） | F2 | ~10 |
+| F6 | Docker Compose（API + MySQL 8 + 健康检查） | F1-F5 | ~15 |
+
+> 每个 F 的详细目标/允许文件/禁止文件/验收命令/回滚/证据见 `PLAN-backend-foundation-v1.md`。
 
 ---
 
-## PENDING
+## GATE
 
-- [ ] SHIP api-contract-v1
-- [ ] backend-foundation-v1:数据库设计
-- [ ] backend-foundation-v1:服务端框架搭建(Node.js/Python/Go?)
-- [ ] backend-foundation-v1:JWT 认证实现
-- [ ] backend-foundation-v1:微信登录 code 换 session
-- [ ] mock-replacement-v1:前端替换 wx.request 对接真实 API
-- [ ] wechat-integration-v1:手机号授权、订阅消息
+- [ ] PLAN → BUILD 闸门：人确认 PLAN-backend-foundation-v1.md 后，按 F1→F6 委派 builder
 
 ---
 
@@ -46,6 +43,8 @@ none
 
 ## NOTES
 
-- 未修改任何 miniprogram 产品代码
-- 未清理任何 mock 数据
-- 前端框架阶段(07-quality-review)已 SHIP
+- api-contract-v1 已 SHIP（见 SPEC.md / HANDOFF.md / archive/）
+- 当前 PLAN 阶段不创建任何代码文件
+- BUILD 启动后才允许在 `backend/` 创建 `.ts` 文件
+- `miniprogram/` 永远禁止新建 `.ts`（ADR 0002）
+- BUILD 由 Trae/子 Agent 执行，军师（Hermes）不写产品代码
