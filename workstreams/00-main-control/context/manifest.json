@@ -1163,8 +1163,8 @@
     },
     {
       "path": "workstreams/06-backend-api/SPEC.md",
-      "bytes": 4088,
-      "mtimeMs": 1782323282752
+      "bytes": 1622,
+      "mtimeMs": 1782359988609
     },
     {
       "path": "workstreams/06-backend-api/STATE.json",
@@ -1597,5 +1597,5 @@
       "mtimeMs": 1782322167610
     }
   ],
-  "fingerprint": "cf85a10c98d72df58042790d16725a0f990888e8cb3f8ed1742015f0beaf6d2f"
+  "fingerprint": "8f782d193463a88e1a217e09d93edf879274cc2c78c4cc34358b62fe400b5200"
 }
